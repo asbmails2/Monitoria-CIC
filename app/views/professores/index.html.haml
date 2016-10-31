@@ -1,0 +1,11 @@
+%h1 Professores
+%table#professors
+  %thead
+    %tr
+      %th Nome do Professor
+      %th Nome da Disciplina
+  %tbody
+    - @professors.each do |professor|
+      %tr
+        %td= professor.nome 
+        %td= professor.disciplina
