@@ -1,0 +1,14 @@
+%h2 Cadastrar Professor
+
+= form_tag professores_url, :method => :post do
+
+  = label :professor, :nome, 'Nome'
+  = text_field :professor, :nome
+
+  = label :professor, :disciplina, 'Disciplina'
+  - disc_lista = []
+  - @disciplinas.each do |disciplina|
+    - disc_lista += [disciplina.nome]
+  = select :professor, :disciplina, disc_lista
+
+  = submit_tag 'Salvar'
