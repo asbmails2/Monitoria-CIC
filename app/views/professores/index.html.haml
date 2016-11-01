@@ -3,9 +3,17 @@
   %thead
     %tr
       %th Nome do Professor
-      %th Nome da Disciplina
+      %th Email
+      %th Sala
+      %th Editar
+      %th Remover
   %tbody
     - @professors.each do |professor|
       %tr
         %td= professor.nome 
-        %td= professor.disciplina
+        %td= professor.email
+        %td= professor.sala
+        %td= link_to "Editar Professor", edit_professore_url(professor)
+        %td= button_to 'Delete', professore_url(professor), :method => :delete, :confirm => 'Deseja remover esse professor?'
+
+=link_to "Cadastrar Professor", new_professore_url

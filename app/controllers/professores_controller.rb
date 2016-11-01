@@ -2,13 +2,29 @@ class ProfessoresController < ApplicationController
   def index
     @professors = Professor.all
   end
-  def new
-  	@disciplinas = Disciplina.all  	
+  def new  	 	
   	@professors = Professor.new
   end
   def create
-  	@professors = Professor.create!(params.require(:professor).permit(:nome,:disciplina))
-  	flash[:retorno] = "{professor.nome} adicionado com sucesso na disciplina {disciplina.nome}"
-  	redirect_to disciplinas_url
+  	@professor = Professor.create!(params.require(:professor).permit(:nome, :email, :sala))
+  	flash[:retorno] = "#{@professor.nome} incluído com sucesso."
+  	redirect_to professores_url
+  end
+  def edit
+  	@id = params[:id]
+  	@professor = Professor.find(@id)
+  end
+  def update
+  	params.permit!
+  	@id = params[:id]
+  	@professor = Professor.find(@id).update_attributes!(params[:professor])
+  	flash[:sucesso] = "#{@professor.nome} foi editado com sucesso."
+  	redirect_to professores_url
+  end
+  def destroy
+    @id = params[:id]
+  	@professor = Professor.find(@id).destroy
+    flash[:sucesso] = "Professor #{@professor.nome} removido."
+    redirect_to professores_url
   end
 end

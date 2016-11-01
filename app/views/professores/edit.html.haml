@@ -1,6 +1,6 @@
-%h2 Cadastrar Professor
+%h1 Editar Professor
 
-= form_tag professores_url, :method => :post do
+= form_tag professores_url(@professor), :method => :put do
 
   = label :professor, :nome, 'Nome*'
   = text_field :professor, :nome
@@ -11,6 +11,6 @@
   = label :professor, :sala, 'Sala*'
   = text_field :professor, :sala
 
-  = submit_tag 'Salvar'
+  = submit_tag 'Editar'
 
 = link_to 'voltar', professores_url

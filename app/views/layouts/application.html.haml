@@ -5,6 +5,10 @@
     = javascript_include_tag 'application'
     = csrf_meta_tags
 
-  %body
+  %body  
+  - if flash[:sucesso]
+    #notice.message= flash[:sucesso]
+  - elsif flash[:aviso]
+    #warning.message= flash[:aviso]    
     #main
-      = yield
+  = yield
