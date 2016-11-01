@@ -1,0 +1,22 @@
+-#  This file is app/views/movies/index.html.haml
+%h1 Candidatos
+
+%table#candidatos
+	%thead
+		%tr
+			%th Nome
+			%th Matricula
+			%th Tipo de Monitoria
+			%th Semestre
+			%th Prioridade
+	%tbody
+	- @candidatos.each do |candidato|
+		%tr
+			%td= candidato.nome
+			%td= candidato.matricula
+			%td= candidato.monitoria
+			%td= candidato.semestre
+			%td= candidato.prioridade
+			%td= link_to "Detalhes de #{candidato.nome}", candidato_path(candidato)
+
+= link_to "Inserir Candidato", new_candidato_path

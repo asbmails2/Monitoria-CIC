@@ -1,0 +1,20 @@
+%h2 Classificar Prioridade do Candidato
+
+= form_tag candidato_path(@candidato), :method => :put do
+
+		= label :candidato, :nome, 'Nome'
+		= text_field :candidato, :nome
+
+		= label :candidato, :matricula, 'Matrícula'
+		= text_field :candidato, :matricula
+
+		= label :candidato, :monitoria, 'Tipo de monitoria'
+		= select :candidato, :monitoria, ['Voluntaria','Remunerada']
+
+		= label :candidato, :semestre, 'Cursa qual semestre'
+		= select :candidato, :semestre, [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
+
+		= label :candidato, :prioridade, 'Prioridade do Candidato'
+		= select :candidato, :prioridade, [1,2,3,4,5,6,7,8,9,10]
+
+		= submit_tag 'Salvar'

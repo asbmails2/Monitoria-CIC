@@ -1,0 +1,25 @@
+
+-# in app/views/movies/show.html.haml
+
+%h2 Detalhes de #{@candidato.nome}
+
+%ul#details
+	%li
+		Nome:
+		= @candidato.nome
+	%li
+		Matricula:
+		= @candidato.matricula
+	%li
+		Semestre:
+		= @candidato.semestre
+	%li
+		Tipo de Monitoria:
+		= @candidato.monitoria
+	%li
+		Prioridade:
+		= @candidato.prioridade
+
+= link_to 'Classificar candidato', edit_candidato_path(@candidato)
+= link_to 'Excluir candidato', candidato_path(@candidato), :method => :delete
+= link_to 'Voltar', candidatos_path
