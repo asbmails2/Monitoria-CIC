@@ -10,7 +10,7 @@
 
   = label :professor, :sala, 'Sala*'
   = text_field :professor, :sala
+  <br />
+  = image_submit_tag('salvar.png')
 
-  = submit_tag 'Salvar'
-
-= link_to 'voltar', professores_url
+= link_to image_tag('voltar.png'), professores_url

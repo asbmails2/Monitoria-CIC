@@ -1,6 +1,6 @@
 %h1 Editar Professor
 
-= form_tag professores_url(@professor), :method => :put do
+= form_tag professore_url(@professor), :method => :put do
 
   = label :professor, :nome, 'Nome*'
   = text_field :professor, :nome
@@ -10,7 +10,7 @@
 
   = label :professor, :sala, 'Sala*'
   = text_field :professor, :sala
+  <br />
+  = image_submit_tag('salvar.png')
 
-  = submit_tag 'Editar'
-
-= link_to 'voltar', professores_url
+= link_to image_tag('voltar.png'), professores_url

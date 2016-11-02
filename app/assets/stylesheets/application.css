@@ -5,6 +5,7 @@ html, body {
   color: DarkSlateGrey;
   font-family: Tahoma, Verdana, sans-serif;
   font-size: 10pt;
+  text-align: center;
 }
 div#main {
   margin: 0;
@@ -34,9 +35,9 @@ h1.title {
   font-style: normal;
 }
 table#disciplinas {
-  margin: 10px;
+  text-align: center;
+  margin: 0 auto;
   border-collapse: collapse;
-  width: 100%;
   border-bottom: 2px solid black;
 }
 table#disciplinas th {
@@ -46,7 +47,7 @@ table#disciplinas th {
 }
 table#disciplinas th, table#disciplinas td {
   padding: 4px;
-  text-align: left;
+  text-align: center;
 }
 #notice, #warning {
   background: rosybrown;
@@ -60,17 +61,18 @@ form label {
   color: maroon;
 }
 table#professors {
-  margin: 10px;
+  text-align: center;
+  margin: 0 auto;
   border-collapse: collapse;
-  width: 100%;
   border-bottom: 2px solid black;
 }
 table#professors th {
+  text-align: center;
   border: 2px solid white;
   font-weight: bold;
   background-color: wheat;
 }
 table#professors th, table#professors td {
   padding: 4px;
-  text-align: left;
+  text-align: center;
 }

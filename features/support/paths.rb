@@ -19,8 +19,17 @@ module NavigationHelpers
     when /^the Monitoria CiC home page/
       '/'
 
+    when /^the Professores page/
+      '/professores'
+
     when /^the Cadastrar Professor page/
       '/professores/new'
+
+    when /^the Show Professor 2 page/
+      '/professores/2'
+
+    when /^the Editar Professor 2 page/
+      '/professores/2/edit'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

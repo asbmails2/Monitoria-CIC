@@ -10,10 +10,8 @@ disciplinas.each do |disciplina|
 end
 
 professores = [
-  {:nome => 'Professor 1', :email => "professor1@unb.br", :sala => "Sala A1-1-1"}
-]
-professores = [
-  {:nome => 'Professor 2', :email => "professor2@unb.br", :sala => "Sala A1-1-2"}
+  {:nome => 'Professor 1', :email => "professor1@unb.br", :sala => "Sala A1-1-1"},
+  {:nome => 'Professor 2', :email => "professor2@unb.br", :sala => "Sala A2-2-2"}
 ]
 
 professores.each do |professor|
