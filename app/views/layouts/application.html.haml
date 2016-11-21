@@ -1,3 +1,28 @@
+%nav.navbar.navbar-default{:role => "navigation"}
+  .container-fluid
+
+    .navbar-header
+      %button.navbar-toggle{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-barQ
+      %a.navbar-brand{:href => "/"} Monitoria CIC
+
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li
+          %a{:href => professores_url} Professores
+        %li
+          %a{:href => disciplinas_url} Disciplinas   
+        %li
+          %a{:href => disciplinas_url} Inscrição de candidatos 
+        %li
+          %a{:href => disciplinas_url} Gerência de bolsas    
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a{:href => "#"} Login
+        
 %html
   %head
     %title Monitoria CIC
@@ -12,3 +37,5 @@
     #warning.message= flash[:aviso]    
     #main
   = yield
+
+

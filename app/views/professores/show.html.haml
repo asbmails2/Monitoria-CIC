@@ -7,7 +7,8 @@
   %li
     Sala:
     = @professor.sala
-
+    
+%br
 = link_to image_tag('voltar.png'), professores_url
 = link_to image_tag('editar.png'), edit_professore_url(@professor)
 = link_to image_tag('deletar.png'), professore_url(@professor), :method => :delete

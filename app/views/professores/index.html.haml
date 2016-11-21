@@ -1,4 +1,4 @@
-%h1 Professores
+%h2 Professores
 %table#professors
   %thead
     %tr
@@ -13,4 +13,5 @@
         %td= professor.sala
         - #Icones <div>Icons made by <a href="http://www.flaticon.com/authors/flat-icons" title="Flat Icons">Flat Icons</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
-=link_to "Cadastrar Professor", new_professore_url
+%br
+= link_to image_tag('adicionar.png'), new_professore_url
