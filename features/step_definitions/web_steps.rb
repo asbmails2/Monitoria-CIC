@@ -57,11 +57,13 @@ When /^(?:|I )press input "Salvar"$/ do
   find(:xpath, "//input[contains(@alt, 'Salvar')]").click
 end
 
-When /^(?:|I )press image "([^"]*)"$/ do |button|
+When /^(?:|I )press the image "([^"]*)"$/ do |button|
   if button == 'Editar'
     click_link('Editar')
   elsif button == 'Deletar'
     click_link('Deletar')
+  elsif button == 'Cadastrar Professor'
+    click_link('Adicionar')
   end
 end
 
