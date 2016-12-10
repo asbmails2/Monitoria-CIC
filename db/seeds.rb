@@ -1,12 +1,21 @@
 disciplinas = [
   {:nome => 'Disciplina 1', :codigo => 'cic01',
-    :professor => 'Professor 1'},
+    :professor => 'Professor 1', :vagas => 3},
   {:nome => 'Disciplina 2', :codigo => 'cic02',
-    :professor => 'Professor 2'}
+    :professor => 'Professor 2', :vagas => 2}
 ]
 
 disciplinas.each do |disciplina|
   Disciplina.create!(disciplina)
+end
+
+ofertas = [
+  {:nome => 'Disciplina 1', :codigo => 'cic01'},
+  {:nome => 'Disciplina 2', :codigo => 'cic02'}
+]
+
+ofertas.each do |oferta|
+  Oferta.create!(oferta)
 end
 
 professores = [
