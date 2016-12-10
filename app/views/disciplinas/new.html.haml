@@ -1,0 +1,19 @@
+%h2 Cadastrar Disciplinas
+
+= form_tag disciplinas_url, :method => :post do
+
+  = label :disciplina, :nome, 'Nome'
+  = text_field :disciplina, :nome
+
+  = label :disciplina, :codigo, 'Código'
+  = text_field :disciplina, :codigo
+
+  = label :disciplina, :professor, 'Professor'
+  - professor_lista = []
+  - @professores.each do |professor|
+    - professor_lista += [professor.nome]
+  = select :disciplina, :professor, professor_lista
+
+  = submit_tag 'Salvar'
+
+= link_to 'voltar', disciplinas_path

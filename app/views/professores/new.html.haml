@@ -1,0 +1,17 @@
+%h2 Cadastrar Professor
+
+= form_tag professores_url, :method => :post do
+
+  = label :professor, :nome, 'Nome*'
+  = text_field :professor, :nome
+
+  = label :professor, :email, 'Email*'
+  = text_field :professor, :email
+
+  = label :professor, :sala, 'Sala*'
+  = text_field :professor, :sala
+  %br
+  %br
+  = link_to image_tag('voltar.png'), professores_url
+  = image_submit_tag('salvar.png')
+    
