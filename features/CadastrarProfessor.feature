@@ -3,7 +3,7 @@ Feature: Cadastrar professor da disciplina
 #if ($Cadastrar Professor Happy Path GUI)
 Scenario: Cadastrar Professor Happy Path GUI
 	Given I am on the Professores page
-	When I follow "Cadastrar Professor"
+	When I press the image "Cadastrar Professor"
 	Then I should be on the Cadastrar Professor page
 	When I fill in "Nome*" with "Professor 3"
 	When I fill in "Email*" with "professor3@unb.br"
@@ -18,7 +18,7 @@ Scenario: Editar Professor Happy Path GUI
 	Given I am on the Professores page
 	When I follow the link containing the "Professor 2"
 	Then I should be on the Show Professor 2 page
-	And I press image "Editar"
+	And I press the image "Editar"
 	Then I should be on the Editar Professor 2 page
 	When I fill in "Nome*" with "Professor 2.1"
 	And I press input "Salvar"
@@ -31,7 +31,7 @@ Scenario: Remover Professor Happy Path GUI
 	Given I am on the Professores page
 	When I follow the link containing the "Professor 2"
 	Then I should be on the Show Professor 2 page
-	When I press image "Deletar"
+	When I press the image "Deletar"
 	Then I should be on the Professores page
 	And I should see "Professor Professor 2 removido com sucesso."
 #end
@@ -39,7 +39,7 @@ Scenario: Remover Professor Happy Path GUI
 #if ($Cadastrar Professor Sad Path Controller)
 Scenario: Cadastrar Professor Existente - Sad Path (Controller)
 	Given I am on the Professores page
-	When I follow "Cadastrar Professor"
+	When I press the image "Cadastrar Professor"
 	Then I should be on the Cadastrar Professor page
 	When I fill in "Nome*" with "Professor 1"
 	When I fill in "Email*" with "professor1@unb.br"
@@ -54,7 +54,7 @@ Scenario: Editar Professor Existente - Sad Path (Controller)
 	Given I am on the Professores page
 	When I follow the link containing the "Professor 2"
 	Then I should be on the Show Professor 2 page
-	And I press image "Editar"
+	And I press the image "Editar"
 	Then I should be on the Editar Professor 2 page
 	When I fill in "Nome*" with "Professor 1"
 	When I fill in "Email*" with "professor1@unb.br"
