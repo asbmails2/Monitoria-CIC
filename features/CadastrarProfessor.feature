@@ -58,6 +58,7 @@ Scenario: Editar Professor Existente - Sad Path (Controller)
 	Then I should be on the Editar Professor 2 page
 	When I fill in "Nome*" with "Professor 1"
 	When I fill in "Email*" with "professor1@unb.br"
+	When I fill in "Sala*" with "Sala A1-1-1"
 	And I press input "Salvar"
 	Then I should be on the Professores page
 	And I should see "O professor Professor 1 não foi modificado pois já existe."
