@@ -1,0 +1,992 @@
+Started GET "/disciplinas" for ::1 at 2016-12-12 20:48:47 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
+activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (280.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CriarProfessor (20161101132911)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "professors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "email" varchar, "sala" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161101132911"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDisciplinas (20161210121327)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "disciplinas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "codigo" varchar, "professor" varchar, "vagas" decimal, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161210121327"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateOferta (20161210121345)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "oferta" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "codigo" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161210121345"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-12-12 22:49:23 UTC], ["updated_at", 2016-12-12 22:49:23 UTC]]
+  [1m[35m (37.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/disciplinas" for ::1 at 2016-12-12 20:49:32 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  Rendered disciplinas/index.html.haml within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Illegal element: classes and ids must have values.):
+     5:     %tr
+     6:       %th Nome da Disciplina
+     7:       %th Código
+     8:       #%th Professor
+     9:   %tbody
+    10:     - @disciplinas.each do |disciplina|
+    11:       %tr
+  
+app/views/disciplinas/index.html.haml:8
+  Rendering /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (96.2ms)
+Started GET "/disciplinas" for ::1 at 2016-12-12 20:51:34 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (942.6ms)
+Completed 200 OK in 1135ms (Views: 1129.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 20:51:37 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 30ms (Views: 27.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 20:51:39 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.6ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 37ms (Views: 34.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 20:51:40 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 56ms (Views: 54.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 20:51:51 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 39ms (Views: 36.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 20:51:52 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professores" for ::1 at 2016-12-12 20:51:53 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 64ms (Views: 57.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 20:51:53 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 48ms (Views: 45.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 20:54:07 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (27.5ms)
+Completed 200 OK in 136ms (Views: 127.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 20:54:08 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (13.3ms)
+Completed 200 OK in 76ms (Views: 70.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professores" for ::1 at 2016-12-12 20:54:08 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 89ms (Views: 31.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professores" for ::1 at 2016-12-12 21:02:00 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.0.1) lib/active_record/migration.rb:572:in `check_pending!'
+activerecord (5.0.0.1) lib/active_record/migration.rb:548:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.1ms)
+  Rendering /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddColumnDisciplinaToDisciplina (20161212173254)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (22.4ms)[0m  [1m[35mALTER TABLE "disciplinas" ADD "disciplina" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161212173254"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddColumnProfessorToProfessor (20161212181453)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "professors" ADD "professor" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161212181453"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/professores" for ::1 at 2016-12-12 21:03:05 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (27.6ms)
+Completed 200 OK in 255ms (Views: 112.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/professores" for ::1 at 2016-12-12 21:03:08 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 21:03:10 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 64ms (Views: 28.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/professores" for ::1 at 2016-12-12 21:03:11 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 36ms (Views: 32.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 21:03:12 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.4ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professores" for ::1 at 2016-12-12 21:03:12 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 32ms (Views: 28.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 21:03:13 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (70.5ms)
+Completed 200 OK in 305ms (Views: 302.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/disciplinas/import" for ::1 at 2016-12-12 21:03:41 -0200
+Processing by DisciplinasController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"quA8bnAqNKNbFAvSBZq+UslqwVrKJumM7465iUBxLtDspyv8qwIKK6EjecaspE/KV9YEClEHeUktN4HKQxbHZg==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007fcb2616bf90 @tempfile=#<Tempfile:/var/folders/k7/xpcqqlz97gq63853qyclh9r80000gn/T/RackMultipart20161212-16569-1azovw1.csv>, @original_filename="oferta_CIC.csv", @content_type="text/csv", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"oferta_CIC.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Importar Disciplinas"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (30.6ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "ALGORITMOS E PROGRAMAÇÃO DE COMPUTADORES"], ["codigo", "113476"], ["created_at", 2016-12-12 23:03:41 UTC], ["updated_at", 2016-12-12 23:03:41 UTC]]
+  [1m[35m (355.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (256.1ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "ARQUITETURA DE PROCESSADORES DIGITAIS"], ["codigo", "117251"], ["created_at", 2016-12-12 23:03:42 UTC], ["updated_at", 2016-12-12 23:03:42 UTC]]
+  [1m[35m (292.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (110.6ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "AUTÔMATOS E COMPUTABILIDADE"], ["codigo", "116882"], ["created_at", 2016-12-12 23:03:42 UTC], ["updated_at", 2016-12-12 23:03:42 UTC]]
+  [1m[35m (435.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (396.0ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "BANCOS DE DADOS"], ["codigo", "116378"], ["created_at", 2016-12-12 23:03:43 UTC], ["updated_at", 2016-12-12 23:03:43 UTC]]
+  [1m[35m (219.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (190.4ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "CIRCUITOS DIGITAIS"], ["codigo", "116351"], ["created_at", 2016-12-12 23:03:44 UTC], ["updated_at", 2016-12-12 23:03:44 UTC]]
+  [1m[35m (251.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (102.0ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "ENGENHARIA DE SOFTWARE"], ["codigo", "116441"], ["created_at", 2016-12-12 23:03:44 UTC], ["updated_at", 2016-12-12 23:03:44 UTC]]
+  [1m[35m (396.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (81.8ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "ESTÁGIO SUPERVISIONADO EM ENGENHARIA DE COMPUTAÇÃO 1"], ["codigo", "207438"], ["created_at", 2016-12-12 23:03:45 UTC], ["updated_at", 2016-12-12 23:03:45 UTC]]
+  [1m[35m (433.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (42.8ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "ESTÁGIO SUPERVISIONADO EM ENGENHARIA DE COMPUTAÇÃO 2"], ["codigo", "207314"], ["created_at", 2016-12-12 23:03:46 UTC], ["updated_at", 2016-12-12 23:03:46 UTC]]
+  [1m[35m (652.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (482.2ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "ESTRUTURAS DE DADOS"], ["codigo", "116319"], ["created_at", 2016-12-12 23:03:46 UTC], ["updated_at", 2016-12-12 23:03:46 UTC]]
+  [1m[35m (569.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (167.9ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "ESTUDOS EM COMPUTACAO MULTIMIDIA"], ["codigo", "116521"], ["created_at", 2016-12-12 23:03:47 UTC], ["updated_at", 2016-12-12 23:03:47 UTC]]
+  [1m[35m (232.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (141.9ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "ESTUDOS EM INTELIGENCIA ARTIFICIAL"], ["codigo", "116661"], ["created_at", 2016-12-12 23:03:48 UTC], ["updated_at", 2016-12-12 23:03:48 UTC]]
+  [1m[35m (188.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "ESTUDOS EM SISTEMAS DE COMPUTACAO"], ["codigo", "116629"], ["created_at", 2016-12-12 23:03:48 UTC], ["updated_at", 2016-12-12 23:03:48 UTC]]
+  [1m[35m (113.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (83.0ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "ESTUDOS EM SISTEMAS DE INFORMACAO"], ["codigo", "116734"], ["created_at", 2016-12-12 23:03:48 UTC], ["updated_at", 2016-12-12 23:03:48 UTC]]
+  [1m[35m (221.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (83.8ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "FORMAÇÃO DOCENTE EM COMPUTAÇÃO"], ["codigo", "113492"], ["created_at", 2016-12-12 23:03:49 UTC], ["updated_at", 2016-12-12 23:03:49 UTC]]
+  [1m[35m (123.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (197.8ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "FUNDAMENTOS COMPUTACIONAIS DE ROBÓTICA"], ["codigo", "200379"], ["created_at", 2016-12-12 23:03:49 UTC], ["updated_at", 2016-12-12 23:03:49 UTC]]
+  [1m[35m (136.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (51.5ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "FUNDAMENTOS TEÓRICOS DA COMPUTAÇÃO"], ["codigo", "113450"], ["created_at", 2016-12-12 23:03:49 UTC], ["updated_at", 2016-12-12 23:03:49 UTC]]
+  [1m[35m (133.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (112.4ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "GERÊNCIA E SEGURANÇA DE REDES"], ["codigo", "204331"], ["created_at", 2016-12-12 23:03:49 UTC], ["updated_at", 2016-12-12 23:03:49 UTC]]
+  [1m[35m (283.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "INFORMATICA E SOCIEDADE"], ["codigo", "116726"], ["created_at", 2016-12-12 23:03:50 UTC], ["updated_at", 2016-12-12 23:03:50 UTC]]
+  [1m[35m (302.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (118.6ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "INTRODUCAO A CIENCIA DA COMPUTACAO"], ["codigo", "113913"], ["created_at", 2016-12-12 23:03:50 UTC], ["updated_at", 2016-12-12 23:03:50 UTC]]
+  [1m[35m (378.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (242.0ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "INTRODUÇÃO À ENGENHARIA DE COMPUTAÇÃO"], ["codigo", "117528"], ["created_at", 2016-12-12 23:03:51 UTC], ["updated_at", 2016-12-12 23:03:51 UTC]]
+  [1m[35m (476.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (13.2ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "INTRODUCAO A MICROINFORMATICA"], ["codigo", "116793"], ["created_at", 2016-12-12 23:03:51 UTC], ["updated_at", 2016-12-12 23:03:51 UTC]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "INTRODUÇÃO À PROGRAMAÇÃO PARALELA"], ["codigo", "117315"], ["created_at", 2016-12-12 23:03:51 UTC], ["updated_at", 2016-12-12 23:03:51 UTC]]
+  [1m[35m (30.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.1ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "INTRODUÇÃO AOS SISTEMAS COMPUTACIONAIS"], ["codigo", "113468"], ["created_at", 2016-12-12 23:03:51 UTC], ["updated_at", 2016-12-12 23:03:51 UTC]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "LINGUAGENS DE PROGRAMACAO"], ["codigo", "116343"], ["created_at", 2016-12-12 23:03:51 UTC], ["updated_at", 2016-12-12 23:03:51 UTC]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "LÓGICA COMPUTACIONAL 1"], ["codigo", "117366"], ["created_at", 2016-12-12 23:03:51 UTC], ["updated_at", 2016-12-12 23:03:51 UTC]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (17.4ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "MÉTODOS DE PROGRAMAÇÃO"], ["codigo", "201600"], ["created_at", 2016-12-12 23:03:51 UTC], ["updated_at", 2016-12-12 23:03:51 UTC]]
+  [1m[35m (63.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "MODELAGEM ORIENTADA A OBJETOS"], ["codigo", "117196"], ["created_at", 2016-12-12 23:03:52 UTC], ["updated_at", 2016-12-12 23:03:52 UTC]]
+  [1m[35m (21.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (15.9ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "NOCOES DE SISTEMAS OPERACIONAIS"], ["codigo", "116068"], ["created_at", 2016-12-12 23:03:52 UTC], ["updated_at", 2016-12-12 23:03:52 UTC]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "ORGANIZAÇÃO DE ARQUIVOS"], ["codigo", "116327"], ["created_at", 2016-12-12 23:03:52 UTC], ["updated_at", 2016-12-12 23:03:52 UTC]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "ORGANIZACAO E ARQUITETURA DE COMPUTADORES"], ["codigo", "116394"], ["created_at", 2016-12-12 23:03:52 UTC], ["updated_at", 2016-12-12 23:03:52 UTC]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (8.5ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "PROCESSAMENTO DE SINAIS MULTIMÍDIA"], ["codigo", "117609"], ["created_at", 2016-12-12 23:03:52 UTC], ["updated_at", 2016-12-12 23:03:52 UTC]]
+  [1m[35m (27.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (7.7ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "PROCESSAMENTO EM TEMPO REAL"], ["codigo", "116599"], ["created_at", 2016-12-12 23:03:52 UTC], ["updated_at", 2016-12-12 23:03:52 UTC]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "PROJETO DE LICENCIATURA"], ["codigo", "116840"], ["created_at", 2016-12-12 23:03:52 UTC], ["updated_at", 2016-12-12 23:03:52 UTC]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "PROJETO DE LICENCIATURA 1"], ["codigo", "116891"], ["created_at", 2016-12-12 23:03:52 UTC], ["updated_at", 2016-12-12 23:03:52 UTC]]
+  [1m[35m (17.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "PROJETO DE LICENCIATURA 2"], ["codigo", "116904"], ["created_at", 2016-12-12 23:03:52 UTC], ["updated_at", 2016-12-12 23:03:52 UTC]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "PROJETO E ANÁLISE DE ALGORITMOS"], ["codigo", "117536"], ["created_at", 2016-12-12 23:03:52 UTC], ["updated_at", 2016-12-12 23:03:52 UTC]]
+  [1m[35m (11.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (6.0ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "PROJETO FINAL EM ENGENHARIA DE COMPUTAÇÃO 1"], ["codigo", "207322"], ["created_at", 2016-12-12 23:03:52 UTC], ["updated_at", 2016-12-12 23:03:52 UTC]]
+  [1m[35m (77.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (18.4ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "PROJETO FINAL EM ENGENHARIA DE COMPUTAÇÃO 2"], ["codigo", "207331"], ["created_at", 2016-12-12 23:03:52 UTC], ["updated_at", 2016-12-12 23:03:52 UTC]]
+  [1m[35m (13.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "REDES DE COMPUTADORES"], ["codigo", "116572"], ["created_at", 2016-12-12 23:03:52 UTC], ["updated_at", 2016-12-12 23:03:52 UTC]]
+  [1m[35m (45.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (13.1ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "SEGURANCA DE DADOS"], ["codigo", "116530"], ["created_at", 2016-12-12 23:03:52 UTC], ["updated_at", 2016-12-12 23:03:52 UTC]]
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.4ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "SINAIS E SISTEMAS"], ["codigo", "206075"], ["created_at", 2016-12-12 23:03:52 UTC], ["updated_at", 2016-12-12 23:03:52 UTC]]
+  [1m[35m (669.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (104.9ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "SISTEMAS DE INFORMACAO"], ["codigo", "116416"], ["created_at", 2016-12-12 23:03:53 UTC], ["updated_at", 2016-12-12 23:03:53 UTC]]
+  [1m[35m (365.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (31.2ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "SISTEMAS DIGITAIS INTEGRADOS"], ["codigo", "117391"], ["created_at", 2016-12-12 23:03:53 UTC], ["updated_at", 2016-12-12 23:03:53 UTC]]
+  [1m[35m (32.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (7.3ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "SISTEMAS OPERACIONAIS"], ["codigo", "116467"], ["created_at", 2016-12-12 23:03:53 UTC], ["updated_at", 2016-12-12 23:03:53 UTC]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (21.9ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "SOFTWARE BASICO"], ["codigo", "116432"], ["created_at", 2016-12-12 23:03:53 UTC], ["updated_at", 2016-12-12 23:03:53 UTC]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (10.3ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "TECNICAS DE PROGRAMAÇÃO 1"], ["codigo", "117889"], ["created_at", 2016-12-12 23:03:53 UTC], ["updated_at", 2016-12-12 23:03:53 UTC]]
+  [1m[35m (37.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (38.9ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "TELEINFORMÁTICA E REDES 1"], ["codigo", "204315"], ["created_at", 2016-12-12 23:03:53 UTC], ["updated_at", 2016-12-12 23:03:53 UTC]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (25.5ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "TELEINFORMÁTICA E REDES 2"], ["codigo", "204323"], ["created_at", 2016-12-12 23:03:53 UTC], ["updated_at", 2016-12-12 23:03:53 UTC]]
+  [1m[35m (125.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.6ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "TEORIA DA COMPUTACAO"], ["codigo", "116360"], ["created_at", 2016-12-12 23:03:54 UTC], ["updated_at", 2016-12-12 23:03:54 UTC]]
+  [1m[35m (136.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "TEORIA E PRATICA PEDAGOGICA EM INFORMATICA 1"], ["codigo", "116823"], ["created_at", 2016-12-12 23:03:54 UTC], ["updated_at", 2016-12-12 23:03:54 UTC]]
+  [1m[35m (459.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (18.0ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "TEORIA E PRATICA PEDAGOGICA EM INFORMATICA 2"], ["codigo", "116831"], ["created_at", 2016-12-12 23:03:54 UTC], ["updated_at", 2016-12-12 23:03:54 UTC]]
+  [1m[35m (309.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "TOPICOS AVANCADOS EM COMPUTADORES"], ["codigo", "116297"], ["created_at", 2016-12-12 23:03:55 UTC], ["updated_at", 2016-12-12 23:03:55 UTC]]
+  [1m[35m (129.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "TRABALHO DE GRADUACAO"], ["codigo", "116475"], ["created_at", 2016-12-12 23:03:55 UTC], ["updated_at", 2016-12-12 23:03:55 UTC]]
+  [1m[35m (323.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (317.8ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "TRABALHO DE GRADUAÇÃO 1"], ["codigo", "116912"], ["created_at", 2016-12-12 23:03:55 UTC], ["updated_at", 2016-12-12 23:03:55 UTC]]
+  [1m[35m (315.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (186.6ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "TRABALHO DE GRADUAÇÃO 2"], ["codigo", "116921"], ["created_at", 2016-12-12 23:03:56 UTC], ["updated_at", 2016-12-12 23:03:56 UTC]]
+  [1m[35m (372.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (135.9ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "TRADUTORES"], ["codigo", "116459"], ["created_at", 2016-12-12 23:03:56 UTC], ["updated_at", 2016-12-12 23:03:56 UTC]]
+  [1m[35m (325.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (203.5ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "TRANSMISSÃO DE DADOS"], ["codigo", "116424"], ["created_at", 2016-12-12 23:03:57 UTC], ["updated_at", 2016-12-12 23:03:57 UTC]]
+  [1m[35m (614.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/disciplinas
+Completed 302 Found in 16325ms (ActiveRecord: 14941.3ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 21:03:58 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (23.6ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (316.5ms)
+Completed 200 OK in 945ms (Views: 743.1ms | ActiveRecord: 23.6ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 21:04:06 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.7ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (10.2ms)
+Completed 200 OK in 47ms (Views: 44.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/professores" for ::1 at 2016-12-12 21:04:08 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 79ms (Views: 31.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/professores/import" for ::1 at 2016-12-12 21:04:18 -0200
+Processing by ProfessoresController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5w9R39Wi87bE261hU5roCcg4ccwZQmBc4+K1GRO26V2hSEZNDorNPj7s33X6pBmRVoS0nIJj8JkhW41aENEA6w==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007fcb249358b8 @tempfile=#<Tempfile:/var/folders/k7/xpcqqlz97gq63853qyclh9r80000gn/T/RackMultipart20161212-16569-lgmc58.csv>, @original_filename="lista_professores.csv", @content_type="text/csv", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"lista_professores.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Importar Professores"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "ALBA CRISTINA MAGALHAES ALVES DE MELO"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "ALETEIA PATRICIA FAVACHO DE ARAUJO VON PAUMGARTTEN"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "ALETEIA PATRICIA FAVACHO DE ARAUJO VON PAUMGARTTEN e EDUARDO ADILIO PELINSON ALCHIERI"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "ALEXANDRE ZAGHETTO"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "ALEXANDRE ZAGHETTO e ANDR\\\\\\\\xc9 COSTA DRUMMOND"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "ALEXANDRE ZAGHETTO e CARLA DENISE CASTANHO"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "ANDR\\\\\\\\xc9 COSTA DRUMMOND"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "ANDR\\\\\\\\xc9 COSTA DRUMMOND e EDISON ISHIKAWA"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "BRUNO LUIGGI MACCHIAVELLO ESPINOZA"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "BRUNO LUIGGI MACCHIAVELLO ESPINOZA e MARCELO GRANDI MANDELLI"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "CARLA DENISE CASTANHO"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "CARLA MARIA CHAGAS E CAVALCANTE KOIKE"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "CARLA MARIA CHAGAS E CAVALCANTE KOIKE e MARCELO GRANDI MANDELLI"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "CARLA MARIA CHAGAS E CAVALCANTE KOIKE e WILSON HENRIQUE VENEZIANO"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "CELIA GHEDINI RALHA"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "CLAUDIA NALON"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "DANIEL DA SILVA SOUZA"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "DIBIO LEANDRO BORGES"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "EDGARD COSTA OLIVEIRA e EDISON ISHIKAWA e MARCIO DE CARVALHO VICTORINO e MARIA DE FATIMA RAMOS BRANDAO"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "EDISON ISHIKAWA"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "EDISON ISHIKAWA e PRISCILA AMERICA SOLIS MENDEZ BARRETO"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "EDUARDO ADILIO PELINSON ALCHIERI"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "FERNANDA LIMA"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "FERNANDO ANTONIO DE ARAUJO CHACON DE ALBUQUERQUE"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "FLAVIO DE BARROS VIDAL"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "FLAVIO JOS\\\\\\\\xc9 FERRO BARROS"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "FLAVIO LEONARDO CAVALCANTI DE MOURA"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "FRANCISCO DE ASSIS CARTAXO PINHEIRO"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "GENAINA NUNES RODRIGUES"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "GEORGE LUIZ MEDEIROS TEODORO"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "GEOVANY ARAUJO BORGES"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "GERMANA MENEZES DA NOBREGA"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "GERSON HENRIQUE PFITSCHER"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "GUILHERME NOVAES RAMOS"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "JACIR LUIZ BORDIM"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "JAN MENDONCA CORREA"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "JORGE CARLOS LUCERO"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "JORGE HENRIQUE CABRAL FERNANDES"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "JO\\\\\\\\xc3O JOS\\\\\\\\xc9 COSTA GONDIM"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "LETICIA LOPES LEITE"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "LETICIA LOPES LEITE e MARIA DE FATIMA RAMOS BRANDAO"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "LI WEIGANG"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "MARCELO GRANDI MANDELLI"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "MARCELO GRANDI MANDELLI e WILSON HENRIQUE VENEZIANO"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "MARCELO LADEIRA"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "MARCOS FAGUNDES CAETANO"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "MARCUS VINICIUS LAMAR"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "MARIA DE FATIMA RAMOS BRANDAO"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "MARIA EMILIA MACHADO TELLES WALTER"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "MARISTELA TERTO DE HOLANDA"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "MAURICIO AYALA RINCON"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "MYLENE CHRISTINE QUEIROZ DE FARIAS"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "PEDRO ANTONIO DOURADO DE REZENDE"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "PEDRO DE AZEVEDO BERGER"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "PRISCILA AMERICA SOLIS MENDEZ BARRETO"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "RAFAEL MARCONI RAMOS"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "RAFAEL TIMOTEO DE SOUSA JUNIOR"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "RICARDO LOPES DE QUEIROZ"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "RICARDO PEZZUOL JACOBI"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "RICARDO ZELENOVSKY"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "RODRIGO BONIF\\\\\\\\xc1CIO DE ALMEIDA"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "VANDER RAMOS ALVES"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "WILSON HENRIQUE VENEZIANO"], ["created_at", 2016-12-12 23:04:18 UTC], ["updated_at", 2016-12-12 23:04:18 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/professores
+Completed 302 Found in 271ms (ActiveRecord: 152.0ms)
+
+
+Started GET "/professores" for ::1 at 2016-12-12 21:04:18 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.5ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (13.6ms)
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/professores" for ::1 at 2016-12-12 21:04:30 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.5ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (13.0ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-12-12 21:04:39 -0200
+Started GET "/home" for ::1 at 2016-12-12 21:04:39 -0200
+Processing by HomeController#index as HTML
+Completed 406 Not Acceptable in 48ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (HomeController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.0.0.1) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
+actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.0.1) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.0.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.0.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.0.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.0.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/felipemagalhaes/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (100.4ms)
+Started GET "/professores" for ::1 at 2016-12-12 21:04:43 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (13.9ms)
+Completed 200 OK in 42ms (Views: 39.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professores" for ::1 at 2016-12-12 21:04:44 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (15.5ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 21:05:05 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.5ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 21:09:27 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.5ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (27.4ms)
+Completed 200 OK in 161ms (Views: 143.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 21:09:29 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.4ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 21:09:30 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.5ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (24.0ms)
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 21:09:31 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.4ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professores" for ::1 at 2016-12-12 21:09:32 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.6ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (15.5ms)
+Completed 200 OK in 82ms (Views: 39.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 21:09:34 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.5ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (10.6ms)
+Completed 200 OK in 48ms (Views: 44.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 21:10:36 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.8ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (15.4ms)
+Started GET "/disciplinas" for ::1 at 2016-12-12 21:10:36 -0200
+Processing by DisciplinasController#index as HTML
+Started GET "/professores" for ::1 at 2016-12-12 21:10:36 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+Completed 200 OK in 132ms (Views: 129.7ms | ActiveRecord: 0.8ms)
+
+
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.4ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  [1m[36mProfessor Load (1.0ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (25.7ms)
+  Rendered professores/index.html.haml within layouts/application (24.2ms)
+Completed 200 OK in 85ms (Views: 81.7ms | ActiveRecord: 1.0ms)
+
+
+Completed 200 OK in 140ms (Views: 137.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 21:10:38 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.4ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 21:10:39 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.8ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (10.1ms)
+Completed 200 OK in 104ms (Views: 100.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 21:10:39 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.4ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 36ms (Views: 33.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 21:10:40 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.5ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (11.0ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 21:10:40 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.7ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (9.5ms)
+Completed 200 OK in 53ms (Views: 49.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 21:10:40 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.4ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (8.8ms)
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 21:10:41 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.4ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (9.6ms)
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professores" for ::1 at 2016-12-12 21:10:42 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (12.4ms)
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-12 21:10:42 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.4ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (9.7ms)
+Completed 200 OK in 36ms (Views: 32.9ms | ActiveRecord: 0.4ms)
+
+

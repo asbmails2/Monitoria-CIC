@@ -1,9 +1,14 @@
-
 MonitoriaCic::Application.routes.draw do
   resources :home
   root :to => redirect('/home')
-  resources :disciplinas
+  resources :disciplinas do
+  	collection { post :import }
+  end
   root :to => redirect('/disciplinas')
-  resources :professores
+  resources :professores do
+  	collection { post :import }
+  end
   root :to => redirect('/professores')
+
+  
 end
