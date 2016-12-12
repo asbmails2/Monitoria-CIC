@@ -1,0 +1,17 @@
+%h1 Editar Disciplina
+
+= form_tag disciplina_url(@disciplina), :method => :put do
+
+  = label :disciplina, :professor, 'Professor'
+  - professor_lista = []
+  - @professores.each do |professor|
+    - professor_lista += [professor.nome]
+  = select :disciplina, :professor, professor_lista
+
+  = label :disciplina, :vagas, 'Vagas'
+  = text_field :disciplina, :vagas
+
+  <br />
+  = image_submit_tag('salvar.png')
+
+= link_to image_tag('voltar.png'), disciplina_url
