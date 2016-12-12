@@ -26,3 +26,15 @@ professores = [
 professores.each do |professor|
   Professor.create!(professor)
 end
+
+candidatos = [
+	{:nome => 'Mateus Andrade', :matricula => '10123456', :monitoria =>'Remunerada', :semestre => 3, :prioridade => 0},
+	{:nome => 'Erick Medeiros', :matricula => '11123456', :monitoria =>'Voluntaria', :semestre => 4, :prioridade => 0},
+	{:nome => 'Simone Garcia', :matricula => '12123456', :monitoria =>'Voluntaria', :semestre => 5, :prioridade => 0},
+	{:nome => 'Jessica Esteves', :matricula => '13123456', :monitoria =>'Remunerada', :semestre => 6, :prioridade => 0}
+]
+
+candidatos.each do |candidato|
+	Candidato.create!(candidato)
+end
+

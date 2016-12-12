@@ -16,9 +16,9 @@
         %li
           %a{:href => disciplinas_url} Disciplinas   
         %li
-          %a{:href => disciplinas_url} Inscrição de candidatos 
+          %a{:href => candidatos_url} Inscrição de candidatos 
         %li
-          %a{:href => disciplinas_url} Gerência de bolsas    
+          %a{:href => "#"} Gerência de bolsas    
       %ul.nav.navbar-nav.navbar-right
         %li
           %a{:href => "#"} Login
@@ -31,6 +31,8 @@
     = csrf_meta_tags
 
   %body  
+  .span12 
+  .span4
   - if flash[:sucesso]
     #notice.message= flash[:sucesso]
   - elsif flash[:aviso]
