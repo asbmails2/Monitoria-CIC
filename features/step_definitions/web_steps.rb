@@ -64,6 +64,8 @@ When /^(?:|I )press the image "([^"]*)"$/ do |button|
     click_link('Deletar')
   elsif button == 'Cadastrar Professor'
     click_link('Adicionar')
+  elsif button == 'Cadastrar Candidato'
+    click_link('Adicionar')
   end
 end
 
@@ -102,6 +104,10 @@ When /^(?:|I )fill in the following:$/ do |fields|
 end
 
 When /^(?:|I )select "([^"]*)" from "([^"]*)"$/ do |value, field|
+  select(value, :from => field)
+end
+
+When /^(?:|I )select (\d+) from "([^"]*)"$/ do |value, field|
   select(value, :from => field)
 end
 

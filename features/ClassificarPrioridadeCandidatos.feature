@@ -1,30 +1,28 @@
-Feature: classificar candidatos por prioridade
+Feature: Classificar prioridade de candidato
 
+#if ($Classificar Prioridade de Candidato Happy Path GUI)
+Scenario: Classificar Prioridade Candidato Happy Path GUI
+	Given I am on the Candidatos page
+	When I follow the link containing the "Mateus Andrade"
+	Then I should be on the Show Mateus Andrade page
+	And I press the image "Editar"
+	Then I should be on the Editar Mateus Andrade page
+	When I select 8 from "Prioridade do Candidato"
+	And I press input "Salvar"
+	Then I should be on the Candidatos page
+	And I should see "Mateus Andrade foi editado com sucesso."
+#end
 
-	Como professor,
-	Quero classificar a prioridade dos alunos candidatos a monitoria,
-	pode envolver os candidatos voluntários e remunerados.
-	E assim selecionar os candidatos mais adequados.
-
-Background: candidatos in database
-
-  Given the following candidatos exist:
-  | nome | | matricula | | monitoria | | semestre | | prioridade |
-  | Mateus Andrade | | 10123456 | | Remunerada | | 3 | | 6 |
-  | Erick Medeiros | | 11123456 | | Voluntaria | | 4 | | 0 |
-  | Simone Garcia | | 12123456 | | Voluntaria | | 5 | | 0 |
-  | Jessica Esteves | | 13123456 | | Remunerada | | 6 | | 10 |
-
-Scenario: classificar prioridade do aluno
-  When I go to the edit page for "Erick Medeiros"
-  Then I should see "0"
-  And  I fill in "Prioridade" with "8"
-  And  I press "Salvar"
-  Then the prioridade of "Erick Medeiros" should be "0"
-
-Scenario: editar classificação de prioridade do aluno
-  Given I am on the details page for "Star Wars"
-  When  I follow "Find Movies With Same Director"
-  Then  I should be on the Similar Movies page for "Star Wars"
-  And   I should see "THX-1138"
-  But   I should not see "Blade Runner"
+#if ($Classificar Prioridade de Candidato Sad Path Controller)
+Scenario: Classificar Prioridade Candidato Existente - Sad Path (Controller)
+	Given I am on the Candidatos page
+	When I follow the link containing the "Mateus Andrade"
+	Then I should be on the Show Mateus Andrade page
+	And I press the image "Editar"
+	Then I should be on the Editar Mateus Andrade page
+	When I fill in "Nome" with "Erick Medeiros"
+	When I fill in "Matrícula" with "11123456"
+	And I press input "Salvar"
+	Then I should be on the Candidatos page
+	And I should see "O candidato Erick Medeiros não foi modificado pois já existe."
+#end

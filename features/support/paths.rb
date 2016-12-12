@@ -31,6 +31,18 @@ module NavigationHelpers
     when /^the Editar Professor 2 page/
       '/professores/2/edit'
 
+	when /^the Candidatos page/
+		'/candidatos'
+
+	when /^the Cadastrar Candidato page/
+		'/candidatos/new'
+
+	when /^the Show Mateus Andrade page/
+		'/candidatos/1'
+
+	when /^the Editar Mateus Andrade page/
+		'/candidatos/1/edit'
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
