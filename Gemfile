@@ -52,7 +52,6 @@ gem 'haml'
 gem 'rails-controller-testing'
 
 gem 'metric_fu'
-gem 'reek'
 
 group :test do
 	gem 'cucumber-rails', :require => false

@@ -1,4 +1,5 @@
-# Controller Responsável pelo CRUD da sessão de professores. Cria, edita, mostra detalhes e deleta um elemento (professor).
+# Controller Responsável pelo CRUD da sessão de professores. 
+# Cria, edita, mostra detalhes e deleta um elemento.
 
 class ProfessoresController < ApplicationController
   def index

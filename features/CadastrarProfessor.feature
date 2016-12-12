@@ -12,7 +12,6 @@ Scenario: Cadastrar Professor Happy Path GUI
 	Then I should be on the Professores page
 	And I should see "Professor 3 incluído com sucesso."
 #end
-
 #if ($Editar Professor Happy Path GUI)
 Scenario: Editar Professor Happy Path GUI
 	Given I am on the Professores page
@@ -25,7 +24,6 @@ Scenario: Editar Professor Happy Path GUI
 	Then I should be on the Professores page
 	And I should see "Professor 2.1 foi editado com sucesso."
 #end
-
 #if ($Remover Professor Happy Path GUI)
 Scenario: Remover Professor Happy Path GUI
 	Given I am on the Professores page
@@ -35,7 +33,6 @@ Scenario: Remover Professor Happy Path GUI
 	Then I should be on the Professores page
 	And I should see "Professor Professor 2 removido com sucesso."
 #end
-
 #if ($Cadastrar Professor Sad Path Controller)
 Scenario: Cadastrar Professor Existente - Sad Path (Controller)
 	Given I am on the Professores page
@@ -48,7 +45,6 @@ Scenario: Cadastrar Professor Existente - Sad Path (Controller)
 	Then I should be on the Professores page
 	And I should see "O professor Professor 1 não foi incluído pois já existe."
 #end
-
 #if ($Editar Professor Sad Path Controller)
 Scenario: Editar Professor Existente - Sad Path (Controller)
 	Given I am on the Professores page
