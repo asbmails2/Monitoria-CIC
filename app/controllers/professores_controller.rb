@@ -36,6 +36,12 @@ class ProfessoresController < ApplicationController
 
   	redirect_to professores_url
   end
+
+  def import
+    Professor.import(params[:file])
+    redirect_to professores_path, notice: "Professores Adicionados com Sucesso."
+  end
+  
   def procura_professor_update(dados_professor, professor_modificado)
     nome = dados_professor[0]
     if Professor.exists?(:nome => nome, :email => dados_professor[1], :sala => dados_professor[2])
@@ -51,6 +57,7 @@ class ProfessoresController < ApplicationController
     flash[:sucesso] = "Professor #{professor.nome} removido com sucesso."
     redirect_to professores_url
   end
+
   def show
   	@professor = Professor.find(params[:id])
   end

@@ -11,4 +11,10 @@ class DisciplinasController < ApplicationController
   	flash[:sucesso] = "#{@disciplina.nome} incluída com sucesso."
   	redirect_to disciplinas_url
   end
+
+  def import
+    Disciplina.import(params[:file])
+    redirect_to disciplinas_path, notice: "Disciplinas Adicionadas com Sucesso."
+  end
+  
 end
