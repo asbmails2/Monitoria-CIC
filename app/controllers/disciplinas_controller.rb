@@ -16,9 +16,4 @@ class DisciplinasController < ApplicationController
     Disciplina.import(params[:file])
     redirect_to disciplinas_path, notice: "Disciplinas Adicionadas com Sucesso."
   end
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> ef1dde9340b78b8e22bd4b6a8702931d6eb9b577
 end
