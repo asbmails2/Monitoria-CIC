@@ -7076,3 +7076,428 @@ Processing by DisciplinasController#new as HTML
 Completed 200 OK in 114ms (Views: 112.0ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/disciplinas/" for 127.0.0.1 at 2016-12-14 13:50:58 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (380.8ms)
+Completed 200 OK in 595ms (Views: 579.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/disciplinas/new" for 127.0.0.1 at 2016-12-14 13:51:02 -0200
+Processing by DisciplinasController#new as HTML
+  Rendering disciplinas/new.html.haml within layouts/application
+  [1m[36mOferta Load (0.3ms)[0m  [1m[34mSELECT "oferta".* FROM "oferta"[0m
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered disciplinas/new.html.haml within layouts/application (29.4ms)
+Completed 200 OK in 65ms (Views: 56.1ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/disciplinas" for 127.0.0.1 at 2016-12-14 13:51:08 -0200
+Processing by DisciplinasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6hiu+1jp1DxzVrfcuM239N1tYvUi18ApsQEgoBOY6MxYKnVU0AZ8hCAQZfe2lgyjYGHQdgJOmxtgOUhdGKYJAg==", "disciplina"=>{"nome"=>"Disciplina 1", "vagas"=>"1", "professor"=>"Professor 1"}, "commit"=>"Salvar"}
+  [1m[36mOferta Load (0.3ms)[0m  [1m[34mSELECT  "oferta".* FROM "oferta" WHERE "oferta"."nome" IS NULL ORDER BY "oferta"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `codigo' for nil:NilClass):
+  
+app/controllers/disciplinas_controller.rb:13:in `create'
+  Rendering /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.6ms)
+  Rendering /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.4ms)
+  Rendering /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.9ms)
+  Rendered /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.9ms)
+Started GET "/disciplinas" for 127.0.0.1 at 2016-12-14 13:52:30 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.6ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (34.8ms)
+Completed 200 OK in 98ms (Views: 93.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/disciplinas/2" for 127.0.0.1 at 2016-12-14 13:52:32 -0200
+Processing by DisciplinasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDisciplina Load (0.4ms)[0m  [1m[34mSELECT  "disciplinas".* FROM "disciplinas" WHERE "disciplinas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering disciplinas/show.html.haml within layouts/application
+  Rendered disciplinas/show.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 35ms (Views: 29.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/disciplinas/2/edit" for 127.0.0.1 at 2016-12-14 13:52:34 -0200
+Processing by DisciplinasController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT  "disciplinas".* FROM "disciplinas" WHERE "disciplinas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering disciplinas/edit.html.haml within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered disciplinas/edit.html.haml within layouts/application (15.1ms)
+Completed 200 OK in 45ms (Views: 40.6ms | ActiveRecord: 1.1ms)
+
+
+Started PUT "/disciplinas/2" for 127.0.0.1 at 2016-12-14 13:52:35 -0200
+Processing by DisciplinasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8dxaCnD1L+oI1LyNYFnKIf+ht3r8QLaZqrG+hGkgb6ND7oGl+BqHUluSbqZuAnF2Qq0F+dzZ7at7idZ5Yh6ObQ==", "disciplina"=>{"professor"=>"Professor 1", "vagas"=>"2.0"}, "x"=>"16", "y"=>"22", "id"=>"2"}
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT  "disciplinas".* FROM "disciplinas" WHERE "disciplinas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameter: vagas
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "disciplinas"."id" FROM "disciplinas" WHERE "disciplinas"."codigo" = ? AND "disciplinas"."professor" = ?[0m  [["codigo", "cic02"], ["professor", "Professor 1"]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/disciplinas
+Completed 302 Found in 16ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2016-12-14 13:52:35 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 35ms (Views: 30.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/disciplinas/new" for 127.0.0.1 at 2016-12-14 13:52:38 -0200
+Processing by DisciplinasController#new as HTML
+  Rendering disciplinas/new.html.haml within layouts/application
+  [1m[36mOferta Load (0.3ms)[0m  [1m[34mSELECT "oferta".* FROM "oferta"[0m
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered disciplinas/new.html.haml within layouts/application (13.6ms)
+Completed 200 OK in 46ms (Views: 40.1ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/disciplinas" for 127.0.0.1 at 2016-12-14 13:52:42 -0200
+Processing by DisciplinasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nN8Xppw+FbQoK/pL8+pP8oc2PRb+HZKQMO6fLYnTBjIu7cwJFNG9DHttKGD9sfSlOjqPld6EyaLh1vfQgu3n/A==", "disciplina"=>{"nome"=>"Disciplina 1", "vagas"=>"1", "professor"=>"Professor 1"}, "commit"=>"Salvar"}
+Unpermitted parameters: nome, vagas
+  [1m[36mDisciplina Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "disciplinas" WHERE "disciplinas"."codigo" = ? AND "disciplinas"."professor" IS NULL LIMIT ?[0m  [["codigo", "Professor 1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 1"], ["professor", "Professor 1"], ["vagas", #<BigDecimal:7f9ecdab09a0,'0.1E1',9(18)>], ["created_at", 2016-12-14 15:52:42 UTC], ["updated_at", 2016-12-14 15:52:42 UTC]]
+  [1m[35m (161.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 226ms (ActiveRecord: 162.7ms)
+
+
+  
+NoMethodError (undefined method `codigo' for #<ActionController::Parameters:0x007f9eb01e0798>):
+  
+app/controllers/disciplinas_controller.rb:19:in `create'
+  Rendering /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.5ms)
+Started GET "/disciplinas" for 127.0.0.1 at 2016-12-14 13:56:21 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.7ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (17.4ms)
+Completed 200 OK in 47ms (Views: 41.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/disciplinas/new" for 127.0.0.1 at 2016-12-14 13:56:25 -0200
+Processing by DisciplinasController#new as HTML
+  Rendering disciplinas/new.html.haml within layouts/application
+  [1m[36mOferta Load (0.3ms)[0m  [1m[34mSELECT "oferta".* FROM "oferta"[0m
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered disciplinas/new.html.haml within layouts/application (21.0ms)
+Completed 200 OK in 53ms (Views: 44.8ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/disciplinas" for 127.0.0.1 at 2016-12-14 13:56:28 -0200
+Processing by DisciplinasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BgCGTz1BSbk1tPRtQxp9wGvN9fFh+AlL5iktNSREYXK0Ml3gta7hAWbyJkZNQcaX1sFHckFhUnk3EUXIL3qAvA==", "disciplina"=>{"nome"=>"Disciplina 1", "vagas"=>"1", "professor"=>"Professor 1"}, "commit"=>"Salvar"}
+Unpermitted parameter: vagas
+  [1m[36mDisciplina Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "disciplinas" WHERE "disciplinas"."nome" = ? AND "disciplinas"."professor" = ? LIMIT ?[0m  [["nome", "Disciplina 1"], ["professor", "Professor 1"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/disciplinas
+Completed 302 Found in 33ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2016-12-14 13:56:28 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 39ms (Views: 36.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/disciplinas/2" for 127.0.0.1 at 2016-12-14 13:56:31 -0200
+Processing by DisciplinasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT  "disciplinas".* FROM "disciplinas" WHERE "disciplinas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering disciplinas/show.html.haml within layouts/application
+  Rendered disciplinas/show.html.haml within layouts/application (10.6ms)
+Completed 200 OK in 39ms (Views: 34.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/disciplinas/2/edit" for 127.0.0.1 at 2016-12-14 13:56:32 -0200
+Processing by DisciplinasController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT  "disciplinas".* FROM "disciplinas" WHERE "disciplinas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering disciplinas/edit.html.haml within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered disciplinas/edit.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 37ms (Views: 33.6ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/disciplinas/2" for 127.0.0.1 at 2016-12-14 13:56:37 -0200
+Processing by DisciplinasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u/85OV7s0zyulWpNnoFQiWelOo8n49D79Rjxb86ANXgJzeKW1gN7hP3TuGaQ2uve2qmIDAd6i8kkIJmSxb7Utg==", "disciplina"=>{"professor"=>"Professor 1", "vagas"=>"3"}, "x"=>"13", "y"=>"18", "id"=>"2"}
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT  "disciplinas".* FROM "disciplinas" WHERE "disciplinas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Unpermitted parameter: vagas
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "disciplinas"."id" FROM "disciplinas" WHERE "disciplinas"."nome" = ? AND "disciplinas"."professor" = ?[0m  [["nome", "Disciplina 2"], ["professor", "Professor 1"]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[33mUPDATE "disciplinas" SET "vagas" = ?, "updated_at" = ? WHERE "disciplinas"."id" = ?[0m  [["vagas", #<BigDecimal:7f9edc9894f0,'0.3E1',9(18)>], ["updated_at", 2016-12-14 15:56:37 UTC], ["id", 2]]
+  [1m[35m (361.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/disciplinas
+Completed 302 Found in 377ms (ActiveRecord: 363.5ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2016-12-14 13:56:37 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/disciplinas/new" for 127.0.0.1 at 2016-12-14 13:57:05 -0200
+Processing by DisciplinasController#new as HTML
+  Rendering disciplinas/new.html.haml within layouts/application
+  [1m[36mOferta Load (1.1ms)[0m  [1m[34mSELECT "oferta".* FROM "oferta"[0m
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered disciplinas/new.html.haml within layouts/application (13.3ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"disciplinas"} missing required keys: [:id]):
+    20:   <br />
+    21:   = image_submit_tag('salvar.png')
+    22: 
+    23: = link_to image_tag('voltar.png'), disciplina_url
+  
+app/views/disciplinas/new.html.haml:23:in `_app_views_disciplinas_new_html_haml___1545533631933985445_70160038204160'
+  Rendering /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/andressa/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.6ms)
+Started GET "/disciplinas/new" for 127.0.0.1 at 2016-12-14 13:57:31 -0200
+Processing by DisciplinasController#new as HTML
+  Rendering disciplinas/new.html.haml within layouts/application
+  [1m[36mOferta Load (0.4ms)[0m  [1m[34mSELECT "oferta".* FROM "oferta"[0m
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered disciplinas/new.html.haml within layouts/application (10.6ms)
+Completed 200 OK in 53ms (Views: 50.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/disciplinas" for 127.0.0.1 at 2016-12-14 13:57:35 -0200
+Processing by DisciplinasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xd5DIBrVWeIW2PhvJSGRxNvWMBipuBM1CtZczmfVAQbv7JiPkjrxWkWeKkQreiqTZtqCm4khSAfb7jQzbOvgyA==", "disciplina"=>{"nome"=>"Disciplina 1", "vagas"=>"2", "professor"=>"Professor 1"}, "x"=>"15", "y"=>"11"}
+Unpermitted parameter: vagas
+  [1m[36mDisciplina Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "disciplinas" WHERE "disciplinas"."nome" = ? AND "disciplinas"."professor" = ? LIMIT ?[0m  [["nome", "Disciplina 1"], ["professor", "Professor 1"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/disciplinas
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2016-12-14 13:57:35 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.4ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (11.9ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/disciplinas/2" for 127.0.0.1 at 2016-12-14 14:03:00 -0200
+Processing by DisciplinasController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT  "disciplinas".* FROM "disciplinas" WHERE "disciplinas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering disciplinas/show.html.haml within layouts/application
+  Rendered disciplinas/show.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 48ms (Views: 33.1ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/disciplinas/2" for 127.0.0.1 at 2016-12-14 14:03:01 -0200
+Processing by DisciplinasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"euauPJdmK8pw/oN4LSqIfl6k3jDi11CJrpXA+C/2No/I1HWTH4mDciO4UVMjcTMp46hss8JOC7t/ragFJMjXQQ==", "id"=>"2"}
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT  "disciplinas".* FROM "disciplinas" WHERE "disciplinas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "disciplinas" WHERE "disciplinas"."id" = ?[0m  [["id", 2]]
+  [1m[35m (80.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/disciplinas
+Completed 302 Found in 94ms (ActiveRecord: 81.3ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2016-12-14 14:03:01 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/disciplinas/20" for 127.0.0.1 at 2016-12-14 14:03:04 -0200
+Processing by DisciplinasController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT  "disciplinas".* FROM "disciplinas" WHERE "disciplinas"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering disciplinas/show.html.haml within layouts/application
+  Rendered disciplinas/show.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 44ms (Views: 35.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/disciplinas/20" for 127.0.0.1 at 2016-12-14 14:03:05 -0200
+Processing by DisciplinasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qi1yJuO3pE2ic/pAXd5+X+i6mb9jof/Ws1sgLf1BPn4YH6mJa1gM9fE1KGtThcUIVbYrPEM4pORiY0jQ9n/fsA==", "id"=>"20"}
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT  "disciplinas".* FROM "disciplinas" WHERE "disciplinas"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "disciplinas" WHERE "disciplinas"."id" = ?[0m  [["id", 20]]
+  [1m[35m (112.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/disciplinas
+Completed 302 Found in 126ms (ActiveRecord: 114.0ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2016-12-14 14:03:06 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/disciplinas/19" for 127.0.0.1 at 2016-12-14 14:03:07 -0200
+Processing by DisciplinasController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT  "disciplinas".* FROM "disciplinas" WHERE "disciplinas"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering disciplinas/show.html.haml within layouts/application
+  Rendered disciplinas/show.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2016-12-14 14:03:09 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (2.7ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (20.9ms)
+Completed 200 OK in 90ms (Views: 85.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/disciplinas/16" for 127.0.0.1 at 2016-12-14 14:03:11 -0200
+Processing by DisciplinasController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT  "disciplinas".* FROM "disciplinas" WHERE "disciplinas"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering disciplinas/show.html.haml within layouts/application
+  Rendered disciplinas/show.html.haml within layouts/application (12.4ms)
+Completed 200 OK in 48ms (Views: 45.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2016-12-14 14:03:13 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (7.1ms)
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/disciplinas/18" for 127.0.0.1 at 2016-12-14 14:03:15 -0200
+Processing by DisciplinasController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT  "disciplinas".* FROM "disciplinas" WHERE "disciplinas"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering disciplinas/show.html.haml within layouts/application
+  Rendered disciplinas/show.html.haml within layouts/application (11.8ms)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/disciplinas/18/edit" for 127.0.0.1 at 2016-12-14 14:03:16 -0200
+Processing by DisciplinasController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT  "disciplinas".* FROM "disciplinas" WHERE "disciplinas"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering disciplinas/edit.html.haml within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered disciplinas/edit.html.haml within layouts/application (13.8ms)
+Completed 200 OK in 41ms (Views: 35.0ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/disciplinas/18" for 127.0.0.1 at 2016-12-14 14:03:21 -0200
+Processing by DisciplinasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MzqrMQoXP6Fd/k1S1Wzt+DUGiJFW9iKs11Z21D9iN0aBCHCegviXGQ64n3nbN1aviAo6EnZveZ4Gbh4pNFzWiA==", "disciplina"=>{"professor"=>"Professor 1", "vagas"=>"2.0"}, "x"=>"16", "y"=>"13", "id"=>"18"}
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT  "disciplinas".* FROM "disciplinas" WHERE "disciplinas"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+Unpermitted parameter: vagas
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "disciplinas"."id" FROM "disciplinas" WHERE "disciplinas"."nome" = ? AND "disciplinas"."professor" = ?[0m  [["nome", "Disciplina 1"], ["professor", "Professor 1"]]
+Redirected to http://localhost:3000/disciplinas
+Completed 302 Found in 9ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2016-12-14 14:03:21 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/disciplinas/16" for 127.0.0.1 at 2016-12-14 14:03:30 -0200
+Processing by DisciplinasController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT  "disciplinas".* FROM "disciplinas" WHERE "disciplinas"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering disciplinas/show.html.haml within layouts/application
+  Rendered disciplinas/show.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2016-12-14 14:03:32 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.7ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (14.9ms)
+Completed 200 OK in 69ms (Views: 65.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/disciplinas/17" for 127.0.0.1 at 2016-12-14 14:03:34 -0200
+Processing by DisciplinasController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mDisciplina Load (0.1ms)[0m  [1m[34mSELECT  "disciplinas".* FROM "disciplinas" WHERE "disciplinas"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering disciplinas/show.html.haml within layouts/application
+  Rendered disciplinas/show.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/disciplinas/17/edit" for 127.0.0.1 at 2016-12-14 14:03:35 -0200
+Processing by DisciplinasController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT  "disciplinas".* FROM "disciplinas" WHERE "disciplinas"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering disciplinas/edit.html.haml within layouts/application
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered disciplinas/edit.html.haml within layouts/application (13.0ms)
+Completed 200 OK in 45ms (Views: 42.0ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/disciplinas/17" for 127.0.0.1 at 2016-12-14 14:03:38 -0200
+Processing by DisciplinasController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GtfA+vv2USjFO5xM+0GkqUAw9MsVlpiUj6A5YmdsjUqo5RtVcxn5kJZ9Tmf1Gh/+/TxGSDUPw6ZemFGfbFJshA==", "disciplina"=>{"professor"=>"Professor 2", "vagas"=>"3.0"}, "x"=>"17", "y"=>"20", "id"=>"17"}
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT  "disciplinas".* FROM "disciplinas" WHERE "disciplinas"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+Unpermitted parameter: vagas
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "disciplinas"."id" FROM "disciplinas" WHERE "disciplinas"."nome" = ? AND "disciplinas"."professor" = ?[0m  [["nome", "Disciplina 3"], ["professor", "Professor 2"]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[33mUPDATE "disciplinas" SET "professor" = ?, "updated_at" = ? WHERE "disciplinas"."id" = ?[0m  [["professor", "Professor 2"], ["updated_at", 2016-12-14 16:03:38 UTC], ["id", 17]]
+  [1m[35m (205.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/disciplinas
+Completed 302 Found in 223ms (ActiveRecord: 208.8ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2016-12-14 14:03:38 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.3ms)
+
+

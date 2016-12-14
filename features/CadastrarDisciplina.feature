@@ -6,11 +6,11 @@ Scenario: Incluir nova disciplina a ser ofertada pelo professor
   When I press the image "Adicionar"
   Then I should be on Cadastrar Disciplina page
   When I select "Disciplina 2" from "Nome"
-  When I fill in "Vagas" with "2"
   When I select "Professor 1" from "Professor"
+  When I fill in "Vagas" with "2"
   And I press input "Salvar"
   Then I should be on Disciplinas page
-  And I should see "Disciplina 2 incluído com sucesso."
+  And I should see "Disciplina incluída com sucesso."
 #end
 
 #if ($Cadastrar disciplina ofertada por um professor)
@@ -20,10 +20,10 @@ Scenario: Incluir uma disciplina já existente pelo mesmo professor (Sad Path)
   Then I should be on Cadastrar Disciplina page
   When I select "Disciplina 1" from "Nome"
   When I select "Professor 1" from "Professor"
-  When I fill in "Vagas" with "1"
+  When I fill in "Vagas" with "2"
   And I press input "Salvar"
-  Then I should be on Cadastrar Disciplina page
-  And I should see "A oferta para Disciplina 1 não foi incluída pois já existe"
+  Then I should be on Disciplinas page
+  And I should see "A oferta não foi incluída pois já existe"
 #end
 
 #if ($Cadastrar disciplina ofertada por um professor)
@@ -37,7 +37,7 @@ Scenario: Editar uma disciplina existente
   When I fill in "Vagas" with "2"
   And I press input "Salvar"
   Then I should be on Disciplinas page
-  And I should see "Disciplina 1 foi editada com sucesso."
+  And I should see "Disciplina foi editada com sucesso."
 #end
 
 #if ($Cadastrar disciplina ofertada por um professor)

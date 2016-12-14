@@ -9,19 +9,16 @@ class DisciplinasController < ApplicationController
   end
   def create
     params.permit!
-    nome = params[:nome]
-    codigo = Oferta.where(:nome => nome).first.codigo
     @disciplina = params.require(:disciplina).permit(:nome, :professor, :vagas)
-    @disciplina.codigo = codigo
-    prof = params.require(:disciplina).permit(:professor).values
+    arr = params.require(:disciplina).permit(:nome, :professor).values
 
-    if Disciplina.exists?(:codigo => @disciplina.codigo, :professor => prof )
-      flash[:aviso] = "A oferta para a disciplina #{@disciplina.codigo} não foi criada pois já existe"
+    if Disciplina.exists?(:nome => arr[0], :professor => arr[1])
+      flash[:aviso] = "A oferta não foi incluída pois já existe"
     else
       if Disciplina.create!(@disciplina)
-        flash[:sucesso] = "A oferta de monitoria para #{@disciplina.codigo} foi criada com sucesso!"
+        flash[:sucesso] = "Disciplina incluída com sucesso."
       else
-        flash[:aviso] = "Erro ao criar oferta de monitoria para #{@disciplina.codigo}."
+        flash[:aviso] = "Ocorreu um erro!"
       end
     end
     redirect_to disciplinas_url
@@ -36,16 +33,16 @@ class DisciplinasController < ApplicationController
     @id = params[:id]
     @disciplina = Disciplina.find(@id)
     @prof = params.require(:disciplina).permit(:professor).values
-    @check = Disciplina.where( :codigo => @disciplina.codigo, :professor => @prof[0]).ids
+    @check = Disciplina.where( :nome => @disciplina.nome, :professor => @prof[0]).ids
 
     if  @check.empty? or (@check.include? @disciplina.id) #Verifica se eh a mesma disciplina que ja existe
       if @disciplina.update_attributes!(params[:disciplina])
-        flash[:sucesso] = "#{@disciplina.nome} do professor #{@disciplina.professor} foi editado com sucesso!"
+        flash[:sucesso] = "Disciplina foi editada com sucesso."
       else
         flash[:aviso] = "Erro ao editar #{@disciplina.nome} do professor #{@disciplina.professor}"
       end
     else
-      flash[:aviso] = "A oferta para a disciplina #{@check} não foi criada pois já existe"
+      flash[:aviso] = "A oferta não foi criada pois já existe"
     end
     redirect_to disciplinas_url
   end
