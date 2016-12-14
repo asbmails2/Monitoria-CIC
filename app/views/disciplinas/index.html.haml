@@ -5,13 +5,13 @@
     %tr
       %th Nome da Disciplina
       %th Código
-      %th Professor
+      //%th Professor
   %tbody
     - @disciplinas.each do |disciplina|
       %tr
         %td= disciplina.nome 
         %td= disciplina.codigo
-        %td= disciplina.professor
+        //%td= disciplina.professor
 
 %br
 = link_to image_tag('adicionar.png'), new_disciplina_url
@@ -23,5 +23,9 @@
     = submit_tag "Importar Disciplinas"
 
   
-
+%h4 Importar Disciplinas
+%div#importar
+  = form_tag import_disciplinas_path, multipart: true do
+    = file_field_tag :file
+    = submit_tag "Importar Disciplinas"
              
