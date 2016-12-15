@@ -3,10 +3,13 @@
 = form_tag disciplinas_url, :method => :post do
 
   = label :disciplina, :nome, 'Nome'
-  = text_field :disciplina, :nome
+  - oferta_lista = []
+  - @ofertadas.each do |o|
+    - oferta_lista += [o.nome]
+  = select :disciplina, :nome, oferta_lista
 
-  = label :disciplina, :codigo, 'Código'
-  = text_field :disciplina, :codigo
+  = label :disciplina, :vagas, 'Vagas'
+  = text_field :disciplina, :vagas
 
   = label :disciplina, :professor, 'Professor'
   - professor_lista = []
@@ -14,6 +17,7 @@
     - professor_lista += [professor.nome]
   = select :disciplina, :professor, professor_lista
 
-  = submit_tag 'Salvar'
+  <br />
+  = image_submit_tag('salvar.png')
 
-= link_to 'voltar', disciplinas_path
+= link_to image_tag('voltar.png'), disciplinas_url

@@ -60,9 +60,11 @@ end
 When /^(?:|I )press the image "([^"]*)"$/ do |button|
   if button == 'Editar'
     click_link('Editar')
-  elsif button == 'Deletar'
+  elsif (button == 'Deletar')
     click_link('Deletar')
   elsif button == 'Cadastrar Professor'
+    click_link('Adicionar')
+  elsif button == 'Adicionar'
     click_link('Adicionar')
   end
 end

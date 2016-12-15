@@ -1,11 +1,11 @@
-# Controller Responsável pelo CRUD da sessão de professores. 
+# Controller Responsável pelo CRUD da sessão de professores.
 # Cria, edita, mostra detalhes e deleta um elemento.
 
 class ProfessoresController < ApplicationController
   def index
     @professors = Professor.all
   end
-  def new  	 	
+  def new
   	@professors = Professor.new
   end
   def create
@@ -19,7 +19,7 @@ class ProfessoresController < ApplicationController
     nome = dados_professor[0]
     if Professor.exists?(:nome => nome, :email => dados_professor[1])
       flash[:aviso] = "O professor #{nome} não foi incluído pois já existe."
-    else  
+    else
       professor_cadastrado = Professor.create!(params_professor)
       flash[:sucesso] = "#{professor_cadastrado.nome} incluído com sucesso."
     end
@@ -31,7 +31,7 @@ class ProfessoresController < ApplicationController
   	params.permit!
   	@professor = Professor.find(params[:id])
   	parray = params.require(:professor).permit(:nome, :email, :sala).values
-  	  	
+
     procura_professor_update(parray, @professor)
 
   	redirect_to professores_url
@@ -40,7 +40,7 @@ class ProfessoresController < ApplicationController
     nome = dados_professor[0]
     if Professor.exists?(:nome => nome, :email => dados_professor[1], :sala => dados_professor[2])
       flash[:aviso] = "O professor #{nome} não foi modificado pois já existe."
-    else  
+    else
       if professor_modificado.update_attributes!(params[:professor])
         flash[:sucesso] = "#{professor_modificado.nome} foi editado com sucesso."
       end

@@ -1,20 +1,18 @@
-%h2 Disciplinas 
-  
+
+%h2 Disciplinas
+
 %table#disciplinas
   %thead
     %tr
       %th Nome da Disciplina
-      %th Código
       %th Professor
+      %th Vagas
   %tbody
     - @disciplinas.each do |disciplina|
       %tr
-        %td= disciplina.nome 
-        %td= disciplina.codigo
+        %td= link_to "#{disciplina.nome}", disciplina_url(disciplina)
         %td= disciplina.professor
+        %td= disciplina.vagas
 
 %br
 = link_to image_tag('adicionar.png'), new_disciplina_url
-  
-
-             

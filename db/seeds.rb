@@ -2,7 +2,9 @@ disciplinas = [
   {:nome => 'Disciplina 1', :codigo => 'cic01',
     :professor => 'Professor 1', :vagas => 3},
   {:nome => 'Disciplina 2', :codigo => 'cic02',
-    :professor => 'Professor 2', :vagas => 2}
+    :professor => 'Professor 2', :vagas => 2},
+  {:nome => 'Disciplina 2', :codigo => 'cic02',
+    :professor => 'Professor 1', :vagas => 2}
 ]
 
 disciplinas.each do |disciplina|
@@ -37,4 +39,3 @@ candidatos = [
 candidatos.each do |candidato|
 	Candidato.create!(candidato)
 end
-

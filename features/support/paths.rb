@@ -14,10 +14,10 @@ module NavigationHelpers
     case page_name
 
     when /^the home\s?page$/
-      '/'
+      '/home'
 
     when /^the Monitoria CiC home page/
-      '/'
+      '/home'
 
     when /^the Professores page/
       '/professores'
@@ -30,6 +30,25 @@ module NavigationHelpers
 
     when /^the Editar Professor 2 page/
       '/professores/2/edit'
+
+    # Disciplinas
+    when /^Disciplinas page/
+      '/disciplinas'
+
+    when /^Disciplinas/
+      '/disciplinas'
+
+    when /^Cadastrar Disciplina page/
+      '/disciplinas/new'
+
+    when /^Cadastrar Disciplina/
+      '/disciplinas/new'
+
+    when /^Show Disciplina 1 page/
+      '/disciplinas/1'
+
+    when /^Editar Disciplina 1 page/
+      '/disciplinas/1/edit'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

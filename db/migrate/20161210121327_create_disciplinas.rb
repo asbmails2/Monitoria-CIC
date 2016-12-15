@@ -4,8 +4,7 @@ class CreateDisciplinas < ActiveRecord::Migration[5.0]
       t.string :nome
       t.string :codigo
       t.string :professor
-      t.numeric :vagas
-
+      t.decimal :vagas
       t.timestamps
     end
   end

@@ -1,0 +1,14 @@
+%h2 #{@disciplina.nome} - #{@disciplina.codigo}
+
+%ul#details
+  %li
+    Professor:
+    = @disciplina.professor
+  %li
+    Vagas:
+    = @disciplina.vagas
+
+%br
+= link_to image_tag('voltar.png'), disciplinas_url
+= link_to image_tag('editar.png'), edit_disciplina_url(@disciplina)
+= link_to image_tag('deletar.png'), disciplina_url(@disciplina), :method => :delete
