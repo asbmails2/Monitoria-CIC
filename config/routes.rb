@@ -10,4 +10,8 @@ MonitoriaCic::Application.routes.draw do
     collection { post :import }
   end
   root :to => redirect('/professores')
+  resources :lista_disciplinas do
+    collection { post :import }
+  end
+  root :to => redirect('/lista_disciplinas')
 end

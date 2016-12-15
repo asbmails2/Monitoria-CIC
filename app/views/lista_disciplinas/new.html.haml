@@ -1,0 +1,16 @@
+%h2 Cadastrar Disciplinas
+
+= form_tag lista_disciplinas_url, :method => :post do
+
+  = label :lista_disciplinas, :nome, 'Nome'
+  = text_field :lista_disciplinas, :nome
+  %br
+  %br
+  = label :lista_disciplinas, :codigo, 'Código'
+  = text_field :lista_disciplinas, :codigo
+  %br
+  %br
+  = image_submit_tag('salvar.png')
+  %br
+  %br
+= link_to 'voltar', lista_disciplinas_path

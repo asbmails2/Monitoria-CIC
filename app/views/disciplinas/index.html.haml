@@ -1,5 +1,5 @@
 
-%h2 Disciplinas
+%h2 Oferta Monitorias
 
 %table#disciplinas
   %thead
@@ -11,6 +11,7 @@
     - @disciplinas.each do |disciplina|
       %tr
         %td= link_to "#{disciplina.nome}", disciplina_url(disciplina)
+        /%dt= link_disciplinas.nome
         %td= disciplina.professor
         %td= disciplina.vagas
 

@@ -1,4 +1,9 @@
 class DisciplinasController < ApplicationController
+  before_action :set_lista_disciplinas
+  def set_lista_disciplinas
+    @lista_disciplinas = ListaDisciplina.all
+  end
+
   def index
     @disciplinas = Disciplina.all
   end

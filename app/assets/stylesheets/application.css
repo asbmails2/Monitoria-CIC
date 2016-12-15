@@ -123,6 +123,38 @@ table#candidatos td {
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
   border-right: 1px solid #C1C3D1;
 }
+table#lista_disciplinas {
+  text-align: center;
+  margin: 0 auto;
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  margin: auto;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+table#lista_disciplinas th {
+  text-align: center;
+  font-weight: bold;
+  color:#fff;
+  background:#364859;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+table#lista_disciplinas th {
+  padding: 4px;
+  text-align: center;
+}
+table#lista_disciplinas td {
+  padding: 4px;
+  text-align: center;
+
+  background:#FFFFFF;
+  vertical-align:middle;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
 
 /*!
  * Bootstrap v3.1.1 (http://getbootstrap.com)
