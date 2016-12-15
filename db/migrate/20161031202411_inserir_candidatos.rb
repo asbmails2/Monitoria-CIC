@@ -3,6 +3,7 @@ class InserirCandidatos < ActiveRecord::Migration[5.0]
 	  create_table 'candidatos' do |t|
 		  t.string 'nome'
 		  t.string 'matricula'
+		  t.string 'disciplina'
 		  t.string 'monitoria'
 		  t.integer 'semestre'
 		  t.integer 'prioridade'

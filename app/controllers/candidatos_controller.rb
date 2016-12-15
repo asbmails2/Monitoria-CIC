@@ -1,5 +1,9 @@
 # This file is app/controllers/movies_controller.rb
 class CandidatosController < ApplicationController
+	before_action :set_lista_disciplinas
+	def set_lista_disciplinas
+      @lista_disciplinas = ListaDisciplina.all
+    end
 	def index
 		@candidatos = Candidato.all
 	end
@@ -14,7 +18,7 @@ class CandidatosController < ApplicationController
 	end
 
 	def create
-		permitted = params.require(:candidato).permit(:nome,:matricula,:monitoria,:semestre)
+		permitted = params.require(:candidato).permit(:nome,:matricula,:disciplina,:monitoria,:semestre)
 		@candidato = Candidato.create!(permitted)
 		flash[:notice] = "Candidato #{@candidato.nome} de matrícula #{@candidato.matricula} foi adicionado com sucesso."
 		redirect_to candidatos_path
@@ -25,7 +29,7 @@ class CandidatosController < ApplicationController
 	end
 
 	def update
-		permitted = params.require(:candidato).permit(:nome,:matricula,:monitoria,:semestre,:prioridade)
+		permitted = params.require(:candidato).permit(:nome,:matricula,:disciplina,:monitoria,:semestre,:prioridade)
 		@candidato = Candidato.find params[:id]
 		@candidato.update_attributes!(permitted)
 		flash[:notice] = "Classificação do aluno #{@candidato.nome} de matrícula #{@candidato.matricula} foi atualizada com sucesso."

@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20161215041239) do
   create_table "candidatos", force: :cascade do |t|
     t.string   "nome"
     t.string   "matricula"
+    t.string   "disciplina"
     t.string   "monitoria"
     t.integer  "semestre"
     t.integer  "prioridade"

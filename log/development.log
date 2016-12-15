@@ -7358,3 +7358,1042 @@ Processing by ProfessoresController#index as HTML
 Completed 200 OK in 90ms (Views: 85.9ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for 127.0.0.1 at 2016-12-15 11:28:48 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/home" for 127.0.0.1 at 2016-12-15 11:28:49 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 849ms (Views: 806.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 11:28:54 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.5ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (18.7ms)
+Completed 200 OK in 143ms (Views: 136.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2016-12-15 11:37:40 -0200
+Processing by CandidatosController#new as HTML
+  Rendering candidatos/new.html.haml within layouts/application
+  Rendered candidatos/new.html.haml within layouts/application (242.3ms)
+Completed 200 OK in 328ms (Views: 325.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 11:37:42 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.5ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 127ms (Views: 124.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2016-12-15 11:38:22 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ListaDisciplinasController#index as HTML
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.7ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered lista_disciplinas/index.html.haml within layouts/application (480.3ms)
+Completed 200 OK in 667ms (Views: 652.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2016-12-15 11:38:34 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (28.1ms)
+Completed 200 OK in 132ms (Views: 127.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/professores/30" for 127.0.0.1 at 2016-12-15 11:38:37 -0200
+Processing by ProfessoresController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  Rendering professores/show.html.haml within layouts/application
+  Rendered professores/show.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 198ms (Views: 108.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professores/30/edit" for 127.0.0.1 at 2016-12-15 11:38:39 -0200
+Processing by ProfessoresController#edit as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mProfessor Load (0.6ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  Rendering professores/edit.html.haml within layouts/application
+  Rendered professores/edit.html.haml within layouts/application (17.1ms)
+Completed 200 OK in 133ms (Views: 129.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2016-12-15 11:38:40 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.6ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (23.9ms)
+Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2016-12-15 11:38:42 -0200
+Processing by ListaDisciplinasController#index as HTML
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.6ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered lista_disciplinas/index.html.haml within layouts/application (15.1ms)
+Completed 200 OK in 140ms (Views: 137.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2016-12-15 11:38:43 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (18.5ms)
+Completed 200 OK in 45ms (Views: 37.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2016-12-15 11:38:48 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (9.1ms)
+Completed 200 OK in 139ms (Views: 137.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/disciplinas/new" for 127.0.0.1 at 2016-12-15 11:38:50 -0200
+Processing by DisciplinasController#new as HTML
+  Rendering disciplinas/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.4ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  [1m[36mProfessor Load (0.5ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered disciplinas/new.html.haml within layouts/application (14.9ms)
+Completed 200 OK in 151ms (Views: 113.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/disciplinas/new" for 127.0.0.1 at 2016-12-15 12:09:10 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DisciplinasController#new as HTML
+  Rendering disciplinas/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.6ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  [1m[36mProfessor Load (0.6ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered disciplinas/new.html.haml within layouts/application (565.6ms)
+Completed 200 OK in 743ms (Views: 712.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:09:12 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (13.7ms)
+Completed 200 OK in 100ms (Views: 96.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2016-12-15 12:09:14 -0200
+Processing by CandidatosController#new as HTML
+  Rendering candidatos/new.html.haml within layouts/application
+  Rendered candidatos/new.html.haml within layouts/application (44.4ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Inconsistent indentation: "\t    " used for indentation, but the rest of the document was indented using 2 tabs.):
+    10: 		= text_field :candidato, :matricula
+    11: 		%br
+    12: 		= label :disciplina, :nome, 'Nome'
+    13: 	    - oferta_lista = []
+    14: 	    - @lista_disciplinas.each do |o|
+    15: 	      - oferta_lista += [o.nome]
+    16: 	    = select :disciplina, :nome, oferta_lista
+  
+app/views/candidatos/new.html.haml:13
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.8ms)
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:09:50 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (449.7ms)
+Completed 200 OK in 627ms (Views: 612.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2016-12-15 12:09:52 -0200
+Processing by CandidatosController#new as HTML
+  Rendering candidatos/new.html.haml within layouts/application
+  Rendered candidatos/new.html.haml within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Inconsistent indentation: "\t    " used for indentation, but the rest of the document was indented using 2 tabs.):
+    10: 		= text_field :candidato, :matricula
+    11: 		%br
+    12: 		= label :disciplina, :nome, 'Nome'
+    13: 	    - oferta_lista = []
+    14: 	    - @lista_disciplinas.each do |o|
+    15: 	      - oferta_lista += [o.nome]
+    16: 	    = select :disciplina, :nome, oferta_lista
+  
+app/views/candidatos/new.html.haml:13
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.5ms)
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.6ms)
+Started GET "/candidatos/new" for 127.0.0.1 at 2016-12-15 12:27:09 -0200
+Processing by CandidatosController#new as HTML
+  Rendering candidatos/new.html.haml within layouts/application
+  Rendered candidatos/new.html.haml within layouts/application (17.6ms)
+Completed 200 OK in 112ms (Views: 110.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2016-12-15 12:27:13 -0200
+Processing by CandidatosController#new as HTML
+  Rendering candidatos/new.html.haml within layouts/application
+  Rendered candidatos/new.html.haml within layouts/application (11.6ms)
+Completed 200 OK in 164ms (Views: 161.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:27:15 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 108ms (Views: 105.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:27:16 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 102ms (Views: 100.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2016-12-15 12:27:27 -0200
+Processing by CandidatosController#new as HTML
+  Rendering candidatos/new.html.haml within layouts/application
+  Rendered candidatos/new.html.haml within layouts/application (15.4ms)
+Completed 200 OK in 147ms (Views: 144.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2016-12-15 12:27:29 -0200
+Processing by ListaDisciplinasController#index as HTML
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.3ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered lista_disciplinas/index.html.haml within layouts/application (15.1ms)
+Completed 200 OK in 107ms (Views: 100.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/lista_disciplinas/new" for 127.0.0.1 at 2016-12-15 12:27:32 -0200
+Processing by ListaDisciplinasController#new as HTML
+  Rendering lista_disciplinas/new.html.haml within layouts/application
+  Rendered lista_disciplinas/new.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 115ms (Views: 111.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2016-12-15 12:27:34 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (16.7ms)
+Completed 200 OK in 111ms (Views: 105.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/disciplinas/new" for 127.0.0.1 at 2016-12-15 12:27:35 -0200
+Processing by DisciplinasController#new as HTML
+  Rendering disciplinas/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.6ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  [1m[36mProfessor Load (0.7ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered disciplinas/new.html.haml within layouts/application (30.2ms)
+Completed 200 OK in 80ms (Views: 68.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2016-12-15 12:27:39 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 124ms (Views: 122.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2016-12-15 12:28:09 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (10.9ms)
+Completed 200 OK in 114ms (Views: 111.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:28:11 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 124ms (Views: 121.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2016-12-15 12:28:12 -0200
+Processing by CandidatosController#new as HTML
+  Rendering candidatos/new.html.haml within layouts/application
+  Rendered candidatos/new.html.haml within layouts/application (11.7ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    10: 	= text_field :candidato, :matricula
+    11: 	%br
+    12: 	- oferta_lista = []
+    13: 	- @lista_disciplinas.each do |o|
+    14: 		- oferta_lista += [o.nome]
+    15: 	= select :disciplina, :nome, oferta_lista
+    16: 	%br
+  
+app/views/candidatos/new.html.haml:13:in `block in _app_views_candidatos_new_html_haml___1979136863493812671_46595940'
+app/views/candidatos/new.html.haml:3:in `_app_views_candidatos_new_html_haml___1979136863493812671_46595940'
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.9ms)
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.3ms)
+Started GET "/disciplinas" for 127.0.0.1 at 2016-12-15 12:29:06 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.4ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (12.1ms)
+Completed 200 OK in 158ms (Views: 154.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/disciplinas/new" for 127.0.0.1 at 2016-12-15 12:29:07 -0200
+Processing by DisciplinasController#new as HTML
+  Rendering disciplinas/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (1.0ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  [1m[36mProfessor Load (0.6ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered disciplinas/new.html.haml within layouts/application (28.1ms)
+Completed 200 OK in 129ms (Views: 124.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/disciplinas/new" for 127.0.0.1 at 2016-12-15 12:30:18 -0200
+Processing by DisciplinasController#new as HTML
+  Rendering disciplinas/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.4ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  [1m[36mProfessor Load (0.5ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered disciplinas/new.html.haml within layouts/application (25.2ms)
+Completed 200 OK in 134ms (Views: 113.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:30:21 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (15.4ms)
+Completed 200 OK in 126ms (Views: 120.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2016-12-15 12:30:22 -0200
+Processing by CandidatosController#new as HTML
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.4ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (14.8ms)
+Completed 200 OK in 109ms (Views: 107.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2016-12-15 12:33:17 -0200
+Processing by CandidatosController#new as HTML
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.5ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (19.7ms)
+Completed 200 OK in 138ms (Views: 124.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2016-12-15 12:33:24 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.6ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (19.3ms)
+Completed 200 OK in 115ms (Views: 110.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/disciplinas/new" for 127.0.0.1 at 2016-12-15 12:33:26 -0200
+Processing by DisciplinasController#new as HTML
+  Rendering disciplinas/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.6ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  [1m[36mProfessor Load (0.7ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered disciplinas/new.html.haml within layouts/application (29.5ms)
+Completed 200 OK in 153ms (Views: 143.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:33:29 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 167ms (Views: 164.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2016-12-15 12:33:30 -0200
+Processing by CandidatosController#new as HTML
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.5ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (18.9ms)
+Completed 200 OK in 139ms (Views: 136.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2016-12-15 12:33:41 -0200
+Processing by CandidatosController#new as HTML
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.5ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (15.5ms)
+Completed 200 OK in 136ms (Views: 132.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2016-12-15 12:33:42 -0200
+Processing by CandidatosController#new as HTML
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.5ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (11.5ms)
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2016-12-15 12:33:43 -0200
+Processing by CandidatosController#new as HTML
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.4ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (14.6ms)
+Completed 200 OK in 122ms (Views: 119.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2016-12-15 12:33:48 -0200
+Processing by CandidatosController#new as HTML
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.5ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (16.8ms)
+Completed 200 OK in 146ms (Views: 142.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2016-12-15 12:33:49 -0200
+Processing by CandidatosController#new as HTML
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.4ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (14.2ms)
+Completed 200 OK in 119ms (Views: 116.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2016-12-15 12:33:55 -0200
+Processing by CandidatosController#new as HTML
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.9ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (17.1ms)
+Completed 200 OK in 128ms (Views: 124.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2016-12-15 12:34:03 -0200
+Processing by CandidatosController#new as HTML
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.7ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (14.0ms)
+Completed 200 OK in 117ms (Views: 114.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/candidatos" for 127.0.0.1 at 2016-12-15 12:34:15 -0200
+Processing by CandidatosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PYPxuwi7Jzyf3JTWZBxqoxdpktuVxsEq9oY402UCF3Tv7QGrJ+hgdA1QGRgY4djmdMGm9ahA5pjEU7d6EKEovg==", "candidato"=>{"nome"=>"asdsasdas", "matricula"=>"dsadasda", "monitoria"=>"Voluntaria", "semestre"=>"1"}, "disciplina"=>{"nome"=>"ARQUITETURA DE PROCESSADORES DIGITAIS"}, "x"=>"13", "y"=>"9"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "asdsasdas"], ["matricula", "dsadasda"], ["monitoria", "Voluntaria"], ["semestre", 1], ["created_at", 2016-12-15 14:34:15 UTC], ["updated_at", 2016-12-15 14:34:15 UTC]]
+  [1m[35m (223.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/candidatos
+Completed 302 Found in 231ms (ActiveRecord: 224.4ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:34:15 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 131ms (Views: 128.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidatos/5" for 127.0.0.1 at 2016-12-15 12:34:17 -0200
+Processing by CandidatosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT  "candidatos".* FROM "candidatos" WHERE "candidatos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering candidatos/show.html.haml within layouts/application
+  Rendered candidatos/show.html.haml within layouts/application (11.4ms)
+Completed 200 OK in 124ms (Views: 118.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/candidatos/5" for 127.0.0.1 at 2016-12-15 12:35:38 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CandidatosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT  "candidatos".* FROM "candidatos" WHERE "candidatos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering candidatos/show.html.haml within layouts/application
+  Rendered candidatos/show.html.haml within layouts/application (16.8ms)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `disciplina' for #<Candidato:0x000000041efad8>
+Did you mean?  display):
+    12: 		= @candidato.matricula
+    13: 	%li
+    14: 		Matricula:
+    15: 		= @candidato.disciplina
+    16: 	%li
+    17: 		Semestre:
+    18: 		= @candidato.semestre
+  
+app/views/candidatos/show.html.haml:15:in `_app_views_candidatos_show_html_haml___1893609588571374671_34805980'
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.4ms)
+Started GET "/" for 127.0.0.1 at 2016-12-15 12:37:33 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/home" for 127.0.0.1 at 2016-12-15 12:37:34 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 665ms (Views: 653.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:37:36 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (37.3ms)
+Completed 200 OK in 145ms (Views: 136.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2016-12-15 12:37:38 -0200
+Processing by CandidatosController#new as HTML
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.6ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (36.4ms)
+Completed 200 OK in 137ms (Views: 134.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/candidatos" for 127.0.0.1 at 2016-12-15 12:37:46 -0200
+Processing by CandidatosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TvDXC+SPbEKbvkw0Nzzc4Qf9SGXPghlxfy+QgQy3mN+cnicby9wrCgkywfpLwW6kZFV8S/IEPsNN+h8oeRSnFQ==", "candidato"=>{"nome"=>"ssadasd", "matricula"=>"adsasdas", "monitoria"=>"Voluntaria", "semestre"=>"1"}, "disciplina"=>{"nome"=>"ORGANIZACAO E ARQUITETURA DE COMPUTADORES"}, "x"=>"14", "y"=>"17"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.7ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "ssadasd"], ["matricula", "adsasdas"], ["monitoria", "Voluntaria"], ["semestre", 1], ["created_at", 2016-12-15 14:37:46 UTC], ["updated_at", 2016-12-15 14:37:46 UTC]]
+  [1m[35m (294.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/candidatos
+Completed 302 Found in 309ms (ActiveRecord: 298.8ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:37:47 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 119ms (Views: 117.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/candidatos/6" for 127.0.0.1 at 2016-12-15 12:37:48 -0200
+Processing by CandidatosController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT  "candidatos".* FROM "candidatos" WHERE "candidatos"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering candidatos/show.html.haml within layouts/application
+  Rendered candidatos/show.html.haml within layouts/application (20.0ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `disciplina' for #<Candidato:0x007fc450147cd0>
+Did you mean?  display):
+    12: 		= @candidato.matricula
+    13: 	%li
+    14: 		Matricula:
+    15: 		= @candidato.disciplina
+    16: 	%li
+    17: 		Semestre:
+    18: 		= @candidato.semestre
+  
+app/views/candidatos/show.html.haml:15:in `_app_views_candidatos_show_html_haml__3988877083945797453_70240566916340'
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.0ms)
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:38:35 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (9.6ms)
+Completed 200 OK in 123ms (Views: 120.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:38:36 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 89ms (Views: 87.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:38:38 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 111ms (Views: 109.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidatos/6" for 127.0.0.1 at 2016-12-15 12:38:39 -0200
+Processing by CandidatosController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT  "candidatos".* FROM "candidatos" WHERE "candidatos"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering candidatos/show.html.haml within layouts/application
+  Rendered candidatos/show.html.haml within layouts/application (18.0ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `disciplina' for #<Candidato:0x007fc4447850e0>
+Did you mean?  display):
+    12: 		= @candidato.matricula
+    13: 	%li
+    14: 		Matricula:
+    15: 		= @candidato.disciplina
+    16: 	%li
+    17: 		Semestre:
+    18: 		= @candidato.semestre
+  
+app/views/candidatos/show.html.haml:15:in `_app_views_candidatos_show_html_haml__3988877083945797453_39984080'
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.5ms)
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:38:49 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.4ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 109ms (Views: 106.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:38:50 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (8.8ms)
+Completed 200 OK in 92ms (Views: 90.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:38:51 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 54ms (Views: 51.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2016-12-15 12:38:52 -0200
+Processing by CandidatosController#new as HTML
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.5ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (20.7ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `disciplina' for #<Candidato:0x0000000207ddf0>
+Did you mean?  display):
+    12: 	- oferta_lista = []
+    13: 	- @lista_disciplinas.each do |o|
+    14: 		- oferta_lista += [o.nome]
+    15: 	= select :candidato, :disciplina, oferta_lista
+    16: 	%br
+    17: 	= label :candidato, :monitoria, 'Tipo de monitoria'
+    18: 	= select :candidato, :monitoria, ['Voluntaria','Remunerada']
+  
+app/views/candidatos/new.html.haml:15:in `block in _app_views_candidatos_new_html_haml__3088502336497707003_17064700'
+app/views/candidatos/new.html.haml:3:in `_app_views_candidatos_new_html_haml__3088502336497707003_17064700'
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 1"], ["codigo", "cic01"], ["professor", "Professor 1"], ["vagas", #<BigDecimal:3e89c90,'0.3E1',9(27)>], ["created_at", 2016-12-15 14:41:11 UTC], ["updated_at", 2016-12-15 14:41:11 UTC]]
+  [1m[35m (216.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["professor", "Professor 2"], ["vagas", #<BigDecimal:3cecbf8,'0.2E1',9(27)>], ["created_at", 2016-12-15 14:41:11 UTC], ["updated_at", 2016-12-15 14:41:11 UTC]]
+  [1m[35m (145.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["professor", "Professor 1"], ["vagas", #<BigDecimal:28a4808,'0.2E1',9(27)>], ["created_at", 2016-12-15 14:41:11 UTC], ["updated_at", 2016-12-15 14:41:11 UTC]]
+  [1m[35m (264.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "oferta" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "Disciplina 1"], ["codigo", "cic01"], ["created_at", 2016-12-15 14:41:11 UTC], ["updated_at", 2016-12-15 14:41:11 UTC]]
+  [1m[35m (289.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "oferta" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["created_at", 2016-12-15 14:41:12 UTC], ["updated_at", 2016-12-15 14:41:12 UTC]]
+  [1m[35m (293.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "email", "sala", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "Professor 1"], ["email", "professor1@unb.br"], ["sala", "Sala A1-1-1"], ["created_at", 2016-12-15 14:41:12 UTC], ["updated_at", 2016-12-15 14:41:12 UTC]]
+  [1m[35m (236.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "email", "sala", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "Professor 2"], ["email", "professor2@unb.br"], ["sala", "Sala A2-2-2"], ["created_at", 2016-12-15 14:41:12 UTC], ["updated_at", 2016-12-15 14:41:12 UTC]]
+  [1m[35m (285.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "prioridade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Mateus Andrade"], ["matricula", "10123456"], ["monitoria", "Remunerada"], ["semestre", 3], ["prioridade", 0], ["created_at", 2016-12-15 14:41:12 UTC], ["updated_at", 2016-12-15 14:41:12 UTC]]
+  [1m[35m (221.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "prioridade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Erick Medeiros"], ["matricula", "11123456"], ["monitoria", "Voluntaria"], ["semestre", 4], ["prioridade", 0], ["created_at", 2016-12-15 14:41:13 UTC], ["updated_at", 2016-12-15 14:41:13 UTC]]
+  [1m[35m (237.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "prioridade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Simone Garcia"], ["matricula", "12123456"], ["monitoria", "Voluntaria"], ["semestre", 5], ["prioridade", 0], ["created_at", 2016-12-15 14:41:13 UTC], ["updated_at", 2016-12-15 14:41:13 UTC]]
+  [1m[35m (247.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "prioridade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Jessica Esteves"], ["matricula", "13123456"], ["monitoria", "Remunerada"], ["semestre", 6], ["prioridade", 0], ["created_at", 2016-12-15 14:41:13 UTC], ["updated_at", 2016-12-15 14:41:13 UTC]]
+  [1m[35m (232.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[35m (242.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (201.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to InserirCandidatos (20161031202411)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "candidatos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "matricula" varchar, "disciplina" varchar, "monitoria" varchar, "semestre" integer, "prioridade" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161031202411"]]
+  [1m[35m (240.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CriarProfessor (20161101132911)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "professors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "email" varchar, "sala" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161101132911"]]
+  [1m[35m (263.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDisciplinas (20161210121327)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "disciplinas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "codigo" varchar, "professor" varchar, "vagas" decimal, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161210121327"]]
+  [1m[35m (203.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateOferta (20161210121345)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "oferta" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "codigo" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161210121345"]]
+  [1m[35m (263.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddColumnProfessorToProfessor (20161212181453)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "professors" ADD "professor" varchar[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161212181453"]]
+  [1m[35m (250.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to ListaDisciplinas (20161215041239)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "lista_disciplinas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "codigo" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161215041239"]]
+  [1m[35m (275.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-12-15 14:41:26 UTC], ["updated_at", 2016-12-15 14:41:26 UTC]]
+  [1m[35m (255.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 1"], ["codigo", "cic01"], ["professor", "Professor 1"], ["vagas", #<BigDecimal:439eff0,'0.3E1',9(27)>], ["created_at", 2016-12-15 14:41:38 UTC], ["updated_at", 2016-12-15 14:41:38 UTC]]
+  [1m[35m (181.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["professor", "Professor 2"], ["vagas", #<BigDecimal:4244448,'0.2E1',9(27)>], ["created_at", 2016-12-15 14:41:38 UTC], ["updated_at", 2016-12-15 14:41:38 UTC]]
+  [1m[35m (254.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["professor", "Professor 1"], ["vagas", #<BigDecimal:2e81258,'0.2E1',9(27)>], ["created_at", 2016-12-15 14:41:38 UTC], ["updated_at", 2016-12-15 14:41:38 UTC]]
+  [1m[35m (242.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "oferta" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "Disciplina 1"], ["codigo", "cic01"], ["created_at", 2016-12-15 14:41:38 UTC], ["updated_at", 2016-12-15 14:41:38 UTC]]
+  [1m[35m (253.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "oferta" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["created_at", 2016-12-15 14:41:39 UTC], ["updated_at", 2016-12-15 14:41:39 UTC]]
+  [1m[35m (233.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "email", "sala", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "Professor 1"], ["email", "professor1@unb.br"], ["sala", "Sala A1-1-1"], ["created_at", 2016-12-15 14:41:39 UTC], ["updated_at", 2016-12-15 14:41:39 UTC]]
+  [1m[35m (223.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "email", "sala", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "Professor 2"], ["email", "professor2@unb.br"], ["sala", "Sala A2-2-2"], ["created_at", 2016-12-15 14:41:39 UTC], ["updated_at", 2016-12-15 14:41:39 UTC]]
+  [1m[35m (243.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "prioridade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Mateus Andrade"], ["matricula", "10123456"], ["monitoria", "Remunerada"], ["semestre", 3], ["prioridade", 0], ["created_at", 2016-12-15 14:41:39 UTC], ["updated_at", 2016-12-15 14:41:39 UTC]]
+  [1m[35m (237.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "prioridade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Erick Medeiros"], ["matricula", "11123456"], ["monitoria", "Voluntaria"], ["semestre", 4], ["prioridade", 0], ["created_at", 2016-12-15 14:41:40 UTC], ["updated_at", 2016-12-15 14:41:40 UTC]]
+  [1m[35m (232.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "prioridade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Simone Garcia"], ["matricula", "12123456"], ["monitoria", "Voluntaria"], ["semestre", 5], ["prioridade", 0], ["created_at", 2016-12-15 14:41:40 UTC], ["updated_at", 2016-12-15 14:41:40 UTC]]
+  [1m[35m (258.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "prioridade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Jessica Esteves"], ["matricula", "13123456"], ["monitoria", "Remunerada"], ["semestre", 6], ["prioridade", 0], ["created_at", 2016-12-15 14:41:40 UTC], ["updated_at", 2016-12-15 14:41:40 UTC]]
+  [1m[35m (184.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:41:54 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (441.6ms)
+Completed 200 OK in 596ms (Views: 580.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:41:57 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (10.3ms)
+Completed 200 OK in 128ms (Views: 126.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2016-12-15 12:41:59 -0200
+Processing by CandidatosController#new as HTML
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (17.8ms)
+Completed 200 OK in 117ms (Views: 114.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2016-12-15 12:42:06 -0200
+Processing by ListaDisciplinasController#index as HTML
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.3ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered lista_disciplinas/index.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 100ms (Views: 98.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:42:42 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.8ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (10.2ms)
+Completed 200 OK in 151ms (Views: 147.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2016-12-15 12:42:43 -0200
+Processing by ListaDisciplinasController#index as HTML
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.1ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered lista_disciplinas/index.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 134ms (Views: 133.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/lista_disciplinas/new" for 127.0.0.1 at 2016-12-15 12:42:45 -0200
+Processing by ListaDisciplinasController#new as HTML
+  Rendering lista_disciplinas/new.html.haml within layouts/application
+  Rendered lista_disciplinas/new.html.haml within layouts/application (8.8ms)
+Completed 200 OK in 107ms (Views: 98.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/lista_disciplinas" for 127.0.0.1 at 2016-12-15 12:42:50 -0200
+Processing by ListaDisciplinasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3DNIweouDvZB98d+5uaekf/PmqcFSIszXA/VTwS6F/EOXbjRxX1JvtN7SrCaGyzUnGeuiTjOrIFu2lrmcRkoOw==", "lista_disciplinas"=>{"nome"=>"Teste", "codigo"=>"123"}, "x"=>"15", "y"=>"23"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "lista_disciplinas" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "Teste"], ["codigo", "123"], ["created_at", 2016-12-15 14:42:50 UTC], ["updated_at", 2016-12-15 14:42:50 UTC]]
+  [1m[35m (313.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/lista_disciplinas
+Completed 302 Found in 324ms (ActiveRecord: 314.5ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2016-12-15 12:42:51 -0200
+Processing by ListaDisciplinasController#index as HTML
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered lista_disciplinas/index.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 99ms (Views: 97.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:42:52 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (10.0ms)
+Completed 200 OK in 122ms (Views: 120.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2016-12-15 12:42:54 -0200
+Processing by CandidatosController#new as HTML
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.5ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (13.1ms)
+Completed 200 OK in 119ms (Views: 116.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/candidatos" for 127.0.0.1 at 2016-12-15 12:43:01 -0200
+Processing by CandidatosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hcOimJkmDVpfclLYYpoLtAf+f7JF2UZ99oeSzWxJ42FXrVKItnVKEs3+3xYeZ7nxZFZLnHhfYc/EUh1kGercqw==", "candidato"=>{"nome"=>"adsas", "matricula"=>"asdasda", "disciplina"=>"Teste", "monitoria"=>"Voluntaria", "semestre"=>"1"}, "x"=>"21", "y"=>"9"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (9.4ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "disciplina", "monitoria", "semestre", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "adsas"], ["matricula", "asdasda"], ["disciplina", "Teste"], ["monitoria", "Voluntaria"], ["semestre", 1], ["created_at", 2016-12-15 14:43:01 UTC], ["updated_at", 2016-12-15 14:43:01 UTC]]
+  [1m[35m (848.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/candidatos
+Completed 302 Found in 862ms (ActiveRecord: 857.6ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:43:02 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (8.3ms)
+Completed 200 OK in 108ms (Views: 105.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidatos/5" for 127.0.0.1 at 2016-12-15 12:43:04 -0200
+Processing by CandidatosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT  "candidatos".* FROM "candidatos" WHERE "candidatos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering candidatos/show.html.haml within layouts/application
+  Rendered candidatos/show.html.haml within layouts/application (10.4ms)
+Completed 200 OK in 53ms (Views: 45.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:43:09 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (11.5ms)
+Completed 200 OK in 136ms (Views: 134.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:43:24 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (11.4ms)
+Completed 200 OK in 130ms (Views: 128.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidatos/5" for 127.0.0.1 at 2016-12-15 12:43:26 -0200
+Processing by CandidatosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT  "candidatos".* FROM "candidatos" WHERE "candidatos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering candidatos/show.html.haml within layouts/application
+  Rendered candidatos/show.html.haml within layouts/application (15.7ms)
+Completed 200 OK in 133ms (Views: 130.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/candidatos/5/edit" for 127.0.0.1 at 2016-12-15 12:43:29 -0200
+Processing by CandidatosController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT  "candidatos".* FROM "candidatos" WHERE "candidatos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering candidatos/edit.html.haml within layouts/application
+  Rendered candidatos/edit.html.haml within layouts/application (12.3ms)
+Completed 200 OK in 105ms (Views: 101.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/candidatos/5/edit" for 127.0.0.1 at 2016-12-15 12:44:03 -0200
+Processing by CandidatosController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCandidato Load (0.1ms)[0m  [1m[34mSELECT  "candidatos".* FROM "candidatos" WHERE "candidatos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering candidatos/edit.html.haml within layouts/application
+  Rendered candidatos/edit.html.haml within layouts/application (9.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Inconsistent indentation: 3 tabs used for indentation, but the rest of the document was indented using 2 tabs.):
+    12: 		= label :candidato, :disciplina, 'Disciplina'
+    13: 		- oferta_lista = []
+    14: 		- @lista_disciplinas.each do |o|
+    15: 			- oferta_lista += [o.nome]
+    16: 		= select :candidato, :disciplina, oferta_lista
+    17: 		%br
+    18: 		= label :candidato, :monitoria, 'Tipo de monitoria'
+  
+app/views/candidatos/edit.html.haml:15
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/luigi/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.7ms)
+Started GET "/candidatos/5/edit" for 127.0.0.1 at 2016-12-15 12:44:41 -0200
+Processing by CandidatosController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCandidato Load (0.1ms)[0m  [1m[34mSELECT  "candidatos".* FROM "candidatos" WHERE "candidatos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering candidatos/edit.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/edit.html.haml within layouts/application (11.6ms)
+Completed 200 OK in 293ms (Views: 290.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidatos/5" for 127.0.0.1 at 2016-12-15 12:44:43 -0200
+Processing by CandidatosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCandidato Load (0.1ms)[0m  [1m[34mSELECT  "candidatos".* FROM "candidatos" WHERE "candidatos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering candidatos/show.html.haml within layouts/application
+  Rendered candidatos/show.html.haml within layouts/application (66.4ms)
+Completed 200 OK in 158ms (Views: 155.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:44:43 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.4ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:44:45 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 99ms (Views: 97.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/candidatos/5" for 127.0.0.1 at 2016-12-15 12:44:47 -0200
+Processing by CandidatosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCandidato Load (0.1ms)[0m  [1m[34mSELECT  "candidatos".* FROM "candidatos" WHERE "candidatos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering candidatos/show.html.haml within layouts/application
+  Rendered candidatos/show.html.haml within layouts/application (11.5ms)
+Completed 200 OK in 108ms (Views: 105.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/candidatos/5/edit" for 127.0.0.1 at 2016-12-15 12:44:48 -0200
+Processing by CandidatosController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCandidato Load (0.1ms)[0m  [1m[34mSELECT  "candidatos".* FROM "candidatos" WHERE "candidatos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering candidatos/edit.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.3ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/edit.html.haml within layouts/application (13.9ms)
+Completed 200 OK in 40ms (Views: 37.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2016-12-15 12:44:52 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (8.8ms)
+Completed 200 OK in 136ms (Views: 134.3ms | ActiveRecord: 0.3ms)
+
+
