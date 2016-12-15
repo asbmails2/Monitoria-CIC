@@ -929,3 +929,513 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.0ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for ::1 at 2016-12-15 00:43:51 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/home" for ::1 at 2016-12-15 00:43:54 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 3067ms (Views: 2958.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/candidatos" for ::1 at 2016-12-15 00:44:08 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (35.0ms)
+Completed 200 OK in 102ms (Views: 94.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-15 00:44:10 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (13.7ms)
+Completed 200 OK in 60ms (Views: 42.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/professores" for ::1 at 2016-12-15 00:44:16 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (13.7ms)
+Completed 200 OK in 111ms (Views: 54.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/professores" for ::1 at 2016-12-15 00:44:17 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 58ms (Views: 54.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-15 00:44:19 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 54ms (Views: 50.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/professores" for ::1 at 2016-12-15 00:44:20 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (9.3ms)
+Completed 200 OK in 60ms (Views: 56.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-15 00:44:22 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 55ms (Views: 51.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidatos" for ::1 at 2016-12-15 00:44:25 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 46ms (Views: 37.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professores" for ::1 at 2016-12-15 00:44:33 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 58ms (Views: 53.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-12-15 00:44:33 -0200
+Started GET "/home" for ::1 at 2016-12-15 00:44:33 -0200
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 33ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/professores" for ::1 at 2016-12-15 00:44:34 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 40ms (Views: 36.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-15 00:44:39 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 50ms (Views: 37.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/candidatos" for ::1 at 2016-12-15 00:44:41 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 59ms (Views: 55.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-15 00:44:41 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 57ms (Views: 51.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professores" for ::1 at 2016-12-15 00:44:42 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.5ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 60ms (Views: 56.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-15 00:45:13 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 69ms (Views: 53.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/candidatos" for ::1 at 2016-12-15 00:45:14 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (9.9ms)
+Completed 200 OK in 51ms (Views: 48.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-15 00:45:14 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 57ms (Views: 53.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-15 00:45:31 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (36.8ms)
+Completed 200 OK in 73ms (Views: 68.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-15 00:45:33 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 48ms (Views: 45.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidatos" for ::1 at 2016-12-15 00:45:34 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 80ms (Views: 44.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-15 00:45:35 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 69ms (Views: 65.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-15 00:45:37 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (9.9ms)
+Completed 200 OK in 64ms (Views: 61.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-15 00:45:39 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.4ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 51ms (Views: 48.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professores" for ::1 at 2016-12-15 00:45:40 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 70ms (Views: 52.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-15 00:45:40 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.4ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 59ms (Views: 54.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/candidatos" for ::1 at 2016-12-15 00:45:43 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 71ms (Views: 61.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-15 00:45:44 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (8.3ms)
+Completed 200 OK in 59ms (Views: 53.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/disciplinas/new" for ::1 at 2016-12-15 00:45:53 -0200
+Processing by DisciplinasController#new as HTML
+  Rendering disciplinas/new.html.haml within layouts/application
+  [1m[36mOferta Load (1.3ms)[0m  [1m[34mSELECT "oferta".* FROM "oferta"[0m
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered disciplinas/new.html.haml within layouts/application (110.0ms)
+Completed 200 OK in 204ms (Views: 142.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/professores" for ::1 at 2016-12-15 00:46:00 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (35.2ms)
+Completed 200 OK in 86ms (Views: 65.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/candidatos" for ::1 at 2016-12-15 00:46:46 -0200
+Processing by CandidatosController#index as HTML
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (26.6ms)
+Completed 200 OK in 136ms (Views: 112.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-15 00:46:49 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 61ms (Views: 38.5ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddColumnProfessorToProfessor (20161212181453)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (16.6ms)[0m  [1m[35mALTER TABLE "professors" ADD "professor" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161212181453"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/professores" for ::1 at 2016-12-15 00:54:54 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (691.7ms)
+Completed 200 OK in 1245ms (Views: 1173.0ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/professores/import" for ::1 at 2016-12-15 00:55:09 -0200
+Processing by ProfessoresController#import as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2k5pzCc2zGggBI+zcOuZBmCeJQ41h8EXKEBBkM/HZW2cCX5e/B7y4Noz/afZ1Wie/iLgXq6mUdLq+XnTzKCM2w==", "file"=>#<ActionDispatch::Http::UploadedFile:0x007f9c7bdc5fe0 @tempfile=#<Tempfile:/var/folders/k7/xpcqqlz97gq63853qyclh9r80000gn/T/RackMultipart20161215-26564-ufda0p.csv>, @original_filename="lista_professores.csv", @content_type="text/csv", @headers="Content-Disposition: form-data; name=\"file\"; filename=\"lista_professores.csv\"\r\nContent-Type: text/csv\r\n">, "commit"=>"Importar Professores"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "ALBA CRISTINA MAGALHAES ALVES DE MELO"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "ALETEIA PATRICIA FAVACHO DE ARAUJO VON PAUMGARTTEN"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "ALETEIA PATRICIA FAVACHO DE ARAUJO VON PAUMGARTTEN e EDUARDO ADILIO PELINSON ALCHIERI"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "ALEXANDRE ZAGHETTO"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "ALEXANDRE ZAGHETTO e ANDR\\\\\\\\xc9 COSTA DRUMMOND"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "ALEXANDRE ZAGHETTO e CARLA DENISE CASTANHO"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "ANDR\\\\\\\\xc9 COSTA DRUMMOND"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "ANDR\\\\\\\\xc9 COSTA DRUMMOND e EDISON ISHIKAWA"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (15.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "BRUNO LUIGGI MACCHIAVELLO ESPINOZA"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "BRUNO LUIGGI MACCHIAVELLO ESPINOZA e MARCELO GRANDI MANDELLI"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "CARLA DENISE CASTANHO"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "CARLA MARIA CHAGAS E CAVALCANTE KOIKE"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (39.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "CARLA MARIA CHAGAS E CAVALCANTE KOIKE e MARCELO GRANDI MANDELLI"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "CARLA MARIA CHAGAS E CAVALCANTE KOIKE e WILSON HENRIQUE VENEZIANO"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "CELIA GHEDINI RALHA"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "CLAUDIA NALON"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "DANIEL DA SILVA SOUZA"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (9.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "DIBIO LEANDRO BORGES"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "EDGARD COSTA OLIVEIRA e EDISON ISHIKAWA e MARCIO DE CARVALHO VICTORINO e MARIA DE FATIMA RAMOS BRANDAO"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "EDISON ISHIKAWA"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "EDISON ISHIKAWA e PRISCILA AMERICA SOLIS MENDEZ BARRETO"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "EDUARDO ADILIO PELINSON ALCHIERI"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "FERNANDA LIMA"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "FERNANDO ANTONIO DE ARAUJO CHACON DE ALBUQUERQUE"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "FLAVIO DE BARROS VIDAL"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "FLAVIO JOS\\\\\\\\xc9 FERRO BARROS"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "FLAVIO LEONARDO CAVALCANTI DE MOURA"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "FRANCISCO DE ASSIS CARTAXO PINHEIRO"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "GENAINA NUNES RODRIGUES"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "GEORGE LUIZ MEDEIROS TEODORO"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "GEOVANY ARAUJO BORGES"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "GERMANA MENEZES DA NOBREGA"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "GERSON HENRIQUE PFITSCHER"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "GUILHERME NOVAES RAMOS"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "JACIR LUIZ BORDIM"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "JAN MENDONCA CORREA"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "JORGE CARLOS LUCERO"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "JORGE HENRIQUE CABRAL FERNANDES"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "JO\\\\\\\\xc3O JOS\\\\\\\\xc9 COSTA GONDIM"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "LETICIA LOPES LEITE"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "LETICIA LOPES LEITE e MARIA DE FATIMA RAMOS BRANDAO"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "LI WEIGANG"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "MARCELO GRANDI MANDELLI"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "MARCELO GRANDI MANDELLI e WILSON HENRIQUE VENEZIANO"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "MARCELO LADEIRA"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "MARCOS FAGUNDES CAETANO"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "MARCUS VINICIUS LAMAR"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "MARIA DE FATIMA RAMOS BRANDAO"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "MARIA EMILIA MACHADO TELLES WALTER"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "MARISTELA TERTO DE HOLANDA"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "MAURICIO AYALA RINCON"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "MYLENE CHRISTINE QUEIROZ DE FARIAS"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "PEDRO ANTONIO DOURADO DE REZENDE"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "PEDRO DE AZEVEDO BERGER"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "PRISCILA AMERICA SOLIS MENDEZ BARRETO"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "RAFAEL MARCONI RAMOS"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "RAFAEL TIMOTEO DE SOUSA JUNIOR"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "RICARDO LOPES DE QUEIROZ"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "RICARDO PEZZUOL JACOBI"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "RICARDO ZELENOVSKY"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "RODRIGO BONIF\\\\\\\\xc1CIO DE ALMEIDA"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "VANDER RAMOS ALVES"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["nome", "WILSON HENRIQUE VENEZIANO"], ["created_at", 2016-12-15 02:55:09 UTC], ["updated_at", 2016-12-15 02:55:09 UTC]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/professores
+Completed 302 Found in 453ms (ActiveRecord: 223.6ms)
+
+
+Started GET "/professores" for ::1 at 2016-12-15 00:55:09 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.8ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (18.1ms)
+Completed 200 OK in 98ms (Views: 79.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/disciplinas" for ::1 at 2016-12-15 00:55:13 -0200
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (20.4ms)
+Completed 200 OK in 69ms (Views: 56.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/professores" for ::1 at 2016-12-15 00:55:14 -0200
+Processing by ProfessoresController#index as HTML
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (21.4ms)
+Completed 200 OK in 74ms (Views: 70.7ms | ActiveRecord: 0.4ms)
+
+

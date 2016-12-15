@@ -6,6 +6,8 @@ MonitoriaCic::Application.routes.draw do
   root :to => redirect('/candidatos')
   resources :disciplinas
   root :to => redirect('/disciplinas')
-  resources :professores
+  resources :professores do
+    collection { post :import }
+  end
   root :to => redirect('/professores')
 end

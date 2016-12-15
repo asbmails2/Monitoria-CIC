@@ -15,3 +15,8 @@
 
 %br
 = link_to image_tag('adicionar.png'), new_professore_url
+
+%h4 Importar Professores
+= form_tag import_professores_path, multipart: true do
+  = file_field_tag :file
+  = submit_tag "Importar Professores"
