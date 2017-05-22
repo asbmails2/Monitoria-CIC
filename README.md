@@ -12,7 +12,7 @@ por as seguintes classes:
   * Professores: gerencia o cadastro de professores, e exibe os professores cadastrados e assim é possivel 
   selecionar um professor para ofertar uma bolsa de monitoria
   
-  *Inscricao de candidatos: cadastro de candidato que desejam se aplicar a monitoria de um certa disciplina
+  * Inscricao de candidatos: cadastro de candidato que desejam se aplicar a monitoria de um certa disciplina
   
 Para rodar os testes é necessário criar o banco de dados e inicializa-lo:
   $ rake db:migrate RAILS_ENV=test
