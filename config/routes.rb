@@ -1,5 +1,6 @@
 
 MonitoriaCic::Application.routes.draw do
+  devise_for :users
   resources :home
   root :to => redirect('/home')
   resources :candidatos
@@ -14,4 +15,6 @@ MonitoriaCic::Application.routes.draw do
     collection { post :import }
   end
   root :to => redirect('/lista_disciplinas')
+
+  root to: "home#index"
 end

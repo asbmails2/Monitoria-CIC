@@ -62,3 +62,10 @@ group :test do
 	gem 'capybara'
 	gem 'launchy'
 end
+
+# Add for a login system
+gem 'devise'
+gem 'toastr-rails'
+#gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', '>= 1.0.0.rc'
+gem 'cancancan'

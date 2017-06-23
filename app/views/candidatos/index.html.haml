@@ -1,4 +1,8 @@
 -#  This file is app/views/movies/index.html.haml
+-if current_user.nil?
+	%li= link_to "Sign in", new_user_session_path
+
+
 %h2 Candidatos
 
 %table#candidatos

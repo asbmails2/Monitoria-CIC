@@ -20,9 +20,7 @@
         %li
           %a{:href => disciplinas_url} Gerência de bolsas
       %ul.nav.navbar-nav.navbar-right
-        %li
-          %a{:href => "#"} Login
-
+        %li=link_to "Log-out", destroy_user_session_path,:method => :delete
 %html
   %head
     %title Monitoria CIC
@@ -39,5 +37,3 @@
     #warning.message= flash[:aviso]
     #main
   = yield
-
-
