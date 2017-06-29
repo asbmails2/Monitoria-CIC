@@ -11214,3 +11214,348 @@ Processing by DisciplinasController#index as HTML
 Completed 200 OK in 51ms (Views: 43.7ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/disciplinas" for 127.0.0.1 at 2017-06-29 00:03:32 -0300
+Processing by DisciplinasController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.4ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 38ms (Views: 34.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-06-29 00:03:36 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 47ms (Views: 44.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2017-06-29 00:03:38 -0300
+Processing by ListaDisciplinasController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.6ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered lista_disciplinas/index.html.haml within layouts/application (12.4ms)
+Completed 200 OK in 55ms (Views: 51.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-06-29 00:03:44 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.6ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (20.7ms)
+Completed 200 OK in 55ms (Views: 52.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-06-29 00:04:43 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (19.9ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %if and nested within it.):
+    19:           %a{:href => candidatos_url} Inscrição de candidatos
+    20: 
+    21:         %if current_user.professor_role? || current_user.supervisor_role?
+    22:             %li
+    23:               %a{:href => disciplinas_url} Gerência de bolsas
+    24:                       
+    25:       %ul.nav.navbar-nav.navbar-right
+  
+app/views/layouts/application.html.haml:22
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.7ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.8ms)
+Started GET "/professores" for 127.0.0.1 at 2017-06-29 00:05:09 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    19:           %a{:href => candidatos_url} Inscrição de candidatos
+    20: 
+    21:         =if current_user.professor_role? || current_user.supervisor_role?
+    22:             %li
+    23:               %a{:href => disciplinas_url} Gerência de bolsas
+    24: 
+    25:       %ul.nav.navbar-nav.navbar-right
+  
+app/views/layouts/application.html.haml:22
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.7ms)
+Started GET "/professores" for 127.0.0.1 at 2017-06-29 00:05:27 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (11.2ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `supervisor_role?' for #<User:0x007f00e2580bd0>):
+    18:         %li
+    19:           %a{:href => candidatos_url} Inscrição de candidatos
+    20: 
+    21:         =if current_user.professor_role? || current_user.supervisor_role?
+    22:           %li
+    23:             %a{:href => disciplinas_url} Gerência de bolsas
+    24: 
+  
+app/views/layouts/application.html.haml:21:in `_app_views_layouts_application_html_haml__597029351436280171_69820886901080'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.5ms)
+Started GET "/" for 127.0.0.1 at 2017-06-29 00:05:35 -0300
+Started GET "/home" for 127.0.0.1 at 2017-06-29 00:05:35 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `supervisor_role?' for #<User:0x007f00dfdf8ea0>):
+    18:         %li
+    19:           %a{:href => candidatos_url} Inscrição de candidatos
+    20: 
+    21:         =if current_user.professor_role? || current_user.supervisor_role?
+    22:           %li
+    23:             %a{:href => disciplinas_url} Gerência de bolsas
+    24: 
+  
+app/views/layouts/application.html.haml:21:in `_app_views_layouts_application_html_haml__597029351436280171_69820668976340'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.9ms)
+Started GET "/home" for 127.0.0.1 at 2017-06-29 00:07:46 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `supervisor_role?' for #<User:0x007f00dedd37a0>):
+    18:         %li
+    19:           %a{:href => candidatos_url} Inscrição de candidatos
+    20: 
+    21:         =if (current_user.professor_role? || current_user.supervisor_role?)
+    22:           %li
+    23:             %a{:href => disciplinas_url} Gerência de bolsas
+    24: 
+  
+app/views/layouts/application.html.haml:21:in `_app_views_layouts_application_html_haml__597029351436280171_69820862589940'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.3ms)
+Started GET "/home" for 127.0.0.1 at 2017-06-29 00:08:10 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-06-29 00:08:13 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.7ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (18.1ms)
+Completed 200 OK in 53ms (Views: 49.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2017-06-29 00:08:34 -0300
+Processing by ListaDisciplinasController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.5ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered lista_disciplinas/index.html.haml within layouts/application (11.0ms)
+Completed 200 OK in 44ms (Views: 38.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-06-29 00:08:38 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (10.8ms)
+Completed 200 OK in 41ms (Views: 37.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-29 00:08:47 -0300
+Started GET "/home" for 127.0.0.1 at 2017-06-29 00:08:47 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2017-06-29 00:10:47 -0300
+Processing by ListaDisciplinasController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.9ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered lista_disciplinas/index.html.haml within layouts/application (16.6ms)
+Completed 200 OK in 70ms (Views: 66.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-06-29 00:10:48 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.7ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (22.9ms)
+Completed 200 OK in 63ms (Views: 60.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-06-29 00:14:11 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  Rendered professores/index.html.haml within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    13:         %td= professor.sala
+    14:         - #Icones <div>Icons made by <a href="http://www.flaticon.com/authors/flat-icons" title="Flat Icons">Flat Icons</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+    15:     =if (current_user.professor_role? || current_user.admin_role?)
+    16:         %br
+    17:           = link_to image_tag('adicionar.png'), new_professore_url
+    18: 
+    19:         %h4 Importar Professores
+  
+app/views/professores/index.html.haml:16
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.8ms)
+Started GET "/professores" for 127.0.0.1 at 2017-06-29 00:14:30 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  Rendered professores/index.html.haml within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %h4 and nested within it.):
+    17:         = link_to image_tag('adicionar.png'), new_professore_url
+    18: 
+    19:       %h4 Importar Professores
+    20:         = form_tag import_professores_path, multipart: true do
+    21:         = file_field_tag :file
+    22:         = image_submit_tag('salvar.png')
+    23:     %br
+  
+app/views/professores/index.html.haml:20
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.4ms)
+Started GET "/professores" for 127.0.0.1 at 2017-06-29 00:15:00 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  Rendered professores/index.html.haml within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %h4 and nested within it.):
+    17:         = link_to image_tag('adicionar.png'), new_professore_url
+    18: 
+    19:         %h4 Importar Professores
+    20:           = form_tag import_professores_path, multipart: true do
+    21:           = file_field_tag :file
+    22:           = image_submit_tag('salvar.png')
+    23:     %br
+  
+app/views/professores/index.html.haml:20
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.6ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.9ms)
+Started GET "/professores" for 127.0.0.1 at 2017-06-29 00:16:24 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.5ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (10.5ms)
+Completed 200 OK in 44ms (Views: 40.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-06-29 00:16:51 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (11.3ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-06-29 00:17:52 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (10.6ms)
+Completed 200 OK in 43ms (Views: 40.3ms | ActiveRecord: 0.6ms)
+
+
