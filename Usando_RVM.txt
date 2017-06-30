@@ -1,0 +1,47 @@
+Para usar o RVM para o controle do uso de versões distindas do Ruby, veja como
+installar o RVM no site.
+
+Uso
+
+Para usar uma versão específica do Ruby:
+
+rvm use X.X.X
+
+Substitua o X.X.X pela versão desejada.
+
+Caso não tenha a versão ele irá instalar para você
+
+Uma informação útil sobre o RVM é que quando se usa o comando USE X.x.x
+ele verifica se já tem a versão específica do Ruby e seleciona tanto a vesão como
+o gemset específico daquela versão além das gemas adicionais que instalou. Dessa
+forma pode usar o mesmo ruby com variações da versão do Rails , por exemplo.
+
+Quando usa esse comando a cima você seleciona apenas o Ruby na versão especificada.
+
+E, caso ja tenha um Rails instalado, será possível variar as versões do Ruby, mas
+a versão do Rails é a mesma.
+
+Para variar a seleção de rails por exemplo podemos usar alguns comandos.
+
+rvm use x.x.x
+rvm gemset list
+
+com isso verá o gemset criados para aquela versão x.x.x do Ruby.
+
+Para gemset com a variação do Rails basta.
+
+rvm use x.x.x@railsX --create
+gem install rails -x.x.x.x
+rails -v
+
+Pode repetir o mesmo comando para a mesma versão do Ruby variando apenas a do Rails.
+O @ é importante pois gera a ligação entre a versão do Ruby e o GemSet contendo o Rails correto.
+
+Quando quiser limpar o gemset de uma versão basta:
+
+rvm gemset empty
+gem install ...
+
+
+
+]
