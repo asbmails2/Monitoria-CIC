@@ -16309,3 +16309,1639 @@ Processing by RailsAdmin::MainController#index as HTML
 Completed 200 OK in 67ms (Views: 50.2ms | ActiveRecord: 0.7ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/admin/?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-06-30 15:56:52 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "candidatos"[0m
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT  "candidatos".* FROM "candidatos" ORDER BY "candidatos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "disciplinas"[0m
+  [1m[36mDisciplina Load (0.1ms)[0m  [1m[34mSELECT  "disciplinas".* FROM "disciplinas" ORDER BY "disciplinas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "lista_disciplinas"[0m
+  [1m[36mListaDisciplina Load (0.1ms)[0m  [1m[34mSELECT  "lista_disciplinas".* FROM "lista_disciplinas" ORDER BY "lista_disciplinas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "oferta"[0m
+  [1m[36mOferta Load (0.1ms)[0m  [1m[34mSELECT  "oferta".* FROM "oferta" ORDER BY "oferta"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "professors"[0m
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" ORDER BY "professors"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (29.1ms)
+Completed 200 OK in 457ms (Views: 44.5ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-30 15:56:56 -0300
+Started GET "/home" for 127.0.0.1 at 2017-06-30 15:56:56 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 451ms (Views: 449.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-06-30 15:56:58 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (12.0ms)
+Completed 200 OK in 43ms (Views: 38.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-30 15:57:15 -0300
+Started GET "/home" for 127.0.0.1 at 2017-06-30 15:57:15 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-06-30 15:57:17 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SnaqILJg83itPUlac0VL82u7KUqE4RD2o50103L5XVa6r4pV7hNC7HJXMkOsLbWhOKIGnsUwdVVdnxvjfmXeQg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-30 15:57:17 -0300
+Started GET "/home" for 127.0.0.1 at 2017-06-30 15:57:17 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-06-30 15:57:19 -0300
+Processing by ProfessoresController#index as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-06-30 15:57:19 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-06-30 15:57:26 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MCYi5Jrkidga2cQ9x+uRFF81KLCG25vi1AoLOaFDkQZKbxwJVt4L6H++awbAmJ3OrsgAahtZT4BT4WaDjFRAgQ==", "user"=>{"email"=>"asb@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "asb@test.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MCYi5Jrkidga2cQ9x+uRFF81KLCG25vi1AoLOaFDkQZKbxwJVt4L6H++awbAmJ3OrsgAahtZT4BT4WaDjFRAgQ==", "user"=>{"email"=>"asb@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 172ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-06-30 15:57:28 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 46ms (Views: 43.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-06-30 15:57:40 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O4nP6seZHqoNYRJmI68sf+9vyRmlRkk9AZuaqLKgFzNBwPEHC6OcmmgGvV0k3CClHpLhwzjEnV+GcPcSn7fGtA==", "user"=>{"email"=>"asb@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "asb@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "asb@test.com"], ["encrypted_password", "$2a$11$zg5RlEtePmiGI/p3Dr0Iw.9wxEXYRkSgHxbuQAH/FGFGl6JpBP47u"], ["created_at", 2017-06-30 18:57:41 UTC], ["updated_at", 2017-06-30 18:57:41 UTC]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-06-30 18:57:41 UTC], ["last_sign_in_at", 2017-06-30 18:57:41 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", 2017-06-30 18:57:41 UTC], ["id", 3]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/home
+Completed 302 Found in 174ms (ActiveRecord: 13.7ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-06-30 15:57:41 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-06-30 15:57:42 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (14.1ms)
+Completed 200 OK in 46ms (Views: 42.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2017-06-30 15:57:44 -0300
+Processing by ListaDisciplinasController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered lista_disciplinas/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 41ms (Views: 37.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-06-30 15:57:45 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 36ms (Views: 32.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2017-06-30 15:57:46 -0300
+Processing by DisciplinasController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 40ms (Views: 36.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-06-30 15:57:48 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (13.7ms)
+Completed 200 OK in 42ms (Views: 38.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-06-30 15:58:32 -0300
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "candidatos"[0m
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT  "candidatos".* FROM "candidatos" ORDER BY "candidatos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "disciplinas"[0m
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT  "disciplinas".* FROM "disciplinas" ORDER BY "disciplinas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "lista_disciplinas"[0m
+  [1m[36mListaDisciplina Load (0.1ms)[0m  [1m[34mSELECT  "lista_disciplinas".* FROM "lista_disciplinas" ORDER BY "lista_disciplinas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "oferta"[0m
+  [1m[36mOferta Load (0.1ms)[0m  [1m[34mSELECT  "oferta".* FROM "oferta" ORDER BY "oferta"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "professors"[0m
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" ORDER BY "professors"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (22.4ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (4.2ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (7.1ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (5.9ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (3.2ms)
+Completed 200 OK in 188ms (Views: 169.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin/professor?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-06-30 15:58:36 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"professor"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" ORDER BY professors.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (55.2ms)
+Completed 200 OK in 78ms (Views: 65.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/oferta?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-06-30 15:58:38 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"oferta"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mOferta Load (0.2ms)[0m  [1m[34mSELECT  "oferta".* FROM "oferta" ORDER BY oferta.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (48.7ms)
+Completed 200 OK in 75ms (Views: 59.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/lista_disciplina?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-06-30 15:58:39 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"lista_disciplina"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT  "lista_disciplinas".* FROM "lista_disciplinas" ORDER BY lista_disciplinas.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (22.1ms)
+Completed 200 OK in 50ms (Views: 32.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/lista_disciplina?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-06-30 15:58:40 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"lista_disciplina"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT  "lista_disciplinas".* FROM "lista_disciplinas" ORDER BY lista_disciplinas.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (23.4ms)
+Completed 200 OK in 45ms (Views: 32.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/disciplina?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-06-30 15:58:40 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"disciplina"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT  "disciplinas".* FROM "disciplinas" ORDER BY disciplinas.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (52.8ms)
+Completed 200 OK in 71ms (Views: 60.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/candidato?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-06-30 15:58:42 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"candidato"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT  "candidatos".* FROM "candidatos" ORDER BY candidatos.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (50.5ms)
+Completed 200 OK in 80ms (Views: 68.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/professor?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-06-30 15:58:43 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"professor"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" ORDER BY professors.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (47.5ms)
+Completed 200 OK in 68ms (Views: 58.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-06-30 15:58:44 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (44.8ms)
+Completed 200 OK in 68ms (Views: 53.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/user?model_name=user&set=1&_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-06-30 15:58:49 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "set"=>"1", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (54.2ms)
+Completed 200 OK in 73ms (Views: 63.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/user/2/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-06-30 15:59:00 -0300
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (1.3ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.3ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (2.6ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.5ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (1.4ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.4ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_boolean.html.haml (1.2ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_boolean.html.haml (0.2ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_boolean.html.haml (0.2ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (3.6ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (39.0ms)
+Completed 200 OK in 64ms (Views: 52.6ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/admin/user/2/edit" for 127.0.0.1 at 2017-06-30 15:59:15 -0300
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oZ9ilXRCRVZ/zBsi8FHZ/a1/5nBOyzvc7h3Ot6uVy9Hb1lx4uHjHZhqrtBn3ItUnXILOqtNJ775p9qMNhoIaVg==", "user"=>{"email"=>"student@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "reset_password_sent_at"=>"[FILTERED]", "remember_created_at"=>"", "sign_in_count"=>"0", "current_sign_in_at"=>"", "last_sign_in_at"=>"", "current_sign_in_ip"=>"", "last_sign_in_ip"=>"", "admin_role"=>"0", "professor_role"=>"1", "student_role"=>"0"}, "return_to"=>"http://localhost:3000/admin/user?model_name=user&set=1", "_continue"=>"", "model_name"=>"user", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/user?model_name=user&set=1
+Filter chain halted as :check_for_cancel rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/user?model_name=user&set=1" for 127.0.0.1 at 2017-06-30 15:59:15 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "set"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (40.8ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.4ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (6.9ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (6.0ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (5.7ms)
+Completed 200 OK in 173ms (Views: 163.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/user/1/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-06-30 15:59:18 -0300
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (1.0ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.6ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (3.6ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.5ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.5ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_boolean.html.haml (1.2ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_boolean.html.haml (0.2ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_boolean.html.haml (0.2ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (3.4ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (36.2ms)
+Completed 200 OK in 63ms (Views: 51.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-06-30 15:59:22 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY users.id desc LIMIT ? OFFSET ?[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (43.8ms)
+Completed 200 OK in 67ms (Views: 56.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/user/3/edit?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2017-06-30 15:59:24 -0300
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user", "id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (1.3ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.6ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.4ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (2.1ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (1.2ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_datetime.html.haml (0.5ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.5ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_field.html.haml (0.2ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_boolean.html.haml (1.2ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_boolean.html.haml (0.2ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_form_boolean.html.haml (0.2ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/_submit_buttons.html.haml (3.5ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/edit.html.haml within layouts/rails_admin/pjax (36.4ms)
+Completed 200 OK in 57ms (Views: 46.2ms | ActiveRecord: 0.5ms)
+
+
+Started PUT "/admin/user/3/edit" for 127.0.0.1 at 2017-06-30 15:59:33 -0300
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ycZXs/OZZQd8wlHK+z1D9U9TSYBpBZ0bAbCihUQL8Kazj2leP6PnNxml/vH8Tk8vvq5hWvSHSXmGW88/aRwhIQ==", "user"=>{"email"=>"asb@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "reset_password_sent_at"=>"[FILTERED]", "remember_created_at"=>"", "sign_in_count"=>"1", "current_sign_in_at"=>"June 30, 2017 18:57", "last_sign_in_at"=>"June 30, 2017 18:57", "current_sign_in_ip"=>"127.0.0.1", "last_sign_in_ip"=>"127.0.0.1", "admin_role"=>"0", "professor_role"=>"0", "student_role"=>"1"}, "return_to"=>"http://localhost:3000/admin/user", "_save"=>"", "model_name"=>"user", "id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "admin_role" = ?, "student_role" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-06-30 18:57:00 UTC], ["last_sign_in_at", 2017-06-30 18:57:00 UTC], ["admin_role", false], ["student_role", true], ["updated_at", 2017-06-30 18:59:33 UTC], ["id", 3]]
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/admin/user
+Completed 302 Found in 26ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/admin/user" for 127.0.0.1 at 2017-06-30 15:59:33 -0300
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.8ms)
+
+
+  
+CanCan::AccessDenied (You are not authorized to access this page.):
+  
+cancancan (2.0.0) lib/cancan/ability.rb:217:in `authorize!'
+rails_admin (1.2.0) lib/rails_admin/extensions/cancancan/authorization_adapter.rb:11:in `initialize'
+rails_admin (1.2.0) lib/rails_admin/config.rb:153:in `new'
+rails_admin (1.2.0) lib/rails_admin/config.rb:153:in `block in authorize_with'
+rails_admin (1.2.0) app/controllers/rails_admin/application_controller.rb:54:in `instance_eval'
+rails_admin (1.2.0) app/controllers/rails_admin/application_controller.rb:54:in `_authorize!'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:169:in `block (2 levels) in halting'
+actionpack (5.0.0.1) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:170:in `block in halting'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.0.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.0.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.0.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+railties (5.0.0.1) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.0.1) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.0.1) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.0.1) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack-pjax (1.0.0) lib/rack/pjax.rb:12:in `call'
+/home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/bundler/gems/remotipart-cd653ddc43bb/lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.5ms)
+Started GET "/admin/user/3/edit" for 127.0.0.1 at 2017-06-30 15:59:41 -0300
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"model_name"=>"user", "id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+CanCan::AccessDenied (You are not authorized to access this page.):
+  
+cancancan (2.0.0) lib/cancan/ability.rb:217:in `authorize!'
+rails_admin (1.2.0) lib/rails_admin/extensions/cancancan/authorization_adapter.rb:11:in `initialize'
+rails_admin (1.2.0) lib/rails_admin/config.rb:153:in `new'
+rails_admin (1.2.0) lib/rails_admin/config.rb:153:in `block in authorize_with'
+rails_admin (1.2.0) app/controllers/rails_admin/application_controller.rb:54:in `instance_eval'
+rails_admin (1.2.0) app/controllers/rails_admin/application_controller.rb:54:in `_authorize!'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:169:in `block (2 levels) in halting'
+actionpack (5.0.0.1) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:170:in `block in halting'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.0.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.0.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.0.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+railties (5.0.0.1) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.0.1) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.0.1) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.0.1) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack-pjax (1.0.0) lib/rack/pjax.rb:12:in `call'
+/home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/bundler/gems/remotipart-cd653ddc43bb/lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.5ms)
+Started GET "/admin/user/2/edit" for 127.0.0.1 at 2017-06-30 15:59:44 -0300
+Processing by RailsAdmin::MainController#edit as HTML
+  Parameters: {"model_name"=>"user", "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+CanCan::AccessDenied (You are not authorized to access this page.):
+  
+cancancan (2.0.0) lib/cancan/ability.rb:217:in `authorize!'
+rails_admin (1.2.0) lib/rails_admin/extensions/cancancan/authorization_adapter.rb:11:in `initialize'
+rails_admin (1.2.0) lib/rails_admin/config.rb:153:in `new'
+rails_admin (1.2.0) lib/rails_admin/config.rb:153:in `block in authorize_with'
+rails_admin (1.2.0) app/controllers/rails_admin/application_controller.rb:54:in `instance_eval'
+rails_admin (1.2.0) app/controllers/rails_admin/application_controller.rb:54:in `_authorize!'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:169:in `block (2 levels) in halting'
+actionpack (5.0.0.1) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:170:in `block in halting'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.0.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.0.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.0.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+railties (5.0.0.1) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.0.1) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.0.1) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.0.1) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack-pjax (1.0.0) lib/rack/pjax.rb:12:in `call'
+/home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/bundler/gems/remotipart-cd653ddc43bb/lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.5ms)
+Started GET "/" for 127.0.0.1 at 2017-06-30 15:59:49 -0300
+Started GET "/home" for 127.0.0.1 at 2017-06-30 15:59:49 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-06-30 15:59:51 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 40ms (Views: 36.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2017-06-30 15:59:52 -0300
+Processing by ListaDisciplinasController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered lista_disciplinas/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 40ms (Views: 36.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-06-30 15:59:53 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 52ms (Views: 48.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2017-06-30 15:59:57 -0300
+Processing by ListaDisciplinasController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered lista_disciplinas/index.html.haml within layouts/application (11.1ms)
+Completed 200 OK in 56ms (Views: 52.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-06-30 15:59:59 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 45ms (Views: 41.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2017-06-30 16:00:00 -0300
+Processing by DisciplinasController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.4ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (16.3ms)
+Completed 200 OK in 47ms (Views: 43.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-30 16:00:01 -0300
+Started GET "/home" for 127.0.0.1 at 2017-06-30 16:00:01 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-30 16:10:35 -0300
+Started GET "/home" for 127.0.0.1 at 2017-06-30 16:10:35 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-06-30 16:10:36 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.6ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (9.0ms)
+Completed 200 OK in 47ms (Views: 42.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2017-06-30 16:10:36 -0300
+Processing by ListaDisciplinasController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered lista_disciplinas/index.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 42ms (Views: 38.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-06-30 16:10:37 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.4ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (9.0ms)
+Completed 200 OK in 46ms (Views: 42.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-06-30 16:19:23 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:23: syntax error, unexpected keyword_else
+haml_temp = else if current_user.professor_role?
+                ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:33: syntax error, unexpected keyword_else
+haml_temp = else if current_user.admin_role?
+                ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:43: syntax error, unexpected keyword_else
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:70: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/layouts/application.html.haml:23: syntax error, unexpected keyword_else
+app/views/layouts/application.html.haml:33: syntax error, unexpected keyword_else
+app/views/layouts/application.html.haml:43: syntax error, unexpected keyword_else
+app/views/layouts/application.html.haml:70: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.0ms)
+Started GET "/candidatos" for 127.0.0.1 at 2017-06-30 16:19:48 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.1ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:33: syntax error, unexpected keyword_else
+haml_temp = else if current_user.admin_role?
+                ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:43: syntax error, unexpected keyword_else
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:70: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/layouts/application.html.haml:33: syntax error, unexpected keyword_else
+app/views/layouts/application.html.haml:43: syntax error, unexpected keyword_else
+app/views/layouts/application.html.haml:70: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.6ms)
+Started GET "/candidatos" for 127.0.0.1 at 2017-06-30 16:20:25 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.1ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:33: syntax error, unexpected keyword_else
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:60: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/layouts/application.html.haml:33: syntax error, unexpected keyword_else
+app/views/layouts/application.html.haml:60: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.9ms)
+Started GET "/candidatos" for 127.0.0.1 at 2017-06-30 16:20:26 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.1ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:33: syntax error, unexpected keyword_else
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:60: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/layouts/application.html.haml:33: syntax error, unexpected keyword_else
+app/views/layouts/application.html.haml:60: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.9ms)
+Started GET "/candidatos" for 127.0.0.1 at 2017-06-30 16:22:38 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 30ms (Views: 26.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-30 16:22:41 -0300
+Started GET "/home" for 127.0.0.1 at 2017-06-30 16:22:41 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-06-30 16:22:47 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aTILt5Gjl3xjusDZ00LRmE9DZ4brb6CLQS3VzN2e6fITezVaXZkVTAbdb+LUMd1Cvr5PXHbtdOnGxrh28Ik4dQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-30 16:22:47 -0300
+Started GET "/home" for 127.0.0.1 at 2017-06-30 16:22:47 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `admin_role?' for nil:NilClass):
+    10:       %a.navbar-brand{:href => "/"} Monitoria CIC
+    11: 
+    12:     #bs-example-navbar-collapse-1.collapse.navbar-collapse
+    13:       =if current_user.admin_role?
+    14:         %ul.nav.navbar-nav
+    15:           %li
+    16:             %a{:href => professores_url} Professores
+  
+app/views/layouts/application.html.haml:13:in `_app_views_layouts_application_html_haml___4596098211065983278_69836137472860'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.6ms)
+Started GET "/home" for 127.0.0.1 at 2017-06-30 16:23:50 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `student_role?' for nil:NilClass):
+    10:       %a.navbar-brand{:href => "/"} Monitoria CIC
+    11: 
+    12:     #bs-example-navbar-collapse-1.collapse.navbar-collapse
+    13:       =if current_user.student_role?
+    14:         %ul.nav.navbar-nav
+    15:           %li
+    16:             %a{:href => professores_url} Professores
+  
+app/views/layouts/application.html.haml:13:in `_app_views_layouts_application_html_haml___4596098211065983278_47452048508620'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.8ms)
+Started GET "/home" for 127.0.0.1 at 2017-06-30 16:24:29 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-06-30 16:24:51 -0300
+Processing by ProfessoresController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-06-30 16:24:51 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2017-06-30 16:24:52 -0300
+Processing by ListaDisciplinasController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-06-30 16:24:52 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-06-30 16:24:52 -0300
+Processing by CandidatosController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-06-30 16:24:52 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-06-30 16:24:56 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B5uSYsbIBJuu3mCdtkx0t/+WEcOILSo5pt//GImBqtYf2x39xzJzBrl2rRlY/7OTn+JZURfw0CSaHD+8wAIRQA==", "user"=>{"email"=>"asb@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B5uSYsbIBJuu3mCdtkx0t/+WEcOILSo5pt//GImBqtYf2x39xzJzBrl2rRlY/7OTn+JZURfw0CSaHD+8wAIRQA==", "user"=>{"email"=>"asb@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-06-30 16:25:04 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rtV7NTLUaleMlu+B8j7Kj7BYUMzrYq+hO+PzMTODl3e2lfSqMy4dyps+IgUcjQ2r0CwYXnS/VbwHIDOVegAs4Q==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 135ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rtV7NTLUaleMlu+B8j7Kj7BYUMzrYq+hO+PzMTODl3e2lfSqMy4dyps+IgUcjQ2r0CwYXnS/VbwHIDOVegAs4Q==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 162ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-06-30 16:25:53 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+S9dP54uRJETUKsfAVwCYJLkF2cWCdqMm6Ksq9/fIfXhb9Kgn9QzDAT4Zpvv78VE8pBf9YnUIJGnYWwPllyaYw==", "user"=>{"email"=>"asb@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "asb@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-06-30 19:25:53 UTC], ["sign_in_count", 2], ["updated_at", 2017-06-30 19:25:53 UTC], ["id", 3]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/home
+Completed 302 Found in 211ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-06-30 16:25:53 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 345ms (Views: 344.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-06-30 16:25:58 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (20.7ms)
+Completed 200 OK in 57ms (Views: 48.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-06-30 16:25:59 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (16.5ms)
+Completed 200 OK in 74ms (Views: 65.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2017-06-30 16:26:00 -0300
+Processing by DisciplinasController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (19.5ms)
+Completed 200 OK in 73ms (Views: 65.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-30 16:30:28 -0300
+Started GET "/home" for 127.0.0.1 at 2017-06-30 16:30:28 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 54ms (Views: 51.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-06-30 16:30:30 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2017-06-30 16:30:30 -0300
+Processing by ListaDisciplinasController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered lista_disciplinas/index.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-06-30 16:30:31 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 48ms (Views: 44.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-06-30 16:30:32 -0300
+Started GET "/home" for 127.0.0.1 at 2017-06-30 16:30:32 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-06-30 16:30:39 -0300
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+CanCan::AccessDenied (You are not authorized to access this page.):
+  
+cancancan (2.0.0) lib/cancan/ability.rb:217:in `authorize!'
+rails_admin (1.2.0) lib/rails_admin/extensions/cancancan/authorization_adapter.rb:11:in `initialize'
+rails_admin (1.2.0) lib/rails_admin/config.rb:153:in `new'
+rails_admin (1.2.0) lib/rails_admin/config.rb:153:in `block in authorize_with'
+rails_admin (1.2.0) app/controllers/rails_admin/application_controller.rb:54:in `instance_eval'
+rails_admin (1.2.0) app/controllers/rails_admin/application_controller.rb:54:in `_authorize!'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:382:in `block in make_lambda'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:169:in `block (2 levels) in halting'
+actionpack (5.0.0.1) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:170:in `block in halting'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:454:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:454:in `each'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:454:in `call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.0.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.0.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.0.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.0.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+railties (5.0.0.1) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.0.1) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.0.1) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.0.1) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack-pjax (1.0.0) lib/rack/pjax.rb:12:in `call'
+/home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/bundler/gems/remotipart-cd653ddc43bb/lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0.1) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.0ms)
+Started GET "/professores" for 127.0.0.1 at 2017-06-30 16:35:05 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (11.8ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    22:           %li
+    23:             %a{:href => disciplinas_url} Gerência de bolsas
+    24:       =else if (current_user.professor_role?)
+    25:           %ul.nav.navbar-nav
+    26:             %li
+    27:               %a{:href => professores_url} Professores
+    28:             %li
+  
+app/views/layouts/application.html.haml:25
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.4ms)
+Started GET "/professores" for 127.0.0.1 at 2017-06-30 16:35:59 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:24: syntax error, unexpected keyword_else
+haml_temp = else if (current_user.professor_role?)
+                ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:32: syntax error, unexpected keyword_else
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:62: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/layouts/application.html.haml:24: syntax error, unexpected keyword_else
+app/views/layouts/application.html.haml:32: syntax error, unexpected keyword_else
+app/views/layouts/application.html.haml:62: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.9ms)
+Started GET "/professores" for 127.0.0.1 at 2017-06-30 16:37:02 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:32: syntax error, unexpected keyword_else
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:61: syntax error, unexpected keyword_ensure, expecting end-of-input
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^):
+  
+app/views/layouts/application.html.haml:32: syntax error, unexpected keyword_else
+app/views/layouts/application.html.haml:61: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.8ms)
+Started GET "/professores" for 127.0.0.1 at 2017-06-30 16:38:18 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:32: syntax error, unexpected keyword_else
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:61: syntax error, unexpected keyword_ensure, expecting end-of-input
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^):
+  
+app/views/layouts/application.html.haml:32: syntax error, unexpected keyword_else
+app/views/layouts/application.html.haml:61: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.5ms)
+Started GET "/professores" for 127.0.0.1 at 2017-06-30 16:38:24 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Got "else" with no preceding "if"):
+    29:             %a{:href => lista_disciplinas_url} Disciplinas
+    30:           %li
+    31:             %a{:href => disciplinas_url} Gerência de bolsas
+    32:       -else
+    33:         %ul.nav.navbar-nav
+    34:           %li
+    35:             %a{:href => professores_url} Professores
+  
+app/views/layouts/application.html.haml:32
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.0ms)
+Started GET "/professores" for 127.0.0.1 at 2017-06-30 16:38:42 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (Got "else" with no preceding "if"):
+    29:             %a{:href => lista_disciplinas_url} Disciplinas
+    30:           %li
+    31:             %a{:href => disciplinas_url} Gerência de bolsas
+    32:       -else
+    33:         %ul.nav.navbar-nav
+    34:           %li
+    35:             %a{:href => professores_url} Professores
+  
+app/views/layouts/application.html.haml:32
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.9ms)
+Started GET "/professores" for 127.0.0.1 at 2017-06-30 16:38:44 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Got "else" with no preceding "if"):
+    29:             %a{:href => lista_disciplinas_url} Disciplinas
+    30:           %li
+    31:             %a{:href => disciplinas_url} Gerência de bolsas
+    32:       -else
+    33:         %ul.nav.navbar-nav
+    34:           %li
+    35:             %a{:href => professores_url} Professores
+  
+app/views/layouts/application.html.haml:32
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.3ms)
+Started GET "/professores" for 127.0.0.1 at 2017-06-30 16:38:45 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (Got "else" with no preceding "if"):
+    29:             %a{:href => lista_disciplinas_url} Disciplinas
+    30:           %li
+    31:             %a{:href => disciplinas_url} Gerência de bolsas
+    32:       -else
+    33:         %ul.nav.navbar-nav
+    34:           %li
+    35:             %a{:href => professores_url} Professores
+  
+app/views/layouts/application.html.haml:32
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.6ms)
+Started GET "/professores" for 127.0.0.1 at 2017-06-30 16:39:05 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:53: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/layouts/application.html.haml:53: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.9ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.8ms)
+Started GET "/professores" for 127.0.0.1 at 2017-06-30 16:39:26 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:52: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/layouts/application.html.haml:52: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.4ms)
+Started GET "/professores" for 127.0.0.1 at 2017-06-30 16:39:42 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 358ms (Views: 354.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-06-30 16:40:01 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:61: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/layouts/application.html.haml:61: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.3ms)
+Started GET "/home" for 127.0.0.1 at 2017-06-30 16:40:42 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-06-30 16:40:46 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 33ms (Views: 30.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2017-06-30 16:40:46 -0300
+Processing by ListaDisciplinasController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.4ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered lista_disciplinas/index.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 38ms (Views: 30.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-06-30 16:40:47 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (13.5ms)
+Completed 200 OK in 42ms (Views: 36.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2017-06-30 16:40:47 -0300
+Processing by DisciplinasController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 40ms (Views: 33.0ms | ActiveRecord: 1.2ms)
+
+
