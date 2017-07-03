@@ -8,6 +8,7 @@ class InserirCandidatos < ActiveRecord::Migration[5.0]
 		  t.integer 'semestre'
 		  t.integer 'prioridade'
 		  t.timestamps
+      t.integer 'id' #relacionar com o usuário
 	   end
   end
 end
