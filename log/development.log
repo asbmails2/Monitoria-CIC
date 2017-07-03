@@ -17945,3 +17945,1255 @@ Processing by DisciplinasController#index as HTML
 Completed 200 OK in 40ms (Views: 33.0ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/d" for 127.0.0.1 at 2017-07-03 10:36:35 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [GET] "/d"):
+  
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.2) lib/puma/configuration.rb:225:in `call'
+puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.2) lib/puma/server.rb:415:in `process_client'
+puma (3.6.2) lib/puma/server.rb:275:in `block in run'
+puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered collection of /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [64 times] (24.1ms)
+  Rendered collection of /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [10 times] (3.6ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.5ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.6ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (97.7ms)
+Started GET "/" for 127.0.0.1 at 2017-07-03 10:36:38 -0300
+Started GET "/home" for 127.0.0.1 at 2017-07-03 10:36:38 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 430ms (Views: 428.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-03 11:32:31 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `supervisor_role?' for #<User:0x00556756f11b30>):
+    17:           %a{:href => lista_disciplinas_url} Disciplinas
+    18:         %li
+    19:           %a{:href => candidatos_url} Inscrição de candidatos
+    20:       -if (current_user.professor_role? || current_user.supervisor_role?)
+    21:         %li
+    22:           %a{:href => professores_url} Professores
+    23: 
+  
+app/views/layouts/application.html.haml:20:in `_app_views_layouts_application_html_haml__4403687735292337869_46951174099720'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.4ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 11:32:51 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-03 11:37:21 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-03 11:37:29 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-07-03 11:38:03 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lb6ait4uQUiZuu5UCcm9w1RjsAz9OVIlANd2IRMBmLHQedw84ACyQUFtAjwa37AkyYwKM+BH36j0wh6we/iwTA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-03 11:38:03 -0300
+Started GET "/home" for 127.0.0.1 at 2017-07-03 11:38:03 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `professor_role?' for nil:NilClass):
+    17:           %a{:href => lista_disciplinas_url} Disciplinas
+    18:         %li
+    19:           %a{:href => candidatos_url} Inscrição de candidatos
+    20:       -if (current_user.professor_role? || current_user.admin_role?)
+    21:         %li
+    22:           %a{:href => professores_url} Professores
+    23: 
+  
+app/views/layouts/application.html.haml:20:in `_app_views_layouts_application_html_haml__4403687735292337869_70167992067920'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.0ms)
+Started GET "/disciplinas" for 127.0.0.1 at 2017-07-03 11:38:59 -0300
+Processing by DisciplinasController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-03 11:38:59 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.1ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `professor_role?' for nil:NilClass):
+    17:           %a{:href => lista_disciplinas_url} Disciplinas
+    18:         %li
+    19:           %a{:href => candidatos_url} Inscrição de candidatos
+    20:       -if (current_user.professor_role? || current_user.admin_role?)
+    21:         %li
+    22:           %a{:href => professores_url} Professores
+    23: 
+  
+app/views/layouts/application.html.haml:20:in `_app_views_layouts_application_html_haml__4403687735292337869_70168036027960'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.9ms)
+Started GET "/candidatos" for 127.0.0.1 at 2017-07-03 11:39:00 -0300
+Processing by CandidatosController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-03 11:39:00 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `professor_role?' for nil:NilClass):
+    17:           %a{:href => lista_disciplinas_url} Disciplinas
+    18:         %li
+    19:           %a{:href => candidatos_url} Inscrição de candidatos
+    20:       -if (current_user.professor_role? || current_user.admin_role?)
+    21:         %li
+    22:           %a{:href => professores_url} Professores
+    23: 
+  
+app/views/layouts/application.html.haml:20:in `_app_views_layouts_application_html_haml__4403687735292337869_70167997593500'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.4ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 11:39:05 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `professor_role?' for nil:NilClass):
+    17:           %a{:href => lista_disciplinas_url} Disciplinas
+    18:         %li
+    19:           %a{:href => candidatos_url} Inscrição de candidatos
+    20:       -if (current_user.professor_role? || current_user.admin_role?)
+    21:         %li
+    22:           %a{:href => professores_url} Professores
+    23: 
+  
+app/views/layouts/application.html.haml:20:in `_app_views_layouts_application_html_haml__4403687735292337869_70168001145440'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.0ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 11:39:49 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:20: syntax error, unexpected tFID, expecting ')'
+...|| current_user.admin_role?can? :manage, User)
+...                               ^):
+  
+app/views/layouts/application.html.haml:20: syntax error, unexpected tFID, expecting ')'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.7ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.4ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 11:40:04 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 192ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00556757d87278>:0x0055675930b7c0>):
+    23: 
+    24: 
+    25:       %ul.nav.navbar-nav.navbar-right
+    26:       -if (user.signed_in?)
+    27:         %li=link_to "Log-out", destroy_user_session_path,:method => :delete
+    28:       -else
+    29:         %li=link_to "Log-In", new_user_session_path, :method => :get
+  
+app/views/layouts/application.html.haml:26:in `_app_views_layouts_application_html_haml__4403687735292337869_46951183145280'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.2ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 11:40:16 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-03 11:41:06 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 220ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `professor' for #<#<Class:0x00556757d87278>:0x007fa284254ff8>
+Did you mean?  professore_url):
+    17:           %a{:href => lista_disciplinas_url} Disciplinas
+    18:         %li
+    19:           %a{:href => candidatos_url} Inscrição de candidatos
+    20:         -if (can? :manage, professor)
+    21:           %li
+    22:             %a{:href => professores_url} Professores
+    23: 
+  
+app/views/layouts/application.html.haml:20:in `_app_views_layouts_application_html_haml__4403687735292337869_70168088884740'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.8ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 11:41:19 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 285ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `professor_role' for #<#<Class:0x00556757d87278>:0x00556755718218>
+Did you mean?  professore_url):
+    17:           %a{:href => lista_disciplinas_url} Disciplinas
+    18:         %li
+    19:           %a{:href => candidatos_url} Inscrição de candidatos
+    20:         -if (can? :manage, professor_role)
+    21:           %li
+    22:             %a{:href => professores_url} Professores
+    23: 
+  
+app/views/layouts/application.html.haml:20:in `_app_views_layouts_application_html_haml__4403687735292337869_46951156049200'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.7ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.4ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 11:41:33 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-03 11:41:49 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-03 11:41:53 -0300
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"Rbzuvyz8tLOBGDpArjh+5d3pZe784xaRWuhpKqMXuX2PbHV+qw1ImIHgpPB4L5Gx32PIJQrIpwhsBoOqn2/lXw=="}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 49ms (Views: 47.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-03 11:46:48 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Student):
+    15:           %a{:href => disciplinas_url} Gerência de bolsas
+    16:         %li
+    17:           %a{:href => lista_disciplinas_url} Disciplinas
+    18:         -if( can? :manage, Student)
+    19:           %li
+    20:             %a{:href => candidatos_url} Inscrição de candidatos
+    21:         -if (can? :manage, Professor)
+  
+app/views/layouts/application.html.haml:18:in `_app_views_layouts_application_html_haml__4403687735292337869_70167992422200'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.0ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.1ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-03 11:49:49 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Student):
+    15:           %a{:href => disciplinas_url} Gerência de bolsas
+    16:         %li
+    17:           %a{:href => lista_disciplinas_url} Disciplinas
+    18:         -if( can? :manage, Student)
+    19:           %li
+    20:             %a{:href => candidatos_url} Inscrição de candidatos
+    21:         -if (can? :manage, Professor)
+  
+app/views/layouts/application.html.haml:18:in `_app_views_layouts_application_html_haml__4403687735292337869_70168034817700'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.5ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 11:50:01 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Student):
+    15:           %a{:href => disciplinas_url} Gerência de bolsas
+    16:         %li
+    17:           %a{:href => lista_disciplinas_url} Disciplinas
+    18:         -if( can? :manage, Student)
+    19:           %li
+    20:             %a{:href => candidatos_url} Inscrição de candidatos
+    21:         -if (can? :manage, Professor)
+  
+app/views/layouts/application.html.haml:18:in `_app_views_layouts_application_html_haml__4403687735292337869_70167922208920'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.9ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 11:50:20 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Student):
+    15:           %a{:href => disciplinas_url} Gerência de bolsas
+    16:         %li
+    17:           %a{:href => lista_disciplinas_url} Disciplinas
+    18:         -if( can? :manage, Student)
+    19:           %li
+    20:             %a{:href => candidatos_url} Inscrição de candidatos
+    21:         -if (can? :manage, Professor)
+  
+app/views/layouts/application.html.haml:18:in `_app_views_layouts_application_html_haml__3460952997976308459_47419194991960'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.6ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 11:51:04 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 265ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `student_role' for #<#<Class:0x005641487ab978>:0x0056414920b5f8>):
+    15:           %a{:href => disciplinas_url} Gerência de bolsas
+    16:         %li
+    17:           %a{:href => lista_disciplinas_url} Disciplinas
+    18:         -if( can? :manage, student_role)
+    19:           %li
+    20:             %a{:href => candidatos_url} Inscrição de candidatos
+    21:         -if (can? :manage, professor_role)
+  
+app/views/layouts/application.html.haml:18:in `_app_views_layouts_application_html_haml__3460952997976308459_47419199953420'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.3ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 11:51:47 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `student_role' for nil:NilClass):
+    15:           %a{:href => disciplinas_url} Gerência de bolsas
+    16:         %li
+    17:           %a{:href => lista_disciplinas_url} Disciplinas
+    18:         -if( current_user.student_role)
+    19:           %li
+    20:             %a{:href => candidatos_url} Inscrição de candidatos
+    21:         -if (can? :manage, professor_role)
+  
+app/views/layouts/application.html.haml:18:in `_app_views_layouts_application_html_haml__3460952997976308459_47419187433320'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.9ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 11:51:55 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `student_role?' for nil:NilClass):
+    15:           %a{:href => disciplinas_url} Gerência de bolsas
+    16:         %li
+    17:           %a{:href => lista_disciplinas_url} Disciplinas
+    18:         -if( current_user.student_role?)
+    19:           %li
+    20:             %a{:href => candidatos_url} Inscrição de candidatos
+    21:         -if (can? :manage, professor_role)
+  
+app/views/layouts/application.html.haml:18:in `_app_views_layouts_application_html_haml__3460952997976308459_47419195466860'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.6ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 11:52:22 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `student_role?' for nil:NilClass):
+    15:           %a{:href => disciplinas_url} Gerência de bolsas
+    16:         %li
+    17:           %a{:href => lista_disciplinas_url} Disciplinas
+    18:         -if(current_user.student_role?)
+    19:           %li
+    20:             %a{:href => candidatos_url} Inscrição de candidatos
+    21:         -if (can? :manage, professor_role)
+  
+app/views/layouts/application.html.haml:18:in `_app_views_layouts_application_html_haml__3460952997976308459_47419198621520'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.9ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 11:54:23 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 194ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x005641487ab978>:0x00564148c53778>):
+    15:           %a{:href => disciplinas_url} Gerência de bolsas
+    16:         %li
+    17:           %a{:href => lista_disciplinas_url} Disciplinas
+    18:         -if(user.student_role?)
+    19:           %li
+    20:             %a{:href => candidatos_url} Inscrição de candidatos
+    21:         -if (can? :manage, professor_role)
+  
+app/views/layouts/application.html.haml:18:in `_app_views_layouts_application_html_haml__3460952997976308459_47419196824260'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.3ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 11:56:48 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 187ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00564147e1ee00>:0x00564147e1a828>):
+    15:           %a{:href => disciplinas_url} Gerência de bolsas
+    16:         %li
+    17:           %a{:href => lista_disciplinas_url} Disciplinas
+    18:         -if(user.student_role?)
+    19:           %li
+    20:             %a{:href => candidatos_url} Inscrição de candidatos
+    21:         -if (can? :manage, professor_role)
+  
+app/views/layouts/application.html.haml:18:in `_app_views_layouts_application_html_haml__3460952997976308459_47419189325360'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.5ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 11:57:33 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 242ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `currente_user' for #<#<Class:0x00564147e1ee00>:0x00564146583418>
+Did you mean?  current_user):
+    15:           %a{:href => disciplinas_url} Gerência de bolsas
+    16:         %li
+    17:           %a{:href => lista_disciplinas_url} Disciplinas
+    18:         -if(currente_user.student_role?)
+    19:           %li
+    20:             %a{:href => candidatos_url} Inscrição de candidatos
+    21:         -if (can? :manage, professor_role)
+  
+app/views/layouts/application.html.haml:18:in `_app_views_layouts_application_html_haml__3460952997976308459_47419176742120'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.6ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 11:59:41 -0300
+  
+NameError (undefined local variable or method `currente_user' for User (call 'User.connection' to establish a connection):Class
+Did you mean?  current):
+  
+app/models/user.rb:12:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+config/routes.rb:4:in `block in <top (required)>'
+config/routes.rb:2:in `<top (required)>'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.8ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 12:00:50 -0300
+  
+NameError (undefined local variable or method `currente_user' for User (call 'User.connection' to establish a connection):Class
+Did you mean?  current):
+  
+app/models/user.rb:12:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+config/routes.rb:4:in `block in <top (required)>'
+config/routes.rb:2:in `<top (required)>'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.0ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 12:01:24 -0300
+  
+NameError (undefined local variable or method `current_user' for User (call 'User.connection' to establish a connection):Class
+Did you mean?  current_scope):
+  
+app/models/user.rb:12:in `<class:User>'
+app/models/user.rb:1:in `<top (required)>'
+config/routes.rb:4:in `block in <top (required)>'
+config/routes.rb:2:in `<top (required)>'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.0ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 12:01:49 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 193ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `currente_user' for #<#<Class:0x0056414914bbb8>:0x0056414914a970>
+Did you mean?  current_user):
+    15:           %a{:href => disciplinas_url} Gerência de bolsas
+    16:         %li
+    17:           %a{:href => lista_disciplinas_url} Disciplinas
+    18:         -if(currente_user.admin_role?)
+    19:           %li
+    20:             %a{:href => candidatos_url} Inscrição de candidatos
+    21:         -if (can? :manage, professor_role)
+  
+app/views/layouts/application.html.haml:18:in `_app_views_layouts_application_html_haml__3460952997976308459_47419199394920'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.7ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 12:02:18 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 259ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `currente_scope' for #<#<Class:0x0056414914bbb8>:0x005641465059a0>
+Did you mean?  current_user):
+    15:           %a{:href => disciplinas_url} Gerência de bolsas
+    16:         %li
+    17:           %a{:href => lista_disciplinas_url} Disciplinas
+    18:         -if(currente_scope.admin?)
+    19:           %li
+    20:             %a{:href => candidatos_url} Inscrição de candidatos
+    21:         -if (can? :manage, professor_role)
+  
+app/views/layouts/application.html.haml:18:in `_app_views_layouts_application_html_haml__3460952997976308459_47419176685320'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.8ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 12:03:46 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 2+)):
+    15:           %a{:href => disciplinas_url} Gerência de bolsas
+    16:         %li
+    17:           %a{:href => lista_disciplinas_url} Disciplinas
+    18:         -if( can? :study)
+    19:           %li
+    20:             %a{:href => candidatos_url} Inscrição de candidatos
+    21:         -if (can? :manage, professor_role)
+  
+app/views/layouts/application.html.haml:18:in `_app_views_layouts_application_html_haml__3460952997976308459_47419187891140'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.3ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 12:05:08 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 375ms (Views: 373.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2017-07-03 12:05:11 -0300
+Processing by DisciplinasController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-03 12:05:11 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 66ms (Views: 51.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2017-07-03 12:05:12 -0300
+Processing by ListaDisciplinasController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-03 12:05:12 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-07-03 12:05:13 -0300
+Processing by ProfessoresController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-03 12:05:13 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-07-03 12:08:05 -0300
+Processing by ProfessoresController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-03 12:08:05 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 461ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `dachboard_path' for #<#<Class:0x007f638b9d3b40>:0x007f638b9d2858>):
+    21:           %li
+    22:             %a{:href => candidatos_url} Inscrição de candidatos
+    23:         -if (can? :access, :rails_admin)
+    24:           %li=link_to "Administração", dachboard_path, :method => :get
+    25: 
+    26: 
+    27: 
+  
+app/views/layouts/application.html.haml:24:in `_app_views_layouts_application_html_haml__3460952997976308459_70032760427000'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.6ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-03 12:08:26 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 584ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `dashboard_path' for #<#<Class:0x007f638b9d3b40>:0x007f639c73dde8>):
+    21:           %li
+    22:             %a{:href => candidatos_url} Inscrição de candidatos
+    23:         -if (can? :access, :rails_admin)
+    24:           %li=link_to "Administração", dashboard_path, :method => :get
+    25: 
+    26: 
+    27: 
+  
+app/views/layouts/application.html.haml:24:in `_app_views_layouts_application_html_haml__3460952997976308459_70032899069440'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.6ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-03 12:09:56 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 552ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `dashboard' for #<#<Class:0x007f638b9d3b40>:0x007f6388342ef0>):
+    21:           %li
+    22:             %a{:href => candidatos_url} Inscrição de candidatos
+    23:         -if (can? :access, :rails_admin)
+    24:           %li=link_to "Administração", dashboard, :method => :get
+    25: 
+    26: 
+    27: 
+  
+app/views/layouts/application.html.haml:24:in `_app_views_layouts_application_html_haml__3460952997976308459_70032760268780'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.3ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.7ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-03 12:10:43 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 628ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `main' for #<#<Class:0x007f638b9d3b40>:0x00564149350468>):
+    21:           %li
+    22:             %a{:href => candidatos_url} Inscrição de candidatos
+    23:         -if (can? :access, :rails_admin)
+    24:           %li=link_to "Administração", rails_admin/main#dashboard, :method => :get
+    25: 
+    26: 
+    27: 
+  
+app/views/layouts/application.html.haml:24:in `_app_views_layouts_application_html_haml__3460952997976308459_47419193062560'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.4ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-03 12:11:12 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:25: unknown regexp option - l
+unmatched close parenthesis: /admin , :method => :get
+));}</i
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:25: syntax error, unexpected $undefined
+));}</li>\n";end;_hamlout.buffer << "</...
+          ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:31: unknown regexp option - l
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:31: syntax error, unexpected $undefined
+));}</li>\n";else
+          ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:33: syntax error, unexpected ')'
+));}</li>\n";end;_hamlout.buff...
+ ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:33: unknown regexp option - l
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:33: syntax error, unexpected $undefined
+...;end;_hamlout.buffer << "</ul>\n</div>\n</div>\n</nav>\n<htm...
+...                               ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:33: unknown regexp options - dv
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:33: syntax error, unexpected $undefined
+...ffer << "</ul>\n</div>\n</div>\n</nav>\n<html>\n<head>\n<tit...
+...                               ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:33: unknown regexp options - ttl
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:33: syntax error, unexpected $undefined
+...\n<title>Monitoria CIC</title>\n#{
+...                               ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:37: syntax error, unexpected '}', expecting ')'
+));}\n#{_hamlout.format_script_fa...
+    ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:38: syntax error, unexpected '}', expecting tSTRING_DEND
+));}\n#{_hamlout.format_script_fa...
+    ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:39: unknown regexp options - bdy
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:39: syntax error, unexpected $undefined
+));}\n</head>\n<body></body>\n<div class='span12'></div>\n...
+                             ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:39: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+...ead>\n<body></body>\n<div class='span12'></div>\n<div class=...
+...                               ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:39: syntax error, unexpected '<'
+...></body>\n<div class='span12'></div>\n<div class='span4'></d...
+...                               ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:39: unknown regexp options - dv
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:39: syntax error, unexpected $undefined
+...iv>\n<div class='span4'></div>\n";
+...                               ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:44: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+_hamlout.buffer << "<div class='message' id='notice'>#{_ham...
+                              ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:44: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+...fer << "<div class='message' id='notice'>#{_hamlout.format_s...
+...                               ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:45: syntax error, unexpected ')'
+));}</div>\n"; elsif flash[:aviso]
+ ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:47: unknown regexp options - dv
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:47: syntax error, unexpected $undefined
+));}</div>\n<div id='main'></div>\n";end;_hamlout.buffer << "#{
+           ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:47: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+));}</div>\n<div id='main'></div>\n";end;_hamlout.buffer << "#{
+                   ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:47: syntax error, unexpected '<'
+));}</div>\n<div id='main'></div>\n";end;_hamlout.buffer << "#{
+                            ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:49: unknown regexp options - htl
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:49: syntax error, unexpected $undefined
+));}\n</html>\n";::Haml::Util.html_safe(_er...
+              ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:49: unterminated string meets end of file
+/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:49: syntax error, unexpected end-of-input, expecting tSTRING_DEND):
+  
+app/views/layouts/application.html.haml:25: unknown regexp option - l
+app/views/layouts/application.html.haml:25: syntax error, unexpected $undefined
+app/views/layouts/application.html.haml:31: unknown regexp option - l
+app/views/layouts/application.html.haml:31: syntax error, unexpected $undefined
+app/views/layouts/application.html.haml:33: syntax error, unexpected ')'
+app/views/layouts/application.html.haml:33: unknown regexp option - l
+app/views/layouts/application.html.haml:33: syntax error, unexpected $undefined
+app/views/layouts/application.html.haml:33: unknown regexp options - dv
+app/views/layouts/application.html.haml:33: syntax error, unexpected $undefined
+app/views/layouts/application.html.haml:33: unknown regexp options - ttl
+app/views/layouts/application.html.haml:33: syntax error, unexpected $undefined
+app/views/layouts/application.html.haml:37: syntax error, unexpected '}', expecting ')'
+app/views/layouts/application.html.haml:38: syntax error, unexpected '}', expecting tSTRING_DEND
+app/views/layouts/application.html.haml:39: unknown regexp options - bdy
+app/views/layouts/application.html.haml:39: syntax error, unexpected $undefined
+app/views/layouts/application.html.haml:39: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+app/views/layouts/application.html.haml:39: syntax error, unexpected '<'
+app/views/layouts/application.html.haml:39: unknown regexp options - dv
+app/views/layouts/application.html.haml:39: syntax error, unexpected $undefined
+app/views/layouts/application.html.haml:44: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+app/views/layouts/application.html.haml:44: syntax error, unexpected tIDENTIFIER, expecting tSTRING_DEND
+app/views/layouts/application.html.haml:45: syntax error, unexpected ')'
+app/views/layouts/application.html.haml:47: unknown regexp options - dv
+app/views/layouts/application.html.haml:47: syntax error, unexpected $undefined
+app/views/layouts/application.html.haml:47: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/views/layouts/application.html.haml:47: syntax error, unexpected '<'
+app/views/layouts/application.html.haml:49: unknown regexp options - htl
+app/views/layouts/application.html.haml:49: syntax error, unexpected $undefined
+app/views/layouts/application.html.haml:49: unterminated string meets end of file
+app/views/layouts/application.html.haml:49: syntax error, unexpected end-of-input, expecting tSTRING_DEND
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.5ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-03 12:11:56 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 435ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admin_url' for #<#<Class:0x007f638b9d3b40>:0x00564149098540>
+Did you mean?  audio_url):
+    22:             %a{:href => candidatos_url} Inscrição de candidatos
+    23:         -if (can? :access, :rails_admin)
+    24:           %li
+    25:             %a{:href => admin_url} Administração
+    26: 
+    27: 
+    28:       %ul.nav.navbar-nav.navbar-right
+  
+app/views/layouts/application.html.haml:25:in `_app_views_layouts_application_html_haml__3460952997976308459_47419198978980'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.2ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-03 12:13:52 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-03 12:13:55 -0300
+Started GET "/home" for 127.0.0.1 at 2017-07-03 12:13:55 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-03 12:13:57 -0300
+Started GET "/home" for 127.0.0.1 at 2017-07-03 12:13:57 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 37ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-03 12:13:59 -0300
+Started GET "/home" for 127.0.0.1 at 2017-07-03 12:13:59 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-03 12:14:00 -0300
+Started GET "/home" for 127.0.0.1 at 2017-07-03 12:14:00 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-03 12:14:35 -0300
+Started GET "/home" for 127.0.0.1 at 2017-07-03 12:14:35 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/layouts/application.html.haml:23: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+if (signed_in? && can? :access, :rails_admin)
+                        ^):
+  
+app/views/layouts/application.html.haml:23: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.0ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 12:17:35 -0300
+  
+SyntaxError (/home/asb/RubyProjects/trab/Monitoria-CIC/config/routes.rb:5: syntax error, unexpected '(', expecting keyword_end
+  root :to => :redirect ('/admin')
+                         ^
+/home/asb/RubyProjects/trab/Monitoria-CIC/config/routes.rb:5: syntax error, unexpected ')', expecting keyword_end):
+  
+config/routes.rb:5: syntax error, unexpected '(', expecting keyword_end
+config/routes.rb:5: syntax error, unexpected ')', expecting keyword_end
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.9ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 12:18:05 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-03 12:18:09 -0300
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"mgSXTz4PCBt2WhFfQHV36j9Gr+j02rwTFVrwgyn5Qc1Q1AyOuf70MHaij++WYpi+PcwCIwLxDYojtBoDFYEd7w=="}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 45ms (Views: 31.0ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-07-03 12:18:20 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TsuXaEfK37NkuKGn+gQBhipjAIbKz9QKu06fPT26qsmEGwypwDsjmGRAPxcsE+7SKOmtTTzkZZONoHW9AcL26w==", "user"=>{"email"=>"asb@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "asb@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-07-03 15:18:20 UTC], ["last_sign_in_at", 2017-06-30 19:25:53 UTC], ["sign_in_count", 3], ["updated_at", 2017-07-03 15:18:20 UTC], ["id", 3]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/home
+Completed 302 Found in 173ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-03 12:18:20 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `student_role' for #<Ability:0x007f638a75b148>):
+    20:         -if( signed_in?)
+    21:           %li
+    22:             %a{:href => candidatos_url} Inscrição de candidatos
+    23:         -if (signed_in? && (can? :access, :rails_admin))
+    24:           %li
+    25:             %a{:href => rails_admin_url} Administração
+    26: 
+  
+app/models/ability.rb:41:in `initialize'
+app/views/layouts/application.html.haml:23:in `_app_views_layouts_application_html_haml__3460952997976308459_70032736057300'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.4ms)
+Started GET "/home" for 127.0.0.1 at 2017-07-03 12:18:44 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 46.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-07-03 12:18:47 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (11.4ms)
+Completed 200 OK in 51ms (Views: 37.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-07-03 12:18:48 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.5ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (15.9ms)
+Completed 200 OK in 54ms (Views: 43.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-07-03 12:19:18 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 65ms (Views: 61.4ms | ActiveRecord: 0.6ms)
+
+

@@ -1,6 +1,9 @@
 
 MonitoriaCic::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  resources :rails_admin
+  root :to => redirect('/admin')
+
   devise_for :users
   resources :home
   root :to => redirect('/home')
