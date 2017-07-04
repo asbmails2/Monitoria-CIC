@@ -15,7 +15,7 @@ class DisciplinasController < ApplicationController
   end
   def create
     params.permit!
-    @disciplina = params.require(:disciplina).permit(:nome, :professor, :vagas)
+    @disciplina = params.require(:disciplina).permit(:nome, :professor, :vagas, :ativa)
     arr = params.require(:disciplina).permit(:nome, :professor).values
 
     if Disciplina.exists?(:nome => arr[0], :professor => arr[1])

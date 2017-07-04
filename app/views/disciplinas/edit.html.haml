@@ -12,6 +12,10 @@
   = text_field :disciplina, :vagas
 
   %br
+  = label :disciplina, :ativa; 'Ativa'
+  = radio_button :disciplina, :ativa, 'Sim ou Não'
+  %br
+  %br
   = image_submit_tag('salvar.png')
 
 = link_to image_tag('voltar.png'), disciplina_url

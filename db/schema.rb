@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170704002349) do
+ActiveRecord::Schema.define(version: 20170704060154) do
 
   create_table "candidatos", force: :cascade do |t|
     t.string   "nome"
@@ -19,18 +19,19 @@ ActiveRecord::Schema.define(version: 20170704002349) do
     t.string   "monitoria"
     t.integer  "semestre"
     t.integer  "prioridade"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
-    t.string   "id_of_user", default: "0"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "id_of_user", default: 0
   end
 
   create_table "disciplinas", force: :cascade do |t|
     t.string   "nome"
     t.string   "codigo"
     t.string   "professor"
-    t.decimal  "vagas"
+    t.integer  "vagas"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "ativa"
   end
 
   create_table "lista_disciplinas", force: :cascade do |t|
@@ -51,10 +52,10 @@ ActiveRecord::Schema.define(version: 20170704002349) do
     t.string   "nome"
     t.string   "email"
     t.string   "sala"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
     t.string   "professor"
-    t.string   "id_of_user", default: "0"
+    t.integer  "id_of_user", default: 0
   end
 
   create_table "users", force: :cascade do |t|

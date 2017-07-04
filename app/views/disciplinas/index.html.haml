@@ -8,12 +8,34 @@
       %th Professor
       %th Vagas
   %tbody
-    - @disciplinas.each do |disciplina|
-      %tr
-        %td= link_to "#{disciplina.nome}", disciplina_url(disciplina)
-        /%dt= link_disciplinas.nome
-        %td= disciplina.professor
-        %td= disciplina.vagas
+    -if (signed_in?)
+      -if(current_user.admin_role?)
+        - @disciplinas.each do |disciplina|
+          %tr
+            %td= link_to "#{disciplina.nome}", disciplina_url(disciplina)
+            /%dt= link_disciplinas.nome
+            %td= disciplina.professor
+            %td= disciplina.vagas
+      -elsif(current_user.professor_role?)
+        - @disciplinas.each do |disciplina|
+          %tr
+            - prof = Professor.find_by(id_of_user: current_user.id)
+            -if ((disciplina.professor <=> prof.nome)==0)
+              %td= link_to "#{disciplina.nome}", disciplina_url(disciplina)
+            -else
+              %td= disciplina.nome
+            /%dt= link_disciplinas.nome
+            %td= disciplina.professor
+            %td= disciplina.vagas
+    -else
+      - @disciplinas.each do |disciplina|
+        -if (disciplina.ativa?)
+          %tr
+            %td= link_to "#{disciplina.nome}", disciplina_url(disciplina)
+            /%dt= link_disciplinas.nome
+            %td= disciplina.professor
+            %td= disciplina.vagas
+
 
 -if (signed_in?)
   -if (current_user.admin_role? || current_user.professor_role?)
