@@ -21876,3 +21876,745 @@ Processing by DisciplinasController#index as HTML
 Completed 200 OK in 50ms (Views: 48.3ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-04 00:08:35 -0300
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"gPE00YmKx3XJgcWOpijXFXrpOP58eHuRxMLqLtr/UcjdarkPzpgNPrpnRCsEV6Ari2QTVveqKiDWPjM/ap3ENg=="}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 46ms (Views: 32.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-07-04 00:08:38 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-07-04 00:09:01 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TXV0nUECksgj1Z6+b8Ae/4/CKtyU7BbPrHfU2awUbwoQ7vlDBhBYg1AzHxvNv2nBfk8BdB8+R36+iw3IHHb69A==", "user"=>{"email"=>"asb@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "asb@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 187ms (Views: 30.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-07-04 00:09:16 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wup+coi0LwAEpZdHzFYu/pblfhFe/g8dHKynYeNCh1sHcfOsz6blS3dDFuJuKVnAZ2hVudUsXqwOUH5wUyASpQ==", "user"=>{"email"=>"asb2@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "asb2@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "asb2@test.com"], ["encrypted_password", "$2a$11$9a392.mFvfTp9sPTBr47dOi90GG.hJtp56TIPFYoMtZbpk1Oq0q5G"], ["created_at", 2017-07-04 03:09:16 UTC], ["updated_at", 2017-07-04 03:09:16 UTC]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-07-04 03:09:16 UTC], ["last_sign_in_at", 2017-07-04 03:09:16 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", 2017-07-04 03:09:16 UTC], ["id", 4]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/home
+Completed 302 Found in 157ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-04 00:09:16 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-07-04 00:13:01 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YPgiINhkKDiDAcZ5PE4hE4cz7Dv2liR6aQ4BDlCi2HQ9Y6/+n3bic/DnR9yeMVYtdr7Hk31Edct78tgf4MBNig=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-04 00:13:01 -0300
+Started GET "/home" for 127.0.0.1 at 2017-07-04 00:13:01 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-04 00:13:03 -0300
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"SpL8/OgVpPWOeL8RfFtT9Q2FYwWesFBUhgJUMDps+NOudrtS1W8nvFh0Ts42QXZ2BOPpRRcCBLvzOaCfS5aKeQ=="}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-07-04 00:13:05 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 41ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-04 00:13:26 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-04 00:13:30 -0300
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"L9CcQ0JlLlbCn8ldQ9PwT3SS/BJiY6zQ9PsnM0Q3IYzLNNvtfx+tHxSTOIIJydXMffR2UuvR+D+BwNOcNc1TJg=="}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 54ms (Views: 52.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-07-04 00:13:36 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-07-04 00:14:16 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kUkzq7kLNMwKgoX4f7thoFdggLTENBLSA09x2UyWsOF1rXQFhHG3hdyOdCc1oUQjXgYK9E2GRj12dIV2PWzCSw==", "user"=>{"email"=>"asb3@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "asb3@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "asb3@test.com"], ["encrypted_password", "$2a$11$xqa/JaN8BzgtGWc6n3cj6eyZeIXAKnAivdPVko9h5eAD99oHVEJt2"], ["created_at", 2017-07-04 03:14:16 UTC], ["updated_at", 2017-07-04 03:14:16 UTC]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-07-04 03:14:16 UTC], ["last_sign_in_at", 2017-07-04 03:14:16 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", 2017-07-04 03:14:16 UTC], ["id", 5]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/home
+Completed 302 Found in 161ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-04 00:14:16 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 36ms (Views: 33.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2017-07-04 00:28:48 -0300
+Processing by ListaDisciplinasController#index as HTML
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered lista_disciplinas/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 39ms (Views: 34.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2017-07-04 00:28:49 -0300
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "candidatos"[0m
+  [1m[36mCandidato Load (0.1ms)[0m  [1m[34mSELECT  "candidatos".* FROM "candidatos" ORDER BY "candidatos"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "disciplinas"[0m
+  [1m[36mDisciplina Load (0.1ms)[0m  [1m[34mSELECT  "disciplinas".* FROM "disciplinas" ORDER BY "disciplinas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "lista_disciplinas"[0m
+  [1m[36mListaDisciplina Load (0.1ms)[0m  [1m[34mSELECT  "lista_disciplinas".* FROM "lista_disciplinas" ORDER BY "lista_disciplinas"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "oferta"[0m
+  [1m[36mOferta Load (0.1ms)[0m  [1m[34mSELECT  "oferta".* FROM "oferta" ORDER BY "oferta"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "professors"[0m
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" ORDER BY "professors"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (19.0ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (3.6ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_navigation.html.haml (6.8ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (5.6ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/rails_admin-1.2.0/app/views/layouts/rails_admin/pjax.html.haml (3.3ms)
+Completed 200 OK in 167ms (Views: 126.5ms | ActiveRecord: 3.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-07-04 00:28:51 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"V9MCwv3SMGX4eYNxMYZk7NpBNdifHdeEj/1Du1yOnKqzN0VswKizLC51cq57nEFv0ye/mBavg2v6xrcULXTuAA=="}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-04 00:28:51 -0300
+Started GET "/home" for 127.0.0.1 at 2017-07-04 00:28:51 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2017-07-04 00:28:54 -0300
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.3ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2017-07-04 00:28:56 -0300
+Processing by ListaDisciplinasController#index as HTML
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered lista_disciplinas/index.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-04 00:28:57 -0300
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"h7AwL22a69hnmGU2/FZjIRYH6qploPk5OtICHs9AtyBcyPMYx31Ju72zPckqjm9tYQIBnzf0VXOmxsSx+W0ypw=="}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2017-07-04 00:28:59 -0300
+Processing by ListaDisciplinasController#index as HTML
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered lista_disciplinas/index.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-04 00:29:01 -0300
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"/HhkinhLGAOy5YEBqNB/boodJL+z+gjCBp3VgvDfZ2onAKe90qy6YGjO2f5+CHMi/RjPiuGupIiaiRMtxvLi7Q=="}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-07-04 00:29:06 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 50ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-07-04 00:30:00 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 60ms (Views: 57.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-07-04 00:30:07 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g8pY589GXkN2muOCCBn44nJvr2TafwF1uV4lVETVjjpYspvQZaH8IKyxu33ewfSuBWpEUYgrrT8lSuP7cvgLvQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 47ms (Views: 38.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-04 00:35:14 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-04 00:35:17 -0300
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"1MgUgWaHzjXXAWPbjMoRIXVUQNxyV3MeVA/F1CQxi6oPsNe2zGBsVg0qOyRaEh1tAlGr6SAD31TIGwN7EhwOLQ=="}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 45ms (Views: 30.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-07-04 00:35:19 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-07-04 00:35:34 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+E1VAKdEh96U2U2DDdThIGnCXRRafKD+05DA4iQHDIMjNZY3DaMlvU7yFXzbDO1sHse2IQgoDLRPhAZNEiqJBA==", "user"=>{"email"=>"asb3@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "asb3@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 178ms (Views: 32.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-07-04 00:35:52 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tdCN6sf2BlkevOki8AJhD5k78p4DaqWQ5JX1+n1THHNuqE7dbRGkOsSXsd0m2m1D7j4Zq1E+Cdp4gTNVS36Z9A==", "user"=>{"email"=>"asb4@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "asb4@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "asb4@test.com"], ["encrypted_password", "$2a$11$xMWrCrCCIpz0ooCU46kjmORgREMARL7tL1hPLv1c8r5DOCsh91ixW"], ["created_at", 2017-07-04 03:35:52 UTC], ["updated_at", 2017-07-04 03:35:52 UTC]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-07-04 03:35:52 UTC], ["last_sign_in_at", 2017-07-04 03:35:52 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", 2017-07-04 03:35:52 UTC], ["id", 6]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/home
+Completed 302 Found in 159ms (ActiveRecord: 10.1ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-04 00:35:52 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-07-04 00:39:31 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ajN2x3eUDfbTKwbrxJypWUJkHWVw/g+H/r+YF/wv9jCxS7Xw3XOvlQkAXhQSRKUVNWH2UCKqo81iq164ygJztw=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-04 00:39:31 -0300
+Started GET "/home" for 127.0.0.1 at 2017-07-04 00:39:31 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-04 00:39:33 -0300
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"MHWYxAAsJ+Gl/e1yAWkRA877/dmJkSCznZMIGviPAty/J9lMH7NgaNPJocMWVABOiEFbaNhlv83uCzDfaTy7Ng=="}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-07-04 00:39:44 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Vi82auwjxpyo92ciG0BDOZ1cf0+OxpQ2STkE32KRHxqCv1RtC/IkwSXkS2fUBBBoM/XTG/PhS6qvNzW7Dn9lg==", "user"=>{"email"=>"student@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "student@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-07-04 03:39:44 UTC], ["last_sign_in_at", 2017-07-04 03:39:44 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", 2017-07-04 03:39:44 UTC], ["id", 2]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/home
+Completed 302 Found in 157ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-04 00:39:44 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 1"], ["codigo", "cic01"], ["professor", "Professor 1"], ["vagas", #<BigDecimal:55a78e109240,'0.3E1',9(27)>], ["created_at", 2017-07-04 03:42:17 UTC], ["updated_at", 2017-07-04 03:42:17 UTC]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["professor", "Professor 2"], ["vagas", #<BigDecimal:55a78e025d10,'0.2E1',9(27)>], ["created_at", 2017-07-04 03:42:17 UTC], ["updated_at", 2017-07-04 03:42:17 UTC]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["professor", "Professor 1"], ["vagas", #<BigDecimal:55a78df27d50,'0.2E1',9(27)>], ["created_at", 2017-07-04 03:42:17 UTC], ["updated_at", 2017-07-04 03:42:17 UTC]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "oferta" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "Disciplina 1"], ["codigo", "cic01"], ["created_at", 2017-07-04 03:42:17 UTC], ["updated_at", 2017-07-04 03:42:17 UTC]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "oferta" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["created_at", 2017-07-04 03:42:17 UTC], ["updated_at", 2017-07-04 03:42:17 UTC]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "email", "sala", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "Professor 1"], ["email", "professor1@unb.br"], ["sala", "Sala A1-1-1"], ["created_at", 2017-07-04 03:42:17 UTC], ["updated_at", 2017-07-04 03:42:17 UTC]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "email", "sala", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "Professor 2"], ["email", "professor2@unb.br"], ["sala", "Sala A2-2-2"], ["created_at", 2017-07-04 03:42:17 UTC], ["updated_at", 2017-07-04 03:42:17 UTC]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "prioridade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Mateus Andrade"], ["matricula", "10123456"], ["monitoria", "Remunerada"], ["semestre", 3], ["prioridade", 0], ["created_at", 2017-07-04 03:42:17 UTC], ["updated_at", 2017-07-04 03:42:17 UTC]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "student2@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "admin_role", "student_role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "student2@test.com"], ["encrypted_password", "$2a$11$Lu8ZGr61zqH0uF2oDcdBIeGBKXMsDAiD4Ez7Kj//SxF43HJtNASiK"], ["created_at", 2017-07-04 03:42:17 UTC], ["updated_at", 2017-07-04 03:42:17 UTC], ["admin_role", false], ["student_role", true]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "prioridade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Erick Medeiros"], ["matricula", "11123456"], ["monitoria", "Voluntaria"], ["semestre", 4], ["prioridade", 0], ["created_at", 2017-07-04 03:42:17 UTC], ["updated_at", 2017-07-04 03:42:17 UTC]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "student2@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from load at /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/bin/rake:23)
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to InserirCandidatos (20161031202411)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "candidatos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "matricula" varchar, "disciplina" varchar, "monitoria" varchar, "semestre" integer, "prioridade" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161031202411"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CriarProfessor (20161101132911)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "professors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "email" varchar, "sala" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161101132911"]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDisciplinas (20161210121327)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "disciplinas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "codigo" varchar, "professor" varchar, "vagas" decimal, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161210121327"]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateOferta (20161210121345)
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "oferta" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "codigo" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161210121345"]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddColumnProfessorToProfessor (20161212181453)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "professors" ADD "professor" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161212181453"]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to ListaDisciplinas (20161215041239)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "lista_disciplinas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "codigo" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161215041239"]]
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to DeviseCreateUsers (20170623180012)
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170623180012"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddRolesToUsers (20170629023755)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "admin_role" boolean DEFAULT 'f'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "professor_role" boolean DEFAULT 'f'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "student_role" boolean DEFAULT 't'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170629023755"]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddRolesToInserirCandidatos (20170704001833)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "candidatos" ADD "id_of_user" integer DEFAULT 0[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170704001833"]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddRolesToProfessores (20170704002349)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "professors" ADD "id_of_user" integer DEFAULT 0[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170704002349"]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-07-04 03:43:27 UTC], ["updated_at", 2017-07-04 03:43:27 UTC]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 1"], ["codigo", "cic01"], ["professor", "Professor 1"], ["vagas", #<BigDecimal:558cd5846540,'0.3E1',9(27)>], ["created_at", 2017-07-04 03:43:35 UTC], ["updated_at", 2017-07-04 03:43:35 UTC]]
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["professor", "Professor 2"], ["vagas", #<BigDecimal:558cd5776278,'0.2E1',9(27)>], ["created_at", 2017-07-04 03:43:35 UTC], ["updated_at", 2017-07-04 03:43:35 UTC]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["professor", "Professor 1"], ["vagas", #<BigDecimal:558cd561e920,'0.2E1',9(27)>], ["created_at", 2017-07-04 03:43:35 UTC], ["updated_at", 2017-07-04 03:43:35 UTC]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "oferta" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "Disciplina 1"], ["codigo", "cic01"], ["created_at", 2017-07-04 03:43:35 UTC], ["updated_at", 2017-07-04 03:43:35 UTC]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "oferta" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["created_at", 2017-07-04 03:43:35 UTC], ["updated_at", 2017-07-04 03:43:35 UTC]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "email", "sala", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "Professor 1"], ["email", "professor1@unb.br"], ["sala", "Sala A1-1-1"], ["created_at", 2017-07-04 03:43:35 UTC], ["updated_at", 2017-07-04 03:43:35 UTC]]
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "email", "sala", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "Professor 2"], ["email", "professor2@unb.br"], ["sala", "Sala A2-2-2"], ["created_at", 2017-07-04 03:43:35 UTC], ["updated_at", 2017-07-04 03:43:35 UTC]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "prioridade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Mateus Andrade"], ["matricula", "10123456"], ["monitoria", "Remunerada"], ["semestre", 3], ["prioridade", 0], ["created_at", 2017-07-04 03:43:35 UTC], ["updated_at", 2017-07-04 03:43:35 UTC]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "student2@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "student2@test.com"], ["encrypted_password", "$2a$11$KMpzIwvu7KqfvoNLfpJureP1pY4t3A6X4qVcQsn.SL7odgxapq/nO"], ["created_at", 2017-07-04 03:43:35 UTC], ["updated_at", 2017-07-04 03:43:35 UTC]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "prioridade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Erick Medeiros"], ["matricula", "11123456"], ["monitoria", "Voluntaria"], ["semestre", 4], ["prioridade", 0], ["created_at", 2017-07-04 03:43:35 UTC], ["updated_at", 2017-07-04 03:43:35 UTC]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "student2@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 1"], ["codigo", "cic01"], ["professor", "Professor 1"], ["vagas", #<BigDecimal:55bd548b8e10,'0.3E1',9(27)>], ["created_at", 2017-07-04 03:44:19 UTC], ["updated_at", 2017-07-04 03:44:19 UTC]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["professor", "Professor 2"], ["vagas", #<BigDecimal:55bd54772790,'0.2E1',9(27)>], ["created_at", 2017-07-04 03:44:19 UTC], ["updated_at", 2017-07-04 03:44:19 UTC]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["professor", "Professor 1"], ["vagas", #<BigDecimal:55bd5472e770,'0.2E1',9(27)>], ["created_at", 2017-07-04 03:44:19 UTC], ["updated_at", 2017-07-04 03:44:19 UTC]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "oferta" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "Disciplina 1"], ["codigo", "cic01"], ["created_at", 2017-07-04 03:44:19 UTC], ["updated_at", 2017-07-04 03:44:19 UTC]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "oferta" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["created_at", 2017-07-04 03:44:19 UTC], ["updated_at", 2017-07-04 03:44:19 UTC]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "email", "sala", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "Professor 1"], ["email", "professor1@unb.br"], ["sala", "Sala A1-1-1"], ["created_at", 2017-07-04 03:44:19 UTC], ["updated_at", 2017-07-04 03:44:19 UTC]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "email", "sala", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "Professor 2"], ["email", "professor2@unb.br"], ["sala", "Sala A2-2-2"], ["created_at", 2017-07-04 03:44:19 UTC], ["updated_at", 2017-07-04 03:44:19 UTC]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "prioridade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Mateus Andrade"], ["matricula", "10123456"], ["monitoria", "Remunerada"], ["semestre", 3], ["prioridade", 0], ["created_at", 2017-07-04 03:44:19 UTC], ["updated_at", 2017-07-04 03:44:19 UTC]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "student2@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 1"], ["codigo", "cic01"], ["professor", "Professor 1"], ["vagas", #<BigDecimal:561df3019408,'0.3E1',9(27)>], ["created_at", 2017-07-04 03:45:00 UTC], ["updated_at", 2017-07-04 03:45:00 UTC]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["professor", "Professor 2"], ["vagas", #<BigDecimal:561df2f48420,'0.2E1',9(27)>], ["created_at", 2017-07-04 03:45:00 UTC], ["updated_at", 2017-07-04 03:45:00 UTC]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["professor", "Professor 1"], ["vagas", #<BigDecimal:561df2ecb218,'0.2E1',9(27)>], ["created_at", 2017-07-04 03:45:00 UTC], ["updated_at", 2017-07-04 03:45:00 UTC]]
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "oferta" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "Disciplina 1"], ["codigo", "cic01"], ["created_at", 2017-07-04 03:45:00 UTC], ["updated_at", 2017-07-04 03:45:00 UTC]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "oferta" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["created_at", 2017-07-04 03:45:00 UTC], ["updated_at", 2017-07-04 03:45:00 UTC]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "email", "sala", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "Professor 1"], ["email", "professor1@unb.br"], ["sala", "Sala A1-1-1"], ["created_at", 2017-07-04 03:45:00 UTC], ["updated_at", 2017-07-04 03:45:00 UTC]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "email", "sala", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "Professor 2"], ["email", "professor2@unb.br"], ["sala", "Sala A2-2-2"], ["created_at", 2017-07-04 03:45:00 UTC], ["updated_at", 2017-07-04 03:45:00 UTC]]
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "prioridade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Mateus Andrade"], ["matricula", "10123456"], ["monitoria", "Remunerada"], ["semestre", 3], ["prioridade", 0], ["created_at", 2017-07-04 03:45:00 UTC], ["updated_at", 2017-07-04 03:45:00 UTC]]
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "s@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "s@test.com"], ["encrypted_password", "$2a$11$l6m6SnHTlDg7hVLOj7/K1OcP02lpDS.Ru9ODC1nTofgyTaPMkvgQW"], ["created_at", 2017-07-04 03:45:00 UTC], ["updated_at", 2017-07-04 03:45:00 UTC]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "prioridade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Erick Medeiros"], ["matricula", "11123456"], ["monitoria", "Voluntaria"], ["semestre", 4], ["prioridade", 0], ["created_at", 2017-07-04 03:45:00 UTC], ["updated_at", 2017-07-04 03:45:00 UTC]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "s@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from load at /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/bin/rake:23)
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to InserirCandidatos (20161031202411)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "candidatos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "matricula" varchar, "disciplina" varchar, "monitoria" varchar, "semestre" integer, "prioridade" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161031202411"]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CriarProfessor (20161101132911)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "professors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "email" varchar, "sala" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161101132911"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDisciplinas (20161210121327)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "disciplinas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "codigo" varchar, "professor" varchar, "vagas" decimal, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161210121327"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateOferta (20161210121345)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "oferta" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "codigo" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161210121345"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddColumnProfessorToProfessor (20161212181453)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "professors" ADD "professor" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161212181453"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to ListaDisciplinas (20161215041239)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "lista_disciplinas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "codigo" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161215041239"]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to DeviseCreateUsers (20170623180012)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170623180012"]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddRolesToUsers (20170629023755)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "admin_role" boolean DEFAULT 'f'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "professor_role" boolean DEFAULT 'f'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "student_role" boolean DEFAULT 't'[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170629023755"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddRolesToInserirCandidatos (20170704001833)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "candidatos" ADD "id_of_user" integer DEFAULT 0[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170704001833"]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddRolesToProfessores (20170704002349)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "professors" ADD "id_of_user" integer DEFAULT 0[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170704002349"]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-07-04 03:47:51 UTC], ["updated_at", 2017-07-04 03:47:51 UTC]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 1"], ["codigo", "cic01"], ["professor", "Professor 1"], ["vagas", #<BigDecimal:56095dd7d338,'0.3E1',9(27)>], ["created_at", 2017-07-04 03:48:14 UTC], ["updated_at", 2017-07-04 03:48:14 UTC]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["professor", "Professor 2"], ["vagas", #<BigDecimal:56095dc17318,'0.2E1',9(27)>], ["created_at", 2017-07-04 03:48:14 UTC], ["updated_at", 2017-07-04 03:48:14 UTC]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["professor", "Professor 1"], ["vagas", #<BigDecimal:56095dbbc4b8,'0.2E1',9(27)>], ["created_at", 2017-07-04 03:48:14 UTC], ["updated_at", 2017-07-04 03:48:14 UTC]]
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "oferta" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "Disciplina 1"], ["codigo", "cic01"], ["created_at", 2017-07-04 03:48:14 UTC], ["updated_at", 2017-07-04 03:48:14 UTC]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "oferta" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["created_at", 2017-07-04 03:48:14 UTC], ["updated_at", 2017-07-04 03:48:14 UTC]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "email", "sala", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "Professor 1"], ["email", "professor1@unb.br"], ["sala", "Sala A1-1-1"], ["created_at", 2017-07-04 03:48:14 UTC], ["updated_at", 2017-07-04 03:48:14 UTC]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "email", "sala", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "Professor 2"], ["email", "professor2@unb.br"], ["sala", "Sala A2-2-2"], ["created_at", 2017-07-04 03:48:14 UTC], ["updated_at", 2017-07-04 03:48:14 UTC]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "prioridade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Mateus Andrade"], ["matricula", "10123456"], ["monitoria", "Remunerada"], ["semestre", 3], ["prioridade", 0], ["created_at", 2017-07-04 03:48:14 UTC], ["updated_at", 2017-07-04 03:48:14 UTC]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "student@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "student@test.com"], ["encrypted_password", "$2a$11$iTbHX4Vxpmn26twy0NXoZuV6fc5B3leRBnJRcLLZMsaMlWnpJreBi"], ["created_at", 2017-07-04 03:48:14 UTC], ["updated_at", 2017-07-04 03:48:14 UTC]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "professor@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "professor_role", "student_role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "professor@test.com"], ["encrypted_password", "$2a$11$2v2Oo0gV7Und1hWBpXGIDewWkq/qPKojIAJ0vwqHK1Fch3FQMrtOq"], ["created_at", 2017-07-04 03:48:14 UTC], ["updated_at", 2017-07-04 03:48:14 UTC], ["professor_role", true], ["student_role", false]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "admin_role", "student_role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "admin@test.com"], ["encrypted_password", "$2a$11$iQ/LiyFAQjkjT.Ix7cp5d.RSO0LPTLhNvPO1Nxq7rzjBubGopdWMa"], ["created_at", 2017-07-04 03:48:15 UTC], ["updated_at", 2017-07-04 03:48:15 UTC], ["admin_role", true], ["student_role", false]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "prioridade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Erick Medeiros"], ["matricula", "11123456"], ["monitoria", "Voluntaria"], ["semestre", 4], ["prioridade", 0], ["created_at", 2017-07-04 03:48:15 UTC], ["updated_at", 2017-07-04 03:48:15 UTC]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "student@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m

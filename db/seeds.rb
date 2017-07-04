@@ -40,7 +40,9 @@ candidatos.each do |candidato|
 	Candidato.create!(candidato)
 
 users = [
-    {:email => 'student@test.com', :password => '000000'}
+    {:email => 'student@test.com', :password => 'password', :admin_role => 'false', :student_role => 'true'},
+    {:email => 'professor@test.com', :password => 'password', :admin_role => 'false', :professor_role => 'true', :student_role => 'false'},
+    {:email => 'admin@test.com', :password => 'password', :admin_role => 'true', :student_role => 'false'}
   ]
 users.each do |user|
     User.create!(user)
