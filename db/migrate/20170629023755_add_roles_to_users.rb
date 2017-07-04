@@ -3,6 +3,5 @@ class AddRolesToUsers < ActiveRecord::Migration[5.0]
     add_column :users, :admin_role, :boolean, default: false
     add_column :users, :professor_role, :boolean, default: false
     add_column :users, :student_role, :boolean, default: true
-    add_column :users, :id, :integer, auto_increment: true
   end
 end
