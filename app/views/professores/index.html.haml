@@ -8,7 +8,11 @@
   %tbody
     - @professors.each do |professor|
       %tr
-        %td= link_to "#{professor.nome}", professore_url(professor)
+        %td
+          -if (professor.id_of_user == current_user.id)
+            = link_to "#{professor.nome}", professore_url(professor)
+          -else
+            = professor.nome
         %td= professor.email
         %td= professor.sala
 

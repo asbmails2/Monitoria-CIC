@@ -24411,3 +24411,127 @@ Processing by ProfessoresController#index as HTML
 Completed 200 OK in 34ms (Views: 29.8ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/professores" for 127.0.0.1 at 2017-07-04 02:24:23 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.5ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2017-07-04 02:24:25 -0300
+Processing by ListaDisciplinasController#index as HTML
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lista_disciplinas/index.html.haml within layouts/application (11.3ms)
+Completed 200 OK in 44ms (Views: 39.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-07-04 02:24:26 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 42ms (Views: 38.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2017-07-04 02:24:27 -0300
+Processing by ListaDisciplinasController#index as HTML
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lista_disciplinas/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lista_disciplinas/new" for 127.0.0.1 at 2017-07-04 02:24:30 -0300
+Processing by ListaDisciplinasController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering lista_disciplinas/new.html.haml within layouts/application
+  Rendered lista_disciplinas/new.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 50ms (Views: 40.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2017-07-04 02:24:37 -0300
+Processing by ListaDisciplinasController#index as HTML
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered lista_disciplinas/index.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-07-04 02:24:41 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professores/2" for 127.0.0.1 at 2017-07-04 02:24:42 -0300
+Processing by ProfessoresController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT  "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering professores/show.html.haml within layouts/application
+  Rendered professores/show.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 37ms (Views: 33.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-07-04 02:27:26 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-07-04 02:27:26 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 35ms (Views: 31.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-07-04 02:28:18 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ymjgpmUFnXyrF68QoGqUlvtUM9wIP468spAy9CycPOvalvl+7A21tUVkZNfXhi6fTkwDURFuheHogbkCznTmdw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-04 02:28:18 -0300
+Started GET "/home" for 127.0.0.1 at 2017-07-04 02:28:18 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2017-07-04 02:28:37 -0300
+Processing by ListaDisciplinasController#index as HTML
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered lista_disciplinas/index.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/disciplinas" for 127.0.0.1 at 2017-07-04 02:28:39 -0300
+Processing by DisciplinasController#index as HTML
+  Rendering disciplinas/index.html.haml within layouts/application
+  [1m[36mDisciplina Load (0.2ms)[0m  [1m[34mSELECT "disciplinas".* FROM "disciplinas"[0m
+  Rendered disciplinas/index.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 41ms (Views: 38.0ms | ActiveRecord: 0.8ms)
+
+
