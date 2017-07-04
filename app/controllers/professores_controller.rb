@@ -9,7 +9,7 @@ class ProfessoresController < ApplicationController
   	@professors = Professor.new
   end
   def create
-  	professor = params.require(:professor).permit(:nome, :email, :sala)
+  	professor = params.require(:professor).permit(:nome, :email, :sala, :id_of_user)
   	parray = professor.values
     procura_professor_create(parray, professor)
 

@@ -4,16 +4,13 @@
 
   = label :professor, :nome, 'Nome*'
   = text_field :professor, :nome
-  %br
-  %br
-  = label :professor, :email, 'Email*'
-  = text_field :professor, :email
+  = hidden_field :professor, :email, value: current_user.email
   %br
   %br
   = label :professor, :sala, 'Sala*'
   = text_field :professor, :sala
   %br
   %br
+  = hidden_field :professor, :id_of_user, value: current_user.id
   = link_to image_tag('voltar.png'), professores_url
   = image_submit_tag('salvar.png')
-

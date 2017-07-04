@@ -5,8 +5,9 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     if (current_user.student_role? && Candidato.find_by(id_of_user: current_user.id)==nil)
       new_candidato_url
-    else
-      home_index_url
+    end
+    if (current_user.professor_role? && Professor.find_by(id_of_user: current_user.id)==nil)
+      new_professore_url
     end
   end
 end
