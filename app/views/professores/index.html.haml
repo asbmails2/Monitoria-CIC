@@ -11,16 +11,16 @@
         %td= link_to "#{professor.nome}", professore_url(professor)
         %td= professor.email
         %td= professor.sala
-        - #Icones <div>Icons made by <a href="http://www.flaticon.com/authors/flat-icons" title="Flat Icons">Flat Icons</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
-      =if (current_user.professor_role? || current_user.admin_role?)
-        %br
-        = link_to image_tag('adicionar.png'), new_professore_url
+- #Icones <div>Icons made by <a href="http://www.flaticon.com/authors/flat-icons" title="Flat Icons">Flat Icons</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+-if (current_user.admin_role?)
+  %br
+    = link_to image_tag('adicionar.png'), new_professore_url
 
-        %h4 Importar Professores
-        = form_tag import_professores_path, multipart: true do
-          = file_field_tag :file
-          = image_submit_tag('salvar.png')
+  %h4 Importar Professores
+  = form_tag import_professores_path, multipart: true do
+    = file_field_tag :file
+    = image_submit_tag('salvar.png')
 %br
 %br
 %br
