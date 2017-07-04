@@ -1,4 +1,5 @@
 class DisciplinasController < ApplicationController
+  skip_before_action :authenticate_user!, :only => [:index]
   before_action :set_lista_disciplinas
   def set_lista_disciplinas
     @lista_disciplinas = ListaDisciplina.all
