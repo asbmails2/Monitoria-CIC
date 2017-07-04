@@ -2,7 +2,6 @@
 # Cria, edita, mostra detalhes e deleta um elemento.
 
 class ProfessoresController < ApplicationController
-  skip_before_action :authenticate_user!, :only => [:index]
   def index
     @professors = Professor.all
   end

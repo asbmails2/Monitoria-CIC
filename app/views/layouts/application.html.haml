@@ -15,9 +15,9 @@
           %a{:href => disciplinas_url} Gerência de bolsas
         %li
           %a{:href => lista_disciplinas_url} Disciplinas
-        %li
-          %a{:href => professores_url} Professores
         -if( signed_in?)
+          %li
+            %a{:href => professores_url} Professores  
           %li
             %a{:href => candidatos_url} Inscrição de candidatos
         -if (signed_in? && (can? :access, :rails_admin))
