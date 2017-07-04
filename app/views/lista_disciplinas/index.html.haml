@@ -11,16 +11,19 @@
         %td= disciplina.nome
         - #Icones <div>Icons made by <a href="http://www.flaticon.com/authors/flat-icons" title="Flat Icons">Flat Icons</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
+-if (signed_in?)
+  -if (current_user.admin_role? || current_user.professor_role?)
+    %br
+      = link_to image_tag('adicionar.png'), new_lista_disciplina_url
 %br
-= link_to image_tag('adicionar.png'), new_lista_disciplina_url
+%br
+-if (signed_in?)
+  -if (current_user.admin_role?)
+    %h4 Importar Lista de Disciplinas
+    = form_tag import_lista_disciplinas_path, multipart: true do
+      = file_field_tag :file
+      = image_submit_tag('salvar.png')
+      %br
 %br
 %br
-%h4 Importar Lista de Disciplinas
-= form_tag import_lista_disciplinas_path, multipart: true do
-  = file_field_tag :file
-  = image_submit_tag('salvar.png')
-  %br
-  %br
-  %br
-  %br
-  
+%br

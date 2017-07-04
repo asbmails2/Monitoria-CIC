@@ -15,5 +15,7 @@
         %td= disciplina.professor
         %td= disciplina.vagas
 
-%br
-= link_to image_tag('adicionar.png'), new_disciplina_url
+-if (signed_in?)
+  -if (current_user.admin_role? || current_user.professor_role?)
+    %br
+      = link_to image_tag('adicionar.png'), new_disciplina_url

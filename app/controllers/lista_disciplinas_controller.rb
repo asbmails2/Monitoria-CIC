@@ -1,8 +1,9 @@
 class ListaDisciplinasController < ApplicationController
+  skip_before_action :authenticate_user!, :only => [:index]
   def index
     @lista_disciplinas = ListaDisciplina.all
   end
-  def new   
+  def new
     @professores = Professor.all
     @lista_disciplinas = ListaDisciplina.new
   end
