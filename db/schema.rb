@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170629023755) do
+ActiveRecord::Schema.define(version: 20170704001833) do
 
   create_table "candidatos", force: :cascade do |t|
     t.string   "nome"
@@ -19,8 +19,9 @@ ActiveRecord::Schema.define(version: 20170629023755) do
     t.string   "monitoria"
     t.integer  "semestre"
     t.integer  "prioridade"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "id_of_user", default: 0
   end
 
   create_table "disciplinas", force: :cascade do |t|
