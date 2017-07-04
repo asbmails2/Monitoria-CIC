@@ -19,9 +19,9 @@ ActiveRecord::Schema.define(version: 20170704002349) do
     t.string   "monitoria"
     t.integer  "semestre"
     t.integer  "prioridade"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.integer  "id_of_user", default: 0
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.string   "id_of_user", default: "0"
   end
 
   create_table "disciplinas", force: :cascade do |t|
@@ -51,10 +51,10 @@ ActiveRecord::Schema.define(version: 20170704002349) do
     t.string   "nome"
     t.string   "email"
     t.string   "sala"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.string   "professor"
-    t.integer  "id_of_user", default: 0
+    t.string   "id_of_user", default: "0"
   end
 
   create_table "users", force: :cascade do |t|

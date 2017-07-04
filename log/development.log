@@ -22618,3 +22618,917 @@ Migrating to AddRolesToProfessores (20170704002349)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "student@test.com"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-07-04 00:50:39 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+YsvJ3bXFzOW/nLYshPyERcR7vSsJVhP5poCB8k2Njrt5xklrqsoicxFyluoo0H52yPXxyE/4u0fXK79us/ZIg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 50ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-04 00:50:39 -0300
+Started GET "/home" for 127.0.0.1 at 2017-07-04 00:50:39 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 472ms (Views: 470.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-04 00:50:41 -0300
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"fa+Fp0yGjMlKG2PkGk322nczwQ1GMX37/QzMzLWofE5pw7OllPqzcxCg22cA/UUyuwH4Pssrx1kEymA2xlGTVg=="}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 53ms (Views: 49.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-07-04 00:50:49 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o/eRjDx7z2t/yb0jqaTncDIFGxiKPK3WNj6HpNpzn3O3m6eO5Afw0SVyBaCzFFSY/jciKwcmF3TP+CteqYpwaw==", "user"=>{"email"=>"student@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "student@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-07-04 03:50:49 UTC], ["last_sign_in_at", 2017-07-04 03:50:49 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", 2017-07-04 03:50:49 UTC], ["id", 1]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT  "candidatos".* FROM "candidatos" WHERE "candidatos"."id_of_user" = ? LIMIT ?[0m  [["id_of_user", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/candidatos/new
+Completed 302 Found in 171ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2017-07-04 00:50:49 -0300
+Processing by CandidatosController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (14.4ms)
+Completed 200 OK in 60ms (Views: 44.0ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/candidatos" for 127.0.0.1 at 2017-07-04 00:51:11 -0300
+Processing by CandidatosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ptGAkToNxmIdVfNvaSaBxnvXjvVQ+YSNdWKg+fEkmZkZjkzSp5viWYyxXEvqVinBcmU+6zNq/1zHes/KgH3bQg==", "candidato"=>{"nome"=>"Adriano", "matricula"=>"140033955", "monitoria"=>"Remunerada", "semestre"=>"7"}, "x"=>"12", "y"=>"13"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Adriano"], ["matricula", "140033955"], ["monitoria", "Remunerada"], ["semestre", 7], ["created_at", 2017-07-04 03:51:11 UTC], ["updated_at", 2017-07-04 03:51:11 UTC]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/candidatos
+Completed 302 Found in 12ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-07-04 00:51:11 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 42ms (Views: 36.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2017-07-04 00:51:24 -0300
+Processing by CandidatosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (9.5ms)
+Completed 200 OK in 47ms (Views: 43.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-07-04 00:51:38 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 47ms (Views: 43.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2017-07-04 00:52:52 -0300
+Processing by CandidatosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (10.5ms)
+Completed 200 OK in 55ms (Views: 51.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-07-04 00:53:03 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 47ms (Views: 43.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2017-07-04 00:53:57 -0300
+Processing by ListaDisciplinasController#index as HTML
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered lista_disciplinas/index.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 40ms (Views: 37.8ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-07-04 00:54:01 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9xd1V1bAGOIqlvH6XQMVdkKmQdUuta05Joby5wkf61xISLkUy1Y82btyXt7ec71xSxTxy00m1uiUnp3UeEaphw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-04 00:54:01 -0300
+Started GET "/home" for 127.0.0.1 at 2017-07-04 00:54:01 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-04 00:54:03 -0300
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"ZsmDWtM9ykizqA+UrGpLQLcC8ACvbSeGkCl16jwXkalIHFmPxTHComu6Bper+saTNS+jDLxdqC166WaNZCl4rg=="}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 56ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-07-04 00:54:09 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MiWxtx9XPO9SSQ101mmbBdDouhOCxz9cqVA+RzsDDpkc8GtiCVs0BYpbBHfR+RbWUsXpH5H3sPdDkC0gYz3nng==", "user"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-07-04 03:54:09 UTC], ["last_sign_in_at", 2017-07-04 03:54:09 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", 2017-07-04 03:54:09 UTC], ["id", 3]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/home
+Completed 302 Found in 154ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-07-04 00:54:09 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-07-04 00:54:13 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.4ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 45ms (Views: 40.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/lista_disciplinas" for 127.0.0.1 at 2017-07-04 00:54:16 -0300
+Processing by ListaDisciplinasController#index as HTML
+  Rendering lista_disciplinas/index.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered lista_disciplinas/index.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 43ms (Views: 40.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/lista_disciplinas/new" for 127.0.0.1 at 2017-07-04 00:54:59 -0300
+Processing by ListaDisciplinasController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering lista_disciplinas/new.html.haml within layouts/application
+  Rendered lista_disciplinas/new.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 52ms (Views: 37.6ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-07-04 00:55:04 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3MJ8liNzXUtcOUaW5VywD5PX3SGqxuUIJof2zGPnwCrd9kPdUPQEGY/FAJ/5gH94jl40/M7/w6BPPJNJcfe3zQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-04 00:55:04 -0300
+Started GET "/home" for 127.0.0.1 at 2017-07-04 00:55:04 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-04 01:05:15 -0300
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"oruJiiHcG4+yVu+XeFU9seXQOiBvnq095jptGZTGqho6Cu617WFKJmZKLA0ml9nuMre5e6vrxSfURbl3lm/dXw=="}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-07-04 01:05:18 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-07-04 01:05:34 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c5Qyoz7ozFN7lkkuVXIuLABZXOw9qc1UCxxk2imBIMnrJVWc8lWd+q+KirQLsMpz1z7ft/ncpU45Y7C0KyhXjA==", "user"=>{"email"=>"student2@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "student2@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "student2@test.com"], ["encrypted_password", "$2a$11$RLcCcApz.tMbZhcfKnl9jePhTAXt2OosaHQPWpEtPamKLDFmzZ4g6"], ["created_at", 2017-07-04 04:05:35 UTC], ["updated_at", 2017-07-04 04:05:35 UTC]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-07-04 04:05:35 UTC], ["last_sign_in_at", 2017-07-04 04:05:35 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", 2017-07-04 04:05:35 UTC], ["id", 4]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCandidato Load (0.1ms)[0m  [1m[34mSELECT  "candidatos".* FROM "candidatos" WHERE "candidatos"."id_of_user" = ? LIMIT ?[0m  [["id_of_user", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/candidatos/new
+Completed 302 Found in 170ms (ActiveRecord: 13.6ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2017-07-04 01:05:35 -0300
+Processing by CandidatosController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (110.5ms)
+Completed 500 Internal Server Error in 116ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `hidden' for #<#<Class:0x007f9cb81ed9b0>:0x00559483314800>):
+    23: 	= select :candidato, :semestre, [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
+    24: 	%br
+    25: 	%br
+    26: 	= hidden :candidato, :id_of_user, current_user.id
+    27: 	= link_to image_tag('voltar.png'), candidatos_url
+    28: 	= image_submit_tag('salvar.png')
+  
+app/views/candidatos/new.html.haml:26:in `block in _app_views_candidatos_new_html_haml__4348134892950062222_47048172285140'
+app/views/candidatos/new.html.haml:4:in `_app_views_candidatos_new_html_haml__4348134892950062222_47048172285140'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.4ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.6ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-04 01:07:40 -0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCandidato Load (0.1ms)[0m  [1m[34mSELECT  "candidatos".* FROM "candidatos" WHERE "candidatos"."id_of_user" = ? LIMIT ?[0m  [["id_of_user", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/candidatos/new
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 13ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2017-07-04 01:07:40 -0300
+Processing by CandidatosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.1ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (22.7ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete' for 4:Fixnum):
+    23: 	= select :candidato, :semestre, [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
+    24: 	%br
+    25: 	%br
+    26: 	= hidden_field :candidato, :id_of_user, current_user.id
+    27: 	= link_to image_tag('voltar.png'), candidatos_url
+    28: 	= image_submit_tag('salvar.png')
+  
+app/views/candidatos/new.html.haml:26:in `block in _app_views_candidatos_new_html_haml__4348134892950062222_47048175367200'
+app/views/candidatos/new.html.haml:4:in `_app_views_candidatos_new_html_haml__4348134892950062222_47048175367200'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.4ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-04 01:08:49 -0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCandidato Load (0.1ms)[0m  [1m[34mSELECT  "candidatos".* FROM "candidatos" WHERE "candidatos"."id_of_user" = ? LIMIT ?[0m  [["id_of_user", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/candidatos/new
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2017-07-04 01:08:49 -0300
+Processing by CandidatosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering candidatos/new.html.haml within layouts/application
+  Rendered candidatos/new.html.haml within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/asb/RubyProjects/trab/Monitoria-CIC/app/views/candidatos/new.html.haml:26: syntax error, unexpected ',', expecting keyword_end
+ :candidato, :id_of_user, current_user.id
+            ^):
+  
+app/views/candidatos/new.html.haml:26: syntax error, unexpected ',', expecting keyword_end
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.7ms)
+Started GET "/candidatos/new" for 127.0.0.1 at 2017-07-04 01:09:49 -0300
+Processing by CandidatosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete' for 4:Fixnum):
+    23: 	= select :candidato, :semestre, [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
+    24: 	%br
+    25: 	%br
+    26: 	= hidden_field :candidato, :id_of_user, current_user.id
+    27: 	%br
+    28: 	%br
+    29: 	= link_to image_tag('voltar.png'), candidatos_url
+  
+app/views/candidatos/new.html.haml:26:in `block in _app_views_candidatos_new_html_haml__4348134892950062222_70155440220960'
+app/views/candidatos/new.html.haml:4:in `_app_views_candidatos_new_html_haml__4348134892950062222_70155440220960'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.6ms)
+Started GET "/candidatos/new" for 127.0.0.1 at 2017-07-04 01:11:50 -0300
+Processing by CandidatosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (13.2ms)
+Completed 200 OK in 49ms (Views: 44.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/candidatos" for 127.0.0.1 at 2017-07-04 01:12:06 -0300
+Processing by CandidatosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2wigcQ8ariAGLLNqyGE8BjoBYk15oqxckkunuKbyNBVDucdOw6f/idIwcPCWo9hZ7WbhFr3XxEagNHPWpFtDUA==", "candidato"=>{"nome"=>"adrianod", "matricula"=>"140033955", "monitoria"=>"Voluntaria", "semestre"=>"1"}, "id_of_user"=>"4", "x"=>"16", "y"=>"18"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "adrianod"], ["matricula", "140033955"], ["monitoria", "Voluntaria"], ["semestre", 1], ["created_at", 2017-07-04 04:12:06 UTC], ["updated_at", 2017-07-04 04:12:06 UTC]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/candidatos
+Completed 302 Found in 11ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-07-04 01:12:06 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 45ms (Views: 41.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2017-07-04 01:13:48 -0300
+Processing by CandidatosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for :current_user:Symbol):
+    23: 	= select :candidato, :semestre, [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
+    24: 	%br
+    25: 	%br
+    26: 	%input{:type=>"hidden", :value=> :current_user.id, :name=>'id_of_user'}
+    27: 	%br
+    28: 	%br
+    29: 	= link_to image_tag('voltar.png'), candidatos_url
+  
+app/views/candidatos/new.html.haml:26:in `block in _app_views_candidatos_new_html_haml__4348134892950062222_70155543087760'
+app/views/candidatos/new.html.haml:4:in `_app_views_candidatos_new_html_haml__4348134892950062222_70155543087760'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.4ms)
+Started GET "/candidatos/new" for 127.0.0.1 at 2017-07-04 01:14:05 -0300
+Processing by CandidatosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for :current_user:Symbol):
+    23: 	= select :candidato, :semestre, [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]
+    24: 	%br
+    25: 	%br
+    26: 	%input{:type=>"hidden", :value=> :current_user.id, :name=>:id_of_user}
+    27: 	%br
+    28: 	%br
+    29: 	= link_to image_tag('voltar.png'), candidatos_url
+  
+app/views/candidatos/new.html.haml:26:in `block in _app_views_candidatos_new_html_haml__4348134892950062222_70155622538260'
+app/views/candidatos/new.html.haml:4:in `_app_views_candidatos_new_html_haml__4348134892950062222_70155622538260'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.1ms)
+Started GET "/candidatos/new" for 127.0.0.1 at 2017-07-04 01:14:36 -0300
+Processing by CandidatosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 35ms (Views: 30.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/candidatos" for 127.0.0.1 at 2017-07-04 01:14:45 -0300
+Processing by CandidatosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cFe4s/MVMmm8u6+Cm4A9vpUk4N70oaQIRVSryAwFWnfo5t+MP6hjwGinbBjFQtnhQkNjhTDUzBJ3K3+mDqwtMg==", "candidato"=>{"nome"=>"asd", "matricula"=>"asdasd", "monitoria"=>"Voluntaria", "semestre"=>"1"}, "id_of_user"=>"current_user.id", "x"=>"15", "y"=>"21"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "asd"], ["matricula", "asdasd"], ["monitoria", "Voluntaria"], ["semestre", 1], ["created_at", 2017-07-04 04:14:45 UTC], ["updated_at", 2017-07-04 04:14:45 UTC]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/candidatos
+Completed 302 Found in 11ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-07-04 01:14:45 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 43ms (Views: 37.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2017-07-04 01:20:18 -0300
+Processing by CandidatosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 52ms (Views: 38.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/candidatos" for 127.0.0.1 at 2017-07-04 01:20:23 -0300
+Processing by CandidatosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+2epsTN0gavQkRW0rCjnNWmJP7NhczDUhalFHBsWsrdj1s6O/8nQAgSN1i7y6gNqvu686KUGWM631pFyGb/F8g==", "candidato"=>{"nome"=>"dsa", "matricula"=>"sda", "monitoria"=>"Voluntaria", "semestre"=>"1", "id_of_user"=>"4"}, "x"=>"23", "y"=>"27"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: id_of_user
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "dsa"], ["matricula", "sda"], ["monitoria", "Voluntaria"], ["semestre", 1], ["created_at", 2017-07-04 04:20:23 UTC], ["updated_at", 2017-07-04 04:20:23 UTC]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/candidatos
+Completed 302 Found in 13ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-07-04 01:20:23 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2017-07-04 01:21:43 -0300
+Processing by CandidatosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 43ms (Views: 39.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/candidatos" for 127.0.0.1 at 2017-07-04 01:21:50 -0300
+Processing by CandidatosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XHn4hds5+Ncgp2Ca4aLBHz4+PBdhaByP4LMOE6Eg9P3EyJ+6F4SpfvS7owC/YCVA6Vm/TKUddJXSzNp9o4mDuA==", "candidato"=>{"nome"=>"sad", "matricula"=>"asd", "monitoria"=>"Voluntaria", "semestre"=>"1", "id_of_user"=>"4"}, "x"=>"12", "y"=>"22"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: id_of_user
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "sad"], ["matricula", "asd"], ["monitoria", "Voluntaria"], ["semestre", 1], ["created_at", 2017-07-04 04:21:50 UTC], ["updated_at", 2017-07-04 04:21:50 UTC]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/candidatos
+Completed 302 Found in 12ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-07-04 01:21:50 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 41ms (Views: 36.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2017-07-04 01:22:41 -0300
+Processing by CandidatosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.3ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (182.6ms)
+Completed 500 Internal Server Error in 189ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `value' for #<#<Class:0x007f9cb81ed9b0>:0x007f9cc1c1e6b0>):
+    24: 	%br
+    25: 	%br
+    26: 	= label :candidato, :id_of_user, current_user.id
+    27: 	= hidden_field :candidato, :id_of_user, value => current_user.id
+    28: 	%br
+    29: 	%br
+    30: 	= link_to image_tag('voltar.png'), candidatos_url
+  
+app/views/candidatos/new.html.haml:27:in `block in _app_views_candidatos_new_html_haml__4348134892950062222_70155621169320'
+app/views/candidatos/new.html.haml:4:in `_app_views_candidatos_new_html_haml__4348134892950062222_70155621169320'
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.3ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendering /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.2ms)
+Started GET "/candidatos/new" for 127.0.0.1 at 2017-07-04 01:22:57 -0300
+Processing by CandidatosController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 45ms (Views: 40.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/candidatos" for 127.0.0.1 at 2017-07-04 01:23:02 -0300
+Processing by CandidatosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VfYW0P8byDUVKDgGt6Qj5u96ABvcfNYHrDNNDuhQaXbNR3HvM6aZnME0+5zpZse5OB2DQBgJvh2eTJlg6vkeMw==", "candidato"=>{"nome"=>"ssad", "matricula"=>"asdas", "monitoria"=>"Voluntaria", "semestre"=>"1", "id_of_user"=>"4"}, "x"=>"18", "y"=>"15"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: id_of_user
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "ssad"], ["matricula", "asdas"], ["monitoria", "Voluntaria"], ["semestre", 1], ["created_at", 2017-07-04 04:23:02 UTC], ["updated_at", 2017-07-04 04:23:02 UTC]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/candidatos
+Completed 302 Found in 16ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-07-04 01:23:02 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (1.1ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (11.0ms)
+Completed 200 OK in 61ms (Views: 55.2ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", :environment]]
+DEPRECATION WARNING: Passing #original_exception is deprecated and has no effect. Exceptions will automatically capture the original exception. (called from load at /home/asb/.rvm/gems/ruby-2.3.0@rails5.0.0.1/bin/rake:23)
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to InserirCandidatos (20161031202411)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "candidatos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "matricula" varchar, "disciplina" varchar, "monitoria" varchar, "semestre" integer, "prioridade" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161031202411"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CriarProfessor (20161101132911)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "professors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "email" varchar, "sala" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161101132911"]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDisciplinas (20161210121327)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "disciplinas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "codigo" varchar, "professor" varchar, "vagas" decimal, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161210121327"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateOferta (20161210121345)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "oferta" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "codigo" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161210121345"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddColumnProfessorToProfessor (20161212181453)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "professors" ADD "professor" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161212181453"]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to ListaDisciplinas (20161215041239)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "lista_disciplinas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "codigo" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161215041239"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to DeviseCreateUsers (20170623180012)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170623180012"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddRolesToUsers (20170629023755)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "admin_role" boolean DEFAULT 'f'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "professor_role" boolean DEFAULT 'f'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "student_role" boolean DEFAULT 't'[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170629023755"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddRolesToInserirCandidatos (20170704001833)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "candidatos" ADD "id_of_user" varchar DEFAULT '0'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170704001833"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddRolesToProfessores (20170704002349)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "professors" ADD "id_of_user" varchar DEFAULT '0'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170704002349"]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-07-04 04:27:52 UTC], ["updated_at", 2017-07-04 04:27:52 UTC]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 1"], ["codigo", "cic01"], ["professor", "Professor 1"], ["vagas", #<BigDecimal:55574adaa718,'0.3E1',9(27)>], ["created_at", 2017-07-04 04:28:08 UTC], ["updated_at", 2017-07-04 04:28:08 UTC]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["professor", "Professor 2"], ["vagas", #<BigDecimal:55574ac5aae8,'0.2E1',9(27)>], ["created_at", 2017-07-04 04:28:08 UTC], ["updated_at", 2017-07-04 04:28:08 UTC]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "disciplinas" ("nome", "codigo", "professor", "vagas", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["professor", "Professor 1"], ["vagas", #<BigDecimal:55574ab966e8,'0.2E1',9(27)>], ["created_at", 2017-07-04 04:28:08 UTC], ["updated_at", 2017-07-04 04:28:08 UTC]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "oferta" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "Disciplina 1"], ["codigo", "cic01"], ["created_at", 2017-07-04 04:28:08 UTC], ["updated_at", 2017-07-04 04:28:08 UTC]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "oferta" ("nome", "codigo", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["nome", "Disciplina 2"], ["codigo", "cic02"], ["created_at", 2017-07-04 04:28:08 UTC], ["updated_at", 2017-07-04 04:28:08 UTC]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "email", "sala", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "Professor 1"], ["email", "professor1@unb.br"], ["sala", "Sala A1-1-1"], ["created_at", 2017-07-04 04:28:08 UTC], ["updated_at", 2017-07-04 04:28:08 UTC]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("nome", "email", "sala", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["nome", "Professor 2"], ["email", "professor2@unb.br"], ["sala", "Sala A2-2-2"], ["created_at", 2017-07-04 04:28:08 UTC], ["updated_at", 2017-07-04 04:28:08 UTC]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "prioridade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Mateus Andrade"], ["matricula", "10123456"], ["monitoria", "Remunerada"], ["semestre", 3], ["prioridade", 0], ["created_at", 2017-07-04 04:28:08 UTC], ["updated_at", 2017-07-04 04:28:08 UTC]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "student@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "student@test.com"], ["encrypted_password", "$2a$11$cT7AMaLoV2sX9mRt34ugfecwN8Rvk3pavxkPXSFqMrPRMfXCkLnMK"], ["created_at", 2017-07-04 04:28:08 UTC], ["updated_at", 2017-07-04 04:28:08 UTC]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "professor@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "professor_role", "student_role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "professor@test.com"], ["encrypted_password", "$2a$11$XkJrbfmCAC9ao4D9J0ZlM.oDhSvSXo7ee0MfL88MHdAoEQhd4hgfG"], ["created_at", 2017-07-04 04:28:08 UTC], ["updated_at", 2017-07-04 04:28:08 UTC], ["professor_role", true], ["student_role", false]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "admin_role", "student_role") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "admin@test.com"], ["encrypted_password", "$2a$11$y/KPfHrUN8snJ1VSKfETJ.9Pf/AUnH0PVMX3vjlouCc1Qhb1EzCDW"], ["created_at", 2017-07-04 04:28:09 UTC], ["updated_at", 2017-07-04 04:28:09 UTC], ["admin_role", true], ["student_role", false]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "prioridade", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Erick Medeiros"], ["matricula", "11123456"], ["monitoria", "Voluntaria"], ["semestre", 4], ["prioridade", 0], ["created_at", 2017-07-04 04:28:09 UTC], ["updated_at", 2017-07-04 04:28:09 UTC]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "student@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/candidatos/new" for 127.0.0.1 at 2017-07-04 01:28:17 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CandidatosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 401 Unauthorized in 7ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-04 01:28:17 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 46ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-07-04 01:28:24 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eqWALDq55BOzxQVYe2FPYwkyCpnQuoej9A0gTglQivTiFOcT9gS1umfZxsIlo6s83lWJwhTP77nGcvQgC/n9sQ==", "user"=>{"email"=>"student@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "student@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-07-04 04:28:24 UTC], ["last_sign_in_at", 2017-07-04 04:28:24 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", 2017-07-04 04:28:24 UTC], ["id", 1]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCandidato Load (0.3ms)[0m  [1m[34mSELECT  "candidatos".* FROM "candidatos" WHERE "candidatos"."id_of_user" = ? LIMIT ?[0m  [["id_of_user", "1"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/candidatos/new
+Completed 302 Found in 160ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2017-07-04 01:28:24 -0300
+Processing by CandidatosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 51ms (Views: 32.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/candidatos" for 127.0.0.1 at 2017-07-04 01:28:30 -0300
+Processing by CandidatosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mPVTnO6yBL/pEybHpawiwsT1xBoMJKNpdnxhqyUix5jyPQ1GxO7BCzVzGpuE065Prq4OvoX++pqGX06hFF9UyA==", "candidato"=>{"nome"=>"asd", "matricula"=>"asdasd", "monitoria"=>"Voluntaria", "semestre"=>"1", "id_of_user"=>"1"}, "x"=>"21", "y"=>"23"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: id_of_user
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "asd"], ["matricula", "asdasd"], ["monitoria", "Voluntaria"], ["semestre", 1], ["created_at", 2017-07-04 04:28:30 UTC], ["updated_at", 2017-07-04 04:28:30 UTC]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/candidatos
+Completed 302 Found in 11ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-07-04 01:28:30 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 48ms (Views: 40.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2017-07-04 01:29:32 -0300
+Processing by CandidatosController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (10.2ms)
+Completed 200 OK in 42ms (Views: 39.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/candidatos" for 127.0.0.1 at 2017-07-04 01:29:37 -0300
+Processing by CandidatosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E7P0YhkJiyon1+Y1gqkd73C2chG8NqemcRnNs1YHq4x5e6q4M1VOnvu32mmj1pFiGu24tTXs/lWBOuK5Z3o43A==", "candidato"=>{"nome"=>"asddsa", "matricula"=>"dsa", "monitoria"=>"Voluntaria", "semestre"=>"1", "id_of_user"=>"1"}, "x"=>"25", "y"=>"19"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: id_of_user
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nome", "asddsa"], ["matricula", "dsa"], ["monitoria", "Voluntaria"], ["semestre", 1], ["created_at", 2017-07-04 04:29:37 UTC], ["updated_at", 2017-07-04 04:29:37 UTC]]
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/candidatos
+Completed 302 Found in 11ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-07-04 01:29:37 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 38ms (Views: 34.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2017-07-04 01:31:39 -0300
+Processing by CandidatosController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.1ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 57ms (Views: 30.7ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/candidatos" for 127.0.0.1 at 2017-07-04 01:31:44 -0300
+Processing by CandidatosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KjRv82HBzEB0RtYur7np/H4S4ZRNFZV5TOUX3KVjmDNA/DEpS50J9Kgm6nKOxmVxFEkrMMTPzIq8xjjWlB4LYw==", "candidato"=>{"nome"=>"asdasdsda", "matricula"=>"asdasdasd", "monitoria"=>"Voluntaria", "semestre"=>"1", "id_of_user"=>"1"}, "x"=>"20", "y"=>"18"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "created_at", "updated_at", "id_of_user") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "asdasdsda"], ["matricula", "asdasdasd"], ["monitoria", "Voluntaria"], ["semestre", 1], ["created_at", 2017-07-04 04:31:44 UTC], ["updated_at", 2017-07-04 04:31:44 UTC], ["id_of_user", "1"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/candidatos
+Completed 302 Found in 13ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-07-04 01:31:44 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.4ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 41ms (Views: 37.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/candidatos/new" for 127.0.0.1 at 2017-07-04 01:32:17 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CandidatosController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering candidatos/new.html.haml within layouts/application
+  [1m[36mListaDisciplina Load (0.2ms)[0m  [1m[34mSELECT "lista_disciplinas".* FROM "lista_disciplinas"[0m
+  Rendered candidatos/new.html.haml within layouts/application (11.4ms)
+Completed 200 OK in 57ms (Views: 54.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/candidatos" for 127.0.0.1 at 2017-07-04 01:32:21 -0300
+Processing by CandidatosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jevr2ZRzOmWMsFsZ4F6mMUi3MhNTf047n7YG6//hbBJPI7UDvi//0VDQZ0XBISq8Iuz4t9qlF8hvlSnhzpz/Qg==", "candidato"=>{"nome"=>"zxczx", "matricula"=>"zxc", "monitoria"=>"Voluntaria", "semestre"=>"1", "id_of_user"=>"1"}, "x"=>"19", "y"=>"26"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "candidatos" ("nome", "matricula", "monitoria", "semestre", "created_at", "updated_at", "id_of_user") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "zxczx"], ["matricula", "zxc"], ["monitoria", "Voluntaria"], ["semestre", 1], ["created_at", 2017-07-04 04:32:21 UTC], ["updated_at", 2017-07-04 04:32:21 UTC], ["id_of_user", "1"]]
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/candidatos
+Completed 302 Found in 11ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/candidatos" for 127.0.0.1 at 2017-07-04 01:32:21 -0300
+Processing by CandidatosController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering candidatos/index.html.haml within layouts/application
+  [1m[36mCandidato Load (0.2ms)[0m  [1m[34mSELECT "candidatos".* FROM "candidatos"[0m
+  Rendered candidatos/index.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 45ms (Views: 40.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/professores" for 127.0.0.1 at 2017-07-04 01:32:33 -0300
+Processing by ProfessoresController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering professores/index.html.haml within layouts/application
+  [1m[36mProfessor Load (0.3ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  Rendered professores/index.html.haml within layouts/application (13.7ms)
+Completed 200 OK in 45ms (Views: 39.2ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-07-04 01:32:36 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gjpOA3G8YBzEdrNQDnEVLMrAzli2I5Aghyd9Qs1W7YPo8hDZW+ClqBgWjwwvDpmhoJsE/D/5ydN3BFJI/Ct+0w=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-04 01:32:36 -0300
+Started GET "/home" for 127.0.0.1 at 2017-07-04 01:32:36 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.haml within layouts/application
+  Rendered home/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-07-04 01:32:39 -0300
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"AhbxKLkPUtWH7Yng1ht/O45X5OIjXI7D6C5FzRk3E9EQotNBCUxVPyA4umtIfG/RWM2f+xnYolWwyT2jKO+eLQ=="}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
