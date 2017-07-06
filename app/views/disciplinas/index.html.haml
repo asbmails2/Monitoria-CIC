@@ -7,6 +7,7 @@
       %th Nome da Disciplina
       %th Professor
       %th Vagas
+      %th Disponível
   %tbody
     -if (signed_in?)
       -if(current_user.admin_role?||current_user.professor_role?)

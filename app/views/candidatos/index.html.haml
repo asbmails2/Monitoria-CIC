@@ -22,5 +22,7 @@
 			%td= candidato.semestre
 			%td= candidato.prioridade
 
-%br
-= link_to image_tag('adicionar.png'), new_candidato_url
+-if signed_in?
+	-if current_user.student_role?
+		%br
+		= link_to image_tag('adicionar.png'), new_candidato_url
