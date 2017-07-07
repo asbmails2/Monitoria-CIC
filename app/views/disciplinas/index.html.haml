@@ -21,6 +21,16 @@
               %td Disponível
             -else
               %td Fechada
+
+      -else
+        - @disciplinas.each do |disciplina|
+          -if (disciplina.ativa)
+            %tr
+              %td= disciplina.nome
+              /%dt= link_disciplinas.nome
+              %td= disciplina.professor
+              %td= disciplina.vagas
+              %td Disponível
     -else
       - @disciplinas.each do |disciplina|
         -if (disciplina.ativa?)
