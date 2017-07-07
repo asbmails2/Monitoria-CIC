@@ -15,7 +15,7 @@ Given(/^the following disciplinas exist:$/) do |table|
 end
 
 When(/^I press input Log in$/) do
-  click_button('Log in')
+  click_on('Log in')
 end
 
 When(/^I press Adicionar$/) do

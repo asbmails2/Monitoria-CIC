@@ -11,6 +11,8 @@
         %td
           -if (professor.id_of_user == current_user.id)
             = link_to "#{professor.nome}", professore_url(professor)
+          -elsif(current_user.admin_role?)
+            = link_to "#{professor.nome}", professore_url(professor)
           -else
             = professor.nome
         %td= professor.email

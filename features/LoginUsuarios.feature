@@ -20,10 +20,9 @@ Scenario:
   Given I am on Sing In page
   When I press to Log In
   Then I should be on Sing In page
-  When I fill in "user_email" with "student@test.com"
-  When I fill in "user_password" with "password"
-  When I press input Log in
-  Given I am on Home page
+  And I fill in "user_email" with "student@test.com"
+  And I fill in "user_password" with "password"
+  And I press input Log in
   Then I should be on Home page
 
 #if ($Login de professor)

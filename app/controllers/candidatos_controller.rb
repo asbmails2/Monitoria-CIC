@@ -18,7 +18,7 @@ class CandidatosController < ApplicationController
 	end
 
 	def create
-		permitted = params.require(:candidato).permit(:nome,:matricula,:disciplina,:monitoria,:semestre,:id_of_user)
+		permitted = params.require(:candidato).permit(:nome,:matricula,:disciplina,:monitoria,:semestre,:prioridade,:id_of_user)
 		@candidato = Candidato.create!(permitted)
 		flash[:notice] = "Candidato #{@candidato.nome} de matrícula #{@candidato.matricula} foi adicionado com sucesso."
 		redirect_to candidatos_path
