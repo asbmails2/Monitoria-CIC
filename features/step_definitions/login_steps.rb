@@ -13,18 +13,11 @@ Given(/^the following disciplinas exist:$/) do |table|
     Disciplina.create d
   end
 end
+
 When(/^I press input Log in$/) do
-  click_on 'Log in'
+  click_button('Log in')
 end
 
 When(/^I press Adicionar$/) do
-  visit('/disciplinas/new')
-end
-
-Then (/^I am sign_in$/) do
-  if(sign_in?)
-    visit ('/home')
-  else
-    visit ('/users/new')
-  end
+  pending # Write code here that turns the phrase above into concrete actions
 end
