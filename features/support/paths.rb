@@ -50,6 +50,12 @@ module NavigationHelpers
     when /^Editar Disciplina 1 page/
       '/disciplinas/1/edit'
 
+    when /^Sing In page/
+      '/users/sign_in'
+
+    when /^Home page/
+      '/home'
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

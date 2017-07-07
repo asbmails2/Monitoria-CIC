@@ -17,7 +17,7 @@
           %a{:href => lista_disciplinas_url} Disciplinas
         -if( signed_in?)
           %li
-            %a{:href => professores_url} Professores  
+            %a{:href => professores_url} Professores
           %li
             %a{:href => candidatos_url} Inscrição de candidatos
         -if (signed_in? && (can? :access, :rails_admin))
@@ -27,9 +27,9 @@
 
       %ul.nav.navbar-nav.navbar-right
         -if (signed_in?)
-          %li=link_to "Log-out", destroy_user_session_path,:method => :delete
+          %li=link_to "Log Out", destroy_user_session_path,:method => :delete
         -else
-          %li=link_to "Log-In", new_user_session_path, :method => :get
+          %li=link_to "Log In", new_user_session_path, :method => :get
 %html
   %head
     %title Monitoria CIC
